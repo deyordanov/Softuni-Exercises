@@ -1,0 +1,27 @@
+public class Solution {
+    public IList<string> LetterCasePermutation(string s) {
+        StringBuilder sb = new StringBuilder(s);
+        List<string> result = new List<string>();
+
+        Permute(0);
+
+        return result;
+
+        void Permute(int index)
+        {
+            if(index == sb.Length)
+            {
+                result.Add(sb.ToString());
+                return;
+            }
+
+            Permute(index + 1);
+
+            if(char.IsLetter(sb[index]))
+            {
+                sb[index] = char.IsLower(sb[index]) ? char.ToUpper(sb[index]) : char.ToLower(sb[index]);
+                Permute(index + 1);
+            }
+        }
+    }
+}
