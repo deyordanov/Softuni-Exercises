@@ -1,0 +1,38 @@
+public class Solution
+{
+    public int ThreeSumClosest(int[] nums, int target)
+    {
+        Array.Sort(nums);
+        int index = 0;
+        int closestSum = int.MaxValue;
+        int prevDiff = int.MaxValue;
+        while (index < nums.Length - 2)
+        {
+            int first = index;
+            int second = first + 1;
+            int third = nums.Length - 1;
+            while (second < third)
+            {
+                int result = nums[first] + nums[second] + nums[third];
+                int difference = Math.Abs(result - target);
+                if (difference < prevDiff)
+                {
+                    prevDiff = difference;
+                    closestSum = result;
+                }
+
+                if (result < target)
+                {
+                    second++;
+                }
+                else
+                {
+                    third--;
+                }
+            }
+
+            index++;
+        }
+        return closestSum;
+    }
+}
