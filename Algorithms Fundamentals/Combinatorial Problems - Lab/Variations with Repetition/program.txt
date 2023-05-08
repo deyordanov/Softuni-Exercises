@@ -1,0 +1,35 @@
+using System;
+
+namespace _03._Variations_without_Repetition
+{
+    internal class Program
+    {
+        private static int k;
+        private static string[] variations;
+        private static string[] elements;
+        static void Main(string[] args)
+        {
+            elements = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            k = int.Parse(Console.ReadLine());
+
+            variations = new string[k];
+
+            Variations(0);
+        }
+
+        private static void Variations(int index)
+        {
+            if (index >= variations.Length)
+            {
+                Console.WriteLine(string.Join(" ", variations));
+                return;
+            }
+
+            for (int i = 0; i < elements.Length; i++)
+            {
+                variations[index] = elements[i];
+                Variations(index + 1);
+            }
+        }
+    }
+}
