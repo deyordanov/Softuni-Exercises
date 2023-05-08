@@ -1,0 +1,35 @@
+using System;
+
+namespace _03._Variations_without_Repetition
+{
+    internal class Program
+    {
+        private static int k;
+        private static string[] combinations;
+        private static string[] elements;
+        static void Main(string[] args)
+        {
+            elements = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            k = int.Parse(Console.ReadLine());
+
+            combinations = new string[k];
+
+            Combinations(0, 0);
+        }
+
+        private static void Combinations(int index, int elementStartIndex)
+        {
+            if (index >= combinations.Length)
+            {
+                Console.WriteLine(string.Join(" ", combinations));
+                return;
+            }
+
+            for (int i = elementStartIndex; i < elements.Length; i++)
+            {
+                combinations[index] = elements[i];
+                Combinations(index + 1, i + 1);
+            }
+        }
+    }
+}
