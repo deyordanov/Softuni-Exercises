@@ -1,0 +1,25 @@
+using System;
+
+namespace _07._N_Choose_K_Count
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int rowN = int.Parse(Console.ReadLine());
+            int colK = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(GetBinom(rowN, colK));
+        }
+
+        private static int GetBinom(int rowN, int colK)
+        {
+            if (rowN <= 1 || colK == 0 || colK == rowN)
+            {
+                return 1;
+            }
+
+            return GetBinom(rowN - 1, colK) + GetBinom(rowN - 1, colK - 1);
+        }
+    }
+}
