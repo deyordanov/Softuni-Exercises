@@ -1,0 +1,12 @@
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.AssemblyInfo.cs
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\bin\Debug\net7.0\LogForU.Core.deps.json
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\bin\Debug\net7.0\LogForU.Core.dll
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\bin\Debug\net7.0\LogForU.Core.pdb
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.dll
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\refint\LogForU.Core.dll
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\LogForU.Core.pdb
+C:\Users\deyor\source\repos\SOLID\LogForU.Core\obj\Debug\net7.0\ref\LogForU.Core.dll
