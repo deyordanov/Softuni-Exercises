@@ -1,0 +1,19 @@
+h1{
+    font-size: 34px;
+}
+
+h2{
+    font-size: 26px;
+}
+
+header, footer{
+    background-color: #f2dcbb;
+    padding: 15px 5px 15px;
+    width: 480px;
+}
+
+body{
+    padding: 15px 5px 15px;
+    width: 480px;
+    background-color: #f9f7cf;
+}
