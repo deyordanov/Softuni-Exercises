@@ -1,0 +1,13 @@
+double[] numbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToArray(); 
+Dictionary<double, int> occurances = new Dictionary<double, int>();
+foreach(double number in numbers)
+{
+    if(!occurances.ContainsKey(number))
+        occurances.Add(number, 0);
+    occurances[number]++;
+}
+
+foreach(double number in occurances.Keys)
+{
+    Console.WriteLine($"{number} - {occurances[number]} times");
+}
