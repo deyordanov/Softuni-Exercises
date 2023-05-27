@@ -1,0 +1,35 @@
+string party;
+HashSet<string> regular = new HashSet<string>();
+HashSet<string> VIP = new HashSet<string>();
+while((party = Console.ReadLine()) != "PARTY")
+{
+    if (char.IsDigit(party[0]))
+    {
+        VIP.Add(party);
+    }
+    else
+    {
+        regular.Add(party);
+    }
+}
+string end;
+while((end = Console.ReadLine()) != "END")
+{
+    if(VIP.Contains(end))
+    {
+        VIP.Remove(end);
+    }
+    else if(regular.Contains(end))
+    {
+        regular.Remove(end);
+    }
+}
+Console.WriteLine(VIP.Count + regular.Count);
+if(VIP.Count > 0)
+{
+    Console.WriteLine(string.Join(Environment.NewLine, VIP));
+}
+if(regular.Count > 0)
+{
+    Console.WriteLine(string.Join(Environment.NewLine, regular));
+}
