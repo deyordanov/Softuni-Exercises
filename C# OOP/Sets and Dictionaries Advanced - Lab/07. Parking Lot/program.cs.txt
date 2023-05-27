@@ -1,0 +1,22 @@
+string end;
+HashSet<string> cars = new HashSet<string>();
+while((end = Console.ReadLine()) != "END")
+{
+    string[] input = end.Split(", ");
+    if (input[0] == "IN")
+    {
+        cars.Add(input[1]);
+    }
+    else
+    {
+        cars.Remove(input[1]);
+    }
+}
+if (cars.Count > 0)
+{
+    Console.WriteLine(string.Join(Environment.NewLine, cars));
+}
+else
+{
+    Console.WriteLine("Parking Lot is Empty");
+}
