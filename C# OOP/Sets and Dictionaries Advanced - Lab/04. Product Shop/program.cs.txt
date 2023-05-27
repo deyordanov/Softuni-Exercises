@@ -1,0 +1,21 @@
+Dictionary<string, Dictionary<string, double>> products = new Dictionary<string, Dictionary<string, double>>();
+string end;
+while((end = Console.ReadLine()) != "Revision")
+{
+    string[] input = end.Split(", ");
+    if (!products.ContainsKey(input[0]))
+    {
+        products.Add(input[0], new Dictionary<string, double>());
+    }
+    if (!products[input[0]].ContainsKey(input[1]))
+    {
+        products[input[0]].Add(input[1], double.Parse(input[2]));
+    }
+    else
+    {
+        products[input[0]][input[1]] = double.Parse(input[2]);
+    }
+}
+//fantastico->
+//Product: apple, Price: 1.2
+Console.WriteLine(string.Join(Environment.NewLine, products.OrderBy(x => x.Key).Select(x => $"{x.Key}->\n{string.Join(Environment.NewLine, x.Value.Select(y => $"Product: {y.Key}, Price: {y.Value}"))}")));
