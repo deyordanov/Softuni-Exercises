@@ -1,0 +1,47 @@
+html{
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Georgia, serif;
+}
+
+blockquote{
+    border-left: solid 1px rgb(221,221,221);
+    font-style: italic;
+}
+
+footer{
+    text-align: right;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td{
+    border: solid 1.5px gray;
+}
+
+thead{
+    text-align: left;
+    background-color: gray;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: lightgray;
+}
+
+.ul-first{
+    list-style: square;
+}
+
+.ul-second{
+    list-style: disc;
+}
+.ul-third{
+    list-style: circle;
+}
