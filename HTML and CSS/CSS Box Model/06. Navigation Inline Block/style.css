@@ -1,0 +1,45 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    margin-left: 30px;
+}
+
+li{
+    display: inline-block;
+}
+
+ul{
+    display: inline-block;
+}
+
+.item{
+    text-decoration: none;
+    color: #2C2E32;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+nav{
+    display: inline-block;
+}
+
+.item:hover{
+    color: #C34A36;
+}
+
+li:not(:last-child){
+    margin-right: 15px;
+}
+
+h1{
+    display: inline-block;
+}
+
+hr{
+    margin-top: -5px;
+    border: solid 1px black;
+}
