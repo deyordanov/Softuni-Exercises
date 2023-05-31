@@ -1,0 +1,24 @@
+html{
+    font-family: Arial;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+main article{
+    width: 80%;
+}
+
+.first-article{
+    display: inline-block;
+}
+
+aside{
+     width: 20%;
+     float: right;
+}
+
+img{
+    width: 70%;
+}
