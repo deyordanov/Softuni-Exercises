@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "LogForU.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/LogForU.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogForU.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LogForU.Core/1.0.0": {
+      "type": "project",
+      "path": "../LogForU.Core/LogForU.Core.csproj",
+      "msbuildProject": "../LogForU.Core/LogForU.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "LogForU.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\deyor\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\deyor\\source\\repos\\SOLID\\LogForU.ConsoleApp\\LogForU.ConsoleApp.csproj",
+      "projectName": "LogForU.ConsoleApp",
+      "projectPath": "C:\\Users\\deyor\\source\\repos\\SOLID\\LogForU.ConsoleApp\\LogForU.ConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\deyor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deyor\\source\\repos\\SOLID\\LogForU.ConsoleApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\deyor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\deyor\\source\\repos\\SOLID\\LogForU.Core\\LogForU.Core.csproj": {
+              "projectPath": "C:\\Users\\deyor\\source\\repos\\SOLID\\LogForU.Core\\LogForU.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
