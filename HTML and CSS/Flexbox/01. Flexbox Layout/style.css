@@ -1,0 +1,30 @@
+
+body{
+    background-color: #EEE;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site > *{
+    padding: 2rem;
+    background: #FFF;
+    border-radius: 0.4rem;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.5);
+}
+
+.site-header,
+.site-footer{
+    flex: 0 0 100%;
+}
+
+.site-aside{
+    flex: 2 1 20rem;
+}
+
+.site-main{
+    flex: 8 1 40rem;
+}
