@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, ul, li{
+    display: flex;
+}
+
+body{
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.gallery{
+    justify-content: center;
+    background-color: #FFF;
+}
+
+li{
+    padding: 2rem 1rem;
+    border: solid 6px black;
+    border-radius: 1rem;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+}
