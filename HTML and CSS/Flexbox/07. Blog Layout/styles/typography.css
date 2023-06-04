@@ -1,0 +1,19 @@
+blockquote{
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    font-family: Georgia, serif;
+}
+
+.page header p{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.page aside p{
+    font-size: 20px;
+    font-weight: 700;
+}
