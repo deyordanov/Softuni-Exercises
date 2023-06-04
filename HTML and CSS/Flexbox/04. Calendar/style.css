@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div, section{
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    text-align: center;
+}
+
+span{
+    padding-bottom: 4rem;
+    border: solid 1px black;
+}
+
+.notes{
+    width: 14rem;
+    flex-direction: column;
+}
+
+.week{
+    flex-wrap: wrap;
+}
+
+.week span:nth-child(1),
+.week span:nth-child(7){
+    flex-basis: 100%;
+}
+
+.week span{
+    min-width: 5rem;
+    flex: 1 0 auto;
+}
+
+.notes span{
+    flex: 1 0 50%;
+}
+
+.week span:nth-child(2),
+.week span:nth-child(3),
+.week span:nth-child(4),
+.week span:nth-child(5),
+.week span:nth-child(6),
+.week span:nth-child(8),
+.week span:nth-child(9){
+    font-size: 0.8rem;
+}
