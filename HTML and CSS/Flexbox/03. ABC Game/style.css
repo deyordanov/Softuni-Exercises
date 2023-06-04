@@ -1,0 +1,31 @@
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+.container{
+    font-size: 20px;
+    display: flex;
+    max-width: 15vw;
+    height: 35rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+span{
+    text-align: center;
+    border: solid 1px black;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.S{order: -10;}
+.e{order: -9;}
+.m{order: -8;}
+.a{order: -7;}
+.n{order: -6;}
+.t{order: -5;}
+.i{order: -4;}
+.c{order: -3;}
