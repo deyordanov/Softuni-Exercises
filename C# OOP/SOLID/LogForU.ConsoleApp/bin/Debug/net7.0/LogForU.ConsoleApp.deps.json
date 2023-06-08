@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LogForU.ConsoleApp/1.0.0": {
+        "dependencies": {
+          "LogForU.Core": "1.0.0"
+        },
+        "runtime": {
+          "LogForU.ConsoleApp.dll": {}
+        }
+      },
+      "LogForU.Core/1.0.0": {
+        "runtime": {
+          "LogForU.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LogForU.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LogForU.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
