@@ -1,0 +1,30 @@
+3/31/2015 5:33:07 PM - Info - Everything seems fine
+
+3/31/2015 5:33:07 PM - Info - Everything seems fine
+
+3/31/2015 5:33:07 PM - Warning - Warning: ping is too high - disconnect imminent
+
+3/31/2015 5:33:07 PM - Info - Everything seems fine
+
+3/31/2015 5:33:07 PM - Warning - Warning: ping is too high - disconnect imminent
+
+3/31/2015 5:33:07 PM - Error - Error parsing request
+
+3/31/2015 5:33:07 PM - Info - Everything seems fine
+
+3/31/2015 5:33:07 PM - Warning - Warning: ping is too high - disconnect imminent
+
+3/31/2015 5:33:07 PM - Error - Error parsing request
+
+3/31/2015 5:33:07 PM - Critical - No connection string found in App.config
+
+3/31/2015 5:33:07 PM - Info - Everything seems fine
+
+3/31/2015 5:33:07 PM - Warning - Warning: ping is too high - disconnect imminent
+
+3/31/2015 5:33:07 PM - Error - Error parsing request
+
+3/31/2015 5:33:07 PM - Critical - No connection string found in App.config
+
+3/31/2015 5:33:07 PM - Fatal - mscorlib.dll does not respond
+
