@@ -1,0 +1,20 @@
+table{
+    min-width: 30rem;
+    text-align: left;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td, th{
+    border: 2px solid black;
+}
+
+th{
+    color: white;
+    background-color: rgb(40, 39, 39);
+}
+
+tr:nth-child(even){
+    background-color: lightgrey;
+}
