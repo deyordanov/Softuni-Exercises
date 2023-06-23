@@ -1,0 +1,62 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline{
+    position: relative;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 0.3rem;
+    height: 100%;
+    background-color: rgb(153, 153, 153);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    left: 50%;
+}
+
+.text-box{
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.dot{
+    display: inline-block;
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: green;
+    border-radius: 100%;
+    border: 0.3rem solid rgb(153, 153, 153);
+    position: absolute;
+    top: 1.25rem;
+    left: -0.9rem;
+    z-index: 10;
+}
+
+.container:nth-child(odd) .dot{
+    background-color: orange;
+}
+
+.title{
+    position: absolute;
+    left: 48%;
+    top: -2.2rem;
+    border: 0.15rem solid rgb(153, 153, 153);
+    padding: 0.4rem;
+}
