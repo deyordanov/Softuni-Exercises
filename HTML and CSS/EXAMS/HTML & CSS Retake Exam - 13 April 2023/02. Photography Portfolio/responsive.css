@@ -1,0 +1,40 @@
+@media(width <= 600px){
+    .navigation-nav{
+        display: none;
+    }
+
+    .home-tab-selector-cards-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-image{
+        display: none;
+    }
+
+    .section-container{
+        padding-top: 40px;
+    }
+
+    .home-text10{
+        margin-right: 30px;
+    }
+
+    .home-links-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-top-part{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-subscribe-container{
+        width: 100%;
+    }
+
+    .button-primary{
+        padding: 1rem 1.2rem;
+    }
+}
