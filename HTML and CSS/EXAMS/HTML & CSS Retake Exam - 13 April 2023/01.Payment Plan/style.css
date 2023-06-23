@@ -1,0 +1,86 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap);
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.cards{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.card{
+    height: 35rem;
+    padding: 2rem 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card h2{
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.card .price{
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.card p{
+    margin-bottom: 2rem;
+}
+
+.card .billing{
+    color: #8c8a8c;
+    font-size: 16px;
+}
+
+.card .benefits{
+    list-style: none;
+    margin-bottom: auto;
+}
+
+.card .benefits li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.card .btn{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+
+.card.active{
+    height: 38rem;
+}
