@@ -1,0 +1,25 @@
+header{
+    padding: 2rem 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+header .left, header .right{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .active{
+    background-color: var(--clr-green);
+    border-radius: 6px;
+    padding: 0.8rem 1.4rem;
+    font-weight: 600;
+}
