@@ -1,0 +1,21 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 13.5rem;
+}
+
+footer .socials{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+footer p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer .socials li i{
+    font-size: 40px;
+}

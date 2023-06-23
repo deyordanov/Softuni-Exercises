@@ -1,0 +1,21 @@
+header{
+    padding: 2rem 3rem;
+    padding-left: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+header .list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+header .list li a{
+    text-decoration: none;
+    color: black;
+}
