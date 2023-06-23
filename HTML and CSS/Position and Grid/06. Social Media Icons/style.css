@@ -1,0 +1,50 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    text-decoration: none;
+    background-color: lightgray;
+    padding: 0.6rem;
+}
+
+i{
+    color: black;
+}
+
+a.ig:hover i, a.tw:hover i, a.li:hover i{
+    color: rgb(25, 184, 237);
+}
+
+a.fb:hover i{
+    color: rgb(36, 89, 106);
+}
+
+a.gl:hover i{
+    color: rgb(203, 140, 24);
+}
