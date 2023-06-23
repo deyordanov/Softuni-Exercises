@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    margin: 3rem 4rem;
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 60rem;
+    gap: 2rem;
+}
+
+.page header{
+    flex-basis: 100%;
+    border-bottom: solid 0.1rem black;
+}
+
+.page main{
+    flex: 1 1 35rem;
+}
+
+.page aside{
+    padding-left: 1.5rem;
+    flex: 1 1 1rem;
+}
+
+img{
+    background-color: rgb(255, 255, 255);
+    border: solid 0.2rem black;   
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4); 
+    padding: 0.5rem;
+}
+
+.page article .align-right{
+    margin: 0 0 0.8rem 0.8rem;
+    float: right;
+}
+
+.page article .align-left{
+    margin: 0 0.8rem 0.8rem 0;
+    float: left;
+}
+
+a{
+    color: rgb(0, 153, 0);
+}
+
+ul{
+    margin-bottom: 1rem;
+}
+
+li{
+    margin-left: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0.5rem 0;
+}
+
+p{
+    margin-bottom: 0.6rem;
+}
+
+.page blockquote{
+    float: right;
+    width: 45%;
+    height: 8rem;
+    opacity: 0.5;
+    border-left: solid 0.3rem lightgray;
+    padding-left: 1rem;
+}
+
+.page blockquote footer{
+    float: right;
+}
