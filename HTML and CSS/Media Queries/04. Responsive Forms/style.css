@@ -1,0 +1,79 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.form-type{
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border: 2px solid lightgrey;
+    padding: 2rem;
+    height: 15rem;
+    width: 30rem;
+    position: relative;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+input{
+    flex-grow: 1;
+    height: 1.8rem;
+    border-radius: 0.4rem;
+}
+
+input:focus ~ i{
+    font-size: 0px;
+}
+
+i{
+    position: absolute;
+    left: 6rem;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    background-color: #595959;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid lightgrey;
+    position: absolute;
+    width: 11rem;
+    height: 2.5rem;
+    top: -1rem;
+    left: -1px;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}

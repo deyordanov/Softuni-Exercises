@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238) ;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: rgb(255, 255, 255) ;
+    width: 25rem;
+    height: 25rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+}
+
+.info{
+    position: relative;
+    padding: 1.5rem;
+    height: 50%;
+}
+
+.btn{
+    border: none;
+    background-color: rgb(0, 153, 0);
+    padding: 0.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding-bottom: 1rem;
+}
+
+p{
+    padding-bottom: 2rem;
+}
+
+.image{
+    height: 50%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(width < 700px){
+    html, .btn{
+        font-size: 12px;
+    }
+}
+
+@media(width < 360px){
+    html, .btn{
+        font-size: 9px;
+    }
+}
