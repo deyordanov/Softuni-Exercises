@@ -1,0 +1,241 @@
+#difference{
+    background-color: var(--clr-lightblue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+#difference img{
+    height: 42rem;
+}
+
+#difference .info{
+    margin-left: 7rem;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+#difference .info h2{
+    font-size: 40px;
+}
+
+#difference .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#difference .btn{
+    width: 55%;
+    padding: 1.8rem;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#difference .btn.primary{
+    width: 45%;
+    background-color: white;
+    color: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#need{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+#need h2{
+    font-size: 30px;
+}
+
+#need .desc{
+    text-align: center;
+    font-size: 22px;
+    line-height: 2rem;
+}
+
+#need .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7rem;
+}
+
+#need .card{
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+#need .card p{
+    font-size: 22px;
+}
+
+#need .container i{
+    font-size: 180px;
+    color: var(--clr-lightblue);
+}
+
+#work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background-color: var(--clr-lightblue);
+    padding: 7.5rem;
+}
+
+#work .container{
+    height: 20rem;
+    display: flex;
+    font-size: 26px;
+}
+
+#work .container .points{
+    height: 17rem;
+    list-style: none;
+    display: grid;
+    row-gap: 3rem;
+    column-gap: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#work .container .points li{
+    width: 30rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+#work h2{
+    font-size: 40px;
+}
+
+#work .btn{
+    font-size: 20px;
+    padding: 1.4rem 6rem;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+#animals{
+    padding: 2.5rem 7rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#animals img{
+    width: 23rem;
+    height: 21rem;
+}
+
+#animals .animal-images{
+    width: 100%;
+    display: grid;
+    column-gap: 3em;
+    grid-template-columns: repeat(4, 23rem);
+}
+
+#animals h2{
+    font-size: 65px;
+}
+
+#animals p{
+    font-size: 24px;
+}
+
+#how{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    padding-bottom: 10rem;
+}
+
+#how h2{
+    font-size: 40px;
+}
+
+#how p{
+    font-size: 24px;
+    padding: 3rem;
+    text-align: left;
+}
+
+#how h3{
+    font-size: 24px;
+    background-color: var(--clr-lightblue);
+    padding: 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#how .card{
+    max-width: 90rem;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+}
+
+#hsus{
+    padding: 0 4.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hsus h2{
+    font-size: 40px;
+}
+
+#hsus p{
+    font-size: 20px;
+}
+
+#hsus input{
+    font-size: 24px;
+    width: 23rem;
+    height: 5rem;
+    padding-left: 1.5rem;
+}
+
+#hsus .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8rem;
+    gap: 3rem;
+}
+
+#hsus a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1.8rem 6.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#hsus img{
+    width: 60rem;
+}
