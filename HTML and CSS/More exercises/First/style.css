@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap);
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 10rem;
+}
+
+.card{
+    width: 20rem;
+    box-shadow: 0.3rem 0.3rem 1rem 0 rgba(0, 0, 0, 0.1);
+    color: #646464;
+    font-size: 14px;
+    background-color: #d9d9d9;
+}
+
+.card img{
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card .subtitle{
+    padding: 1rem 0 0.5rem 0;
+    color: #646464;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card h2{
+    color: #2f2d2e;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+}
+
+.card .info{
+    padding: 0 1.4rem 1.4rem 1.4rem;
+    font-size: 13px;
+}
+
+.card .info .person{
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid black;
+    display: flex;
+    gap: 0.5rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.card .info .person .time{
+    margin-left: 5.9rem;
+    color: #a6a8ac;
+}
+
+img{
+    width: 10rem;
+}
+
+.person img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.card{
+    transform: scale(1.4);
+}
