@@ -1,0 +1,22 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 8px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 150ms;
+}
+
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
