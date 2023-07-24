@@ -1,0 +1,15 @@
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\bin\Debug\net6.0\01. Square Root.exe
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\bin\Debug\net6.0\01. Square Root.deps.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\bin\Debug\net6.0\01. Square Root.runtimeconfig.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\bin\Debug\net6.0\01. Square Root.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\bin\Debug\net6.0\01. Square Root.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\refint\01. Square Root.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\01. Square Root.genruntimeconfig.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\01. Square Root\obj\Debug\net6.0\ref\01. Square Root.dll
