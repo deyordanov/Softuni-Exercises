@@ -1,0 +1,15 @@
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\bin\Debug\net6.0\04. Sum of Integers.exe
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\bin\Debug\net6.0\04. Sum of Integers.deps.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\bin\Debug\net6.0\04. Sum of Integers.runtimeconfig.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\bin\Debug\net6.0\04. Sum of Integers.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\bin\Debug\net6.0\04. Sum of Integers.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\refint\04. Sum of Integers.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\04. Sum of Integers.genruntimeconfig.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\04. Sum of Integers\obj\Debug\net6.0\ref\04. Sum of Integers.dll
