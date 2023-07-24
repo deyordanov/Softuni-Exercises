@@ -1,0 +1,15 @@
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\bin\Debug\net6.0\03. Cards.exe
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\bin\Debug\net6.0\03. Cards.deps.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\bin\Debug\net6.0\03. Cards.runtimeconfig.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\bin\Debug\net6.0\03. Cards.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\bin\Debug\net6.0\03. Cards.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\refint\03. Cards.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\03. Cards.genruntimeconfig.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\03. Cards\obj\Debug\net6.0\ref\03. Cards.dll
