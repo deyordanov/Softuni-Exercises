@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.exe
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.deps.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.runtimeconfig.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\bin\Debug\netcoreapp3.1\02.BlackBoxInteger.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\02. Black Box Integer\obj\Debug\netcoreapp3.1\02.BlackBoxInteger.genruntimeconfig.cache
