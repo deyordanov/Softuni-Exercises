@@ -1,0 +1,14 @@
+﻿namespace _03.BarrackWars_ANewFactory.Models.Units
+{
+    using _03BarracksFactory.Models.Units;
+
+    public class Gunner : Unit
+    {
+        private const int DefaultHealth = 20;
+        private const int DefaultDamage = 20;
+        public Gunner() 
+            : base(DefaultHealth, DefaultDamage)
+        {
+        }
+    }
+}
