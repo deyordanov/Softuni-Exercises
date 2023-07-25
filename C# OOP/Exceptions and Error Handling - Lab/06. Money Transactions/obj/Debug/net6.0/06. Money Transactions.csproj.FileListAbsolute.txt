@@ -1,0 +1,15 @@
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\bin\Debug\net6.0\06. Money Transactions.exe
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\bin\Debug\net6.0\06. Money Transactions.deps.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\bin\Debug\net6.0\06. Money Transactions.runtimeconfig.json
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\bin\Debug\net6.0\06. Money Transactions.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\bin\Debug\net6.0\06. Money Transactions.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\refint\06. Money Transactions.dll
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.pdb
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\06. Money Transactions.genruntimeconfig.cache
+C:\Users\deyor\source\repos\Exceptions and Error Handling - Lab\06. Money Transactions\obj\Debug\net6.0\ref\06. Money Transactions.dll
