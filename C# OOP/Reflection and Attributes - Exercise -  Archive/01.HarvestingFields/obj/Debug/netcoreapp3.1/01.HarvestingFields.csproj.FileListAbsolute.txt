@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.exe
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.deps.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.runtimeconfig.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\bin\Debug\netcoreapp3.1\01.HarvestingFields.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\01.HarvestingFields\obj\Debug\netcoreapp3.1\01.HarvestingFields.genruntimeconfig.cache
