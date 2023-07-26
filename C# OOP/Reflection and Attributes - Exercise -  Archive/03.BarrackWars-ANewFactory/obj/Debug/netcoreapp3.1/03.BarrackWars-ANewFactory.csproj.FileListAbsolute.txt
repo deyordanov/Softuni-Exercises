@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.exe
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.deps.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.runtimeconfig.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\bin\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.dll
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.pdb
+C:\Users\deyor\source\repos\Reflection and Attributes - Exercise -  Archive\03.BarrackWars-ANewFactory\obj\Debug\netcoreapp3.1\03.BarrackWars-ANewFactory.genruntimeconfig.cache
