@@ -7,8 +7,6 @@ function attachEvents() {
     Degrees: "\u{00B0}",
   };
 
-  console.log(icons["Degrees"]);
-
   const urls = {
     LOCATION_BASE_URL: "http://localhost:3030/jsonstore/forecaster/locations",
     CURRENT_CONDITIONS_BASE_URL:
@@ -16,6 +14,7 @@ function attachEvents() {
     UPCOMING_CONDITIONS_BASE_URL:
       "http://localhost:3030/jsonstore/forecaster/upcoming/",
   };
+
   const getWeatherButton = document.querySelector("#submit");
   const forecastContainer = document.querySelector("#forecast");
   const current = document.querySelector("#current");
@@ -106,8 +105,6 @@ function attachEvents() {
     currentForecastContainer.appendChild(
       createCurrentWeatherConditionStatus(currentData)
     );
-
-    console.log(currentForecastContainer);
 
     return currentForecastContainer;
   };
