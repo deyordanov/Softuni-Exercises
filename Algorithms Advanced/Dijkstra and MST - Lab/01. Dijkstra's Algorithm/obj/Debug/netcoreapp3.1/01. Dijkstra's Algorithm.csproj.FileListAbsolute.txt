@@ -1,0 +1,16 @@
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.exe
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.deps.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.runtimeconfig.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\bin\Debug\netcoreapp3.1\PowerCollections.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.csproj.CopyComplete
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\01. Dijkstra's Algorithm\obj\Debug\netcoreapp3.1\01. Dijkstra's Algorithm.genruntimeconfig.cache

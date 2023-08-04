@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "XAct.Wintellect.PowerCollections/0.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net20/PowerCollections.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net20/PowerCollections.dll": {
+            "related": ".XML"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "XAct.Wintellect.PowerCollections/0.0.1": {
+      "sha512": "SO3u8CnTlOSdjr7lp5dEMsdIc+yKvLoIzdN0MbNa7pz4tnL2SMn9hdwSvBxayfQzUhdahz5XiddU2s3H580LZA==",
+      "type": "package",
+      "path": "xact.wintellect.powercollections/0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "contents/NewGet.ReadMe/Licenses/Wintellect.PowerCollections.License.txt",
+        "lib/net20/PowerCollections.XML",
+        "lib/net20/PowerCollections.dll",
+        "xact.wintellect.powercollections.0.0.1.nupkg.sha512",
+        "xact.wintellect.powercollections.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "XAct.Wintellect.PowerCollections >= 0.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\deyor\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\deyor\\source\\repos\\Dijkstra and MST - Lab\\01. Dijkstra's Algorithm\\01. Dijkstra's Algorithm.csproj",
+      "projectName": "01. Dijkstra's Algorithm",
+      "projectPath": "C:\\Users\\deyor\\source\\repos\\Dijkstra and MST - Lab\\01. Dijkstra's Algorithm\\01. Dijkstra's Algorithm.csproj",
+      "packagesPath": "C:\\Users\\deyor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deyor\\source\\repos\\Dijkstra and MST - Lab\\01. Dijkstra's Algorithm\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\deyor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "XAct.Wintellect.PowerCollections": {
+            "target": "Package",
+            "version": "[0.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'XAct.Wintellect.PowerCollections 0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "XAct.Wintellect.PowerCollections",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
