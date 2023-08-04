@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "03. Prim's Algorithm/1.0.0": {
+        "dependencies": {
+          "XAct.Wintellect.PowerCollections": "0.0.1"
+        },
+        "runtime": {
+          "03. Prim's Algorithm.dll": {}
+        }
+      },
+      "XAct.Wintellect.PowerCollections/0.0.1": {
+        "runtime": {
+          "lib/net20/PowerCollections.dll": {
+            "assemblyVersion": "1.0.2141.24679",
+            "fileVersion": "1.0.2141.24679"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "03. Prim's Algorithm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "XAct.Wintellect.PowerCollections/0.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SO3u8CnTlOSdjr7lp5dEMsdIc+yKvLoIzdN0MbNa7pz4tnL2SMn9hdwSvBxayfQzUhdahz5XiddU2s3H580LZA==",
+      "path": "xact.wintellect.powercollections/0.0.1",
+      "hashPath": "xact.wintellect.powercollections.0.0.1.nupkg.sha512"
+    }
+  }
+}

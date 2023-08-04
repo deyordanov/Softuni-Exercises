@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.exe
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.deps.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.runtimeconfig.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\bin\Debug\netcoreapp3.1\02. Kruskal's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\02. Kruskal's Algorithm\obj\Debug\netcoreapp3.1\02. Kruskal's Algorithm.genruntimeconfig.cache
