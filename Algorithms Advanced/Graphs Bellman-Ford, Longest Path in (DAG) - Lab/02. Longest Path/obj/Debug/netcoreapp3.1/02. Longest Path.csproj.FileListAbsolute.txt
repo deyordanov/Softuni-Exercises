@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.exe
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.deps.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.runtimeconfig.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.dll
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\bin\Debug\netcoreapp3.1\02. Longest Path.pdb
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.dll
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.pdb
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\02. Longest Path\obj\Debug\netcoreapp3.1\02. Longest Path.genruntimeconfig.cache
