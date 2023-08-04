@@ -1,0 +1,14 @@
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.exe
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.deps.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.runtimeconfig.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.dll
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\bin\Debug\netcoreapp3.1\01. Bellman-Ford.pdb
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.dll
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.pdb
+C:\Users\deyor\source\repos\Graphs Bellman-Ford, Longest Path in (DAG) - Lab\01. Bellman-Ford\obj\Debug\netcoreapp3.1\01. Bellman-Ford.genruntimeconfig.cache

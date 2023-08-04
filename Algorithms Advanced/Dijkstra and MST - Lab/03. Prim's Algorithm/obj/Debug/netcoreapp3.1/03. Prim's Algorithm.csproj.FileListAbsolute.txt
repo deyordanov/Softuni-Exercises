@@ -1,0 +1,16 @@
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.exe
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.deps.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.runtimeconfig.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.runtimeconfig.dev.json
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\03. Prim's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\bin\Debug\netcoreapp3.1\PowerCollections.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.csproj.AssemblyReference.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.AssemblyInfoInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.AssemblyInfo.cs
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.csproj.CopyComplete
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.dll
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.pdb
+C:\Users\deyor\source\repos\Dijkstra and MST - Lab\03. Prim's Algorithm\obj\Debug\netcoreapp3.1\03. Prim's Algorithm.genruntimeconfig.cache
