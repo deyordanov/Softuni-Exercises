@@ -4,7 +4,8 @@ All the various types of algorithms that are studied in this course will be desc
 # 1. Dijkstra's Algorithm
 
 How the algorithm works:
-   Dijkstra's Algorithm is used, mostly, to find the shortets path in a weighted graph - meaning
+   Dijkstra's Algorithm is used, mostly, to find the shortets path in a weighted graph. In the exaple below the shortest path is:
+   
 
   
   <p align="center">
