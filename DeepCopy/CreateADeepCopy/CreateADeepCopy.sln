@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberwiseCloneMethod", "ShallowCopyMemberwiseMethod\MemberwiseCloneMethod.csproj", "{20C43227-AA41-44E6-A903-D0993A9DF4C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableInterface", "ICloneableInterface\ICloneableInterface.csproj", "{A1070FB7-CC4D-42DF-A53D-A755FFB1E6D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyConstructors", "CopyConstructors\CopyConstructors.csproj", "{35DBC552-0533-4D89-A500-CF9E5D09AC5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization.csproj", "{766A63E2-D995-4CD4-83FC-87870F52FBCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20C43227-AA41-44E6-A903-D0993A9DF4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C43227-AA41-44E6-A903-D0993A9DF4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C43227-AA41-44E6-A903-D0993A9DF4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C43227-AA41-44E6-A903-D0993A9DF4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1070FB7-CC4D-42DF-A53D-A755FFB1E6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1070FB7-CC4D-42DF-A53D-A755FFB1E6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1070FB7-CC4D-42DF-A53D-A755FFB1E6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1070FB7-CC4D-42DF-A53D-A755FFB1E6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DBC552-0533-4D89-A500-CF9E5D09AC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DBC552-0533-4D89-A500-CF9E5D09AC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DBC552-0533-4D89-A500-CF9E5D09AC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DBC552-0533-4D89-A500-CF9E5D09AC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766A63E2-D995-4CD4-83FC-87870F52FBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766A63E2-D995-4CD4-83FC-87870F52FBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766A63E2-D995-4CD4-83FC-87870F52FBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766A63E2-D995-4CD4-83FC-87870F52FBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E7A7FC7-FBED-4451-8313-97680741D163}
+	EndGlobalSection
+EndGlobal

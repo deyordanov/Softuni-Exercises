@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Serialization/1.0.0": {
+        "dependencies": {
+          "FastDeepCloner": "1.3.6"
+        },
+        "runtime": {
+          "Serialization.dll": {}
+        }
+      },
+      "FastDeepCloner/1.3.6": {
+        "runtime": {
+          "lib/netcoreapp2.0/FastDeepCloner.dll": {
+            "assemblyVersion": "1.0.3.6",
+            "fileVersion": "1.0.3.6"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Serialization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FastDeepCloner/1.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4WDjv/Wxc+uj0P2asasuGQakdY7QhwLVZxpNDzSoUNIo+XjIIR7PAdHbgyweP/dlkjJpYBSnAOQuNjG5Az+nWg==",
+      "path": "fastdeepcloner/1.3.6",
+      "hashPath": "fastdeepcloner.1.3.6.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\bin\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.exe
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\bin\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.deps.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\bin\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.runtimeconfig.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\bin\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\bin\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.csproj.AssemblyReference.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.AssemblyInfoInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.AssemblyInfo.cs
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.csproj.CoreCompileInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\refint\ShallowCopyMemberwiseCloneMethod.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ShallowCopyMemberwiseCloneMethod.genruntimeconfig.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\ShallowCopyMemberwiseMethod\obj\Debug\net7.0\ref\ShallowCopyMemberwiseCloneMethod.dll

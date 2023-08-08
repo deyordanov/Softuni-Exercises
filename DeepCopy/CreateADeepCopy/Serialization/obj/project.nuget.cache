@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ShRj5T8mGkREAHGeGVSE4cUee1wVbvsc6JGPLFcdZa0XDhjTU93AqT6jzXfiTi0otBmn3wpPT1HcfLJU9qfivw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\deyor\\Documents\\GitHub\\Projects\\CustomDeepCopier\\CreateADeepCopy\\Serialization\\Serialization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deyor\\.nuget\\packages\\fastdeepcloner\\1.3.6\\fastdeepcloner.1.3.6.nupkg.sha512"
+  ],
+  "logs": []
+}
