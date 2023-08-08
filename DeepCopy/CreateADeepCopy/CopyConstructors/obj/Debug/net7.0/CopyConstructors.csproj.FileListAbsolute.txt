@@ -1,0 +1,15 @@
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.csproj.AssemblyReference.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.AssemblyInfoInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.AssemblyInfo.cs
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.csproj.CoreCompileInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\bin\Debug\net7.0\CopyConstructors.exe
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\bin\Debug\net7.0\CopyConstructors.deps.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\bin\Debug\net7.0\CopyConstructors.runtimeconfig.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\bin\Debug\net7.0\CopyConstructors.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\bin\Debug\net7.0\CopyConstructors.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\refint\CopyConstructors.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\CopyConstructors.genruntimeconfig.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\CopyConstructors\obj\Debug\net7.0\ref\CopyConstructors.dll

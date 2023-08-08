@@ -1,0 +1,15 @@
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\bin\Debug\net7.0\DeepCopy.exe
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\bin\Debug\net7.0\DeepCopy.deps.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\bin\Debug\net7.0\DeepCopy.runtimeconfig.json
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\bin\Debug\net7.0\DeepCopy.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\bin\Debug\net7.0\DeepCopy.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.csproj.AssemblyReference.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.AssemblyInfoInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.AssemblyInfo.cs
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.csproj.CoreCompileInputs.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\refint\DeepCopy.dll
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.pdb
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\DeepCopy.genruntimeconfig.cache
+C:\Users\deyor\Documents\GitHub\Projects\CustomDeepCopier\CreateADeepCopy\DeepCopier\obj\Debug\net7.0\ref\DeepCopy.dll
