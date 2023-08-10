@@ -1,0 +1,20 @@
+CREATE TABLE People(
+    Id INT PRIMARY KEY IDENTITY(1, 1),
+    Name NVARCHAR(200) NOT NULL,
+    Picture VARBINARY(MAX)
+    CHECK (DATALENGTH(Picture) <= 2000000),
+    Height DECIMAL(3, 2),
+    Weight DECIMAL(5, 2),
+    Gender CHAR(1) NOT NULL
+    CHECK(Gender = 'm' OR Gender = 'f'),
+    Birthdate DATE NOT NULL,
+    Biography NVARCHAR(MAX)
+)
+
+INSERT INTO People(Name, Height, Weight, Gender, Birthdate)
+VALUES
+('Denis', 1.90, 102.5, 'm', '2003-05-01'),
+('Villy', 1.75, 55, 'f', '2002-11-14'),
+('Negan', 1.90, 85, 'm', '1980-12-21'),
+('Rick', 1.85, 90, 'm', '1990-03-23'),
+('Maggie', 1.78, 60, 'f', '1986-03-12')

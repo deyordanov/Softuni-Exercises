@@ -1,0 +1,63 @@
+CREATE TABLE Directors
+(
+    Id           INT PRIMARY KEY IDENTITY (1, 1),
+    DirectorName NVARCHAR(20) NOT NULL,
+    Notes        NVARCHAR(MAX)
+)
+
+CREATE TABLE Genres
+(
+    Id        INT PRIMARY KEY IDENTITY (1, 1),
+    GenreName NVARCHAR(20) NOT NULL,
+    Notes     NVARCHAR(MAX)
+)
+
+CREATE TABLE Categories
+(
+    Id           INT PRIMARY KEY IDENTITY (1, 1),
+    CategoryName NVARCHAR(20) NOT NULL,
+    Notes        NVARCHAR(MAX)
+)
+
+CREATE TABLE Movies
+(
+    Id            INT PRIMARY KEY IDENTITY (1, 1),
+    Title         NVARCHAR(20)  NOT NULL,
+    DirectorId    INT           NOT NULL FOREIGN KEY REFERENCES Directors (Id),
+    CopyrightYear DATE          NOT NULL,
+    Length        DECIMAL(3, 2) NOT NULL,
+    GenreId       INT           NOT NULL FOREIGN KEY REFERENCES Genres (Id),
+    CategoryId    INT           NOT NULL FOREIGN KEY REFERENCES Categories (Id),
+    Rating        DECIMAL(2, 1) NOT NULL,
+    Notes         NVARCHAR(MAX)
+)
+
+INSERT INTO Directors(DirectorName)
+VALUES ('A'),
+       ('B'),
+       ('C'),
+       ('D'),
+       ('E')
+
+
+INSERT INTO Genres(GenreName)
+VALUES ('A'),
+       ('B'),
+       ('C'),
+       ('D'),
+       ('E')
+
+INSERT INTO Categories(CategoryName)
+VALUES ('A'),
+       ('B'),
+       ('C'),
+       ('D'),
+       ('E')
+
+INSERT INTO Movies(Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating)
+VALUES ('Alien', 1, '2023-01-10', 1.20, 1, 1, 1.2),
+       ('Predator', 2, '2023-02-10', 1.40, 2, 2, 2.2),
+       ('Michael Myers', 3, '2023-03-10', 1.60, 3, 3, 3.2),
+       ('Cenobite', 4, '2023-04-10', 1.80, 4, 4, 4.2),
+       ('Leatherface', 5, '2023-05-10', 2, 5, 5, 5.2)
+

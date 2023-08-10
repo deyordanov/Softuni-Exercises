@@ -1,0 +1,17 @@
+CREATE TABLE Users
+(
+    Id             BIGINT PRIMARY KEY IDENTITY (1, 1),
+    Username       VARCHAR(30) NOT NULL,
+    Password       VARCHAR(26) NOT NULL,
+    ProfilePicture  VARBINARY(MAX) CHECK (DATALENGTH(ProfilePicture) <= 900000),
+    LastLoginTime  TIME,
+    IsDeleted       VARCHAR(5) CHECK (IsDeleted = 'true' OR IsDeleted = 'false')
+)
+
+INSERT INTO Users(Username, Password)
+VALUES
+('A', 'A'),
+('B', 'B'),
+('C', 'C'),
+('D', 'D'),
+('E', 'E')
