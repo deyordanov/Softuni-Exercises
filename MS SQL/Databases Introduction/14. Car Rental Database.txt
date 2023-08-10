@@ -1,0 +1,89 @@
+CREATE TABLE Categories
+(
+    Id           INT PRIMARY KEY IDENTITY (1, 1),
+    CategoryName NVARCHAR(20)  NOT NULL,
+    DailyRate    DECIMAL(5, 2) NOT NULL,
+    WeeklyRate   DECIMAL(6, 2) NOT NULL,
+    MonthlyRate  DECIMAL(7, 2) NOT NULL,
+    WeekendRate  DECIMAL(5, 2) NOT NULL
+)
+
+CREATE TABLE Cars
+(
+    Id           INT PRIMARY KEY IDENTITY (1, 1),
+    PlateNumber  NVARCHAR(8)  NOT NULL,
+    Manufacturer NVARCHAR(20) NOT NULL,
+    Model        NVARCHAR(14) NOT NULL,
+    CarYear      DATE         NOT NULL,
+    CategoryId   INT          NOT NULL FOREIGN KEY REFERENCES Categories (Id),
+    Doors        INT          NOT NULL CHECK (DATALENGTH(Doors) >= 2 OR DATALENGTH(Doors) <= 4),
+    Picture      VARBINARY(MAX) CHECK (DATALENGTH(Picture) <= 2000000),
+    Condition    NVARCHAR(10) NOT NULL,
+    Available    VARCHAR(5)   NOT NULL CHECK (Available = 'true' OR Available = 'false')
+)
+
+CREATE TABLE Employees
+(
+    Id        INT PRIMARY KEY IDENTITY (1, 1),
+    FirstName NVARCHAR(10) NOT NULL,
+    LastName  NVARCHAR(10) NOT NULL,
+    Title     NVARCHAR(10) NOT NULL,
+    Notes     NVARCHAR(MAX)
+)
+
+CREATE TABLE Customers
+(
+    Id                  INT PRIMARY KEY IDENTITY (1, 1),
+    DriverLicenceNumber NVARCHAR(16) NOT NULL,
+    FullName            NVARCHAR(30) NOT NULL,
+    Address             NVARCHAR(20) NOT NULL,
+    City                NVARCHAR(50) NOT NULL,
+    ZIPCode             NVARCHAR(14) NOT NULL,
+    Notes               NVARCHAR(MAX)
+)
+
+CREATE TABLE RentalOrders
+(
+    Id               INT PRIMARY KEY IDENTITY (1, 1),
+    EmployeeId       INT           NOT NULL FOREIGN KEY REFERENCES Employees (Id),
+    CustomerId       INT           NOT NULL FOREIGN KEY REFERENCES Customers (Id),
+    CarId            INT           NOT NULL FOREIGN KEY REFERENCES Cars (Id),
+    TankLevel        DECIMAL(3, 1) NOT NULL,
+    KilometrageStart DECIMAL(5, 1) NOT NULL,
+    KilometrageEnd   DECIMAL(5, 1) NOT NULL,
+    TotalKilometrage DECIMAL(5, 1) NOT NULL,
+    StartDate        DATE          NOT NULL,
+    EndDate          DATE          NOT NULL,
+    TotalDays        INT           NOT NULL,
+    RateApplied      DECIMAL(3, 1) NOT NULL,
+    TaxRate          DECIMAL(3, 2) NOT NULL,
+    OrderStatus      VARCHAR(5)    NOT NULL CHECK (OrderStatus = 'true' OR OrderStatus = 'false'),
+    Notes            NVARCHAR(MAX)
+)
+
+INSERT INTO Categories(CategoryName, DailyRate, WeeklyRate, MonthlyRate, WeekendRate)
+VALUES ('Jeeps', 400.00, 4000.00, 40000.00, 800.00),
+       ('Trucks', 200.00, 2000.00, 20000.00, 400.00),
+       ('SportsCars', 100.00, 1000.00, 10000.00, 200.00)
+
+INSERT INTO Cars(PlateNumber, Manufacturer, Model, CarYear, CategoryId, Doors, Condition, Available)
+VALUES ('77KING77', 'Toyota', 'Land Cruiser', '2023-01-01', 1, 4, 'perfect', 'false'),
+       ('77777777', 'RAM', 'RAM 6.4', '2021-02-12', 2, 4, 'perfect', 'true'),
+       ('77FAST77', 'BMW', 'BMW M5', '2022-08-11', 3, 4, 'perfect', 'false')
+
+INSERT INTO Employees(FirstName, LastName, Title)
+VALUES ('Gosho', 'Goshovich', 'Manager'),
+       ('Daniel', 'Lozanov', 'Salesman'),
+       ('Patrick', 'Star', 'Salesman')
+
+INSERT INTO Customers(DriverLicenceNumber, FullName, Address, City, ZIPCode)
+VALUES ('111111', 'Maria', 'Sofia 1', 'Sofia', '4322'),
+       ('222222', 'Ivan', 'Sofia 1', 'Sofia', '4322'),
+       ('333333', 'Milena', 'Sofia 1', 'Sofia', '4322')
+
+INSERT INTO RentalOrders(EmployeeId, CustomerId, CarId, TankLevel, KilometrageStart, KilometrageEnd, TotalKilometrage, StartDate, EndDate, TotalDays, RateApplied, TaxRate, OrderStatus)
+VALUES
+    (1, 1, 1, 90.0, 10, 1010, 1000, '2023-01-01', '2023-01-11', 10, 15, 0.18, 'true'),
+    (2, 2, 2, 90.0, 10, 1010, 1000, '2023-01-01', '2023-01-11', 10, 15, 0.18, 'true'),
+    (3, 3, 3, 90.0, 10, 1010, 1000, '2023-01-01', '2023-01-11', 10, 15, 0.18, 'true')
+
