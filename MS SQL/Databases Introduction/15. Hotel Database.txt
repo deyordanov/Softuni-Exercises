@@ -1,0 +1,116 @@
+CREATE TABLE Employees
+(
+    Id        INT PRIMARY KEY IDENTITY (1, 1),
+    FirstName NVARCHAR(10) NOT NULL,
+    LastName  NVARCHAR(10) NOT NULL,
+    Title     NVARCHAR(10) NOT NULL,
+    Notes     NVARCHAR(MAX)
+)
+
+CREATE TABLE Customers
+(
+    AccountNumber   INT PRIMARY KEY IDENTITY (1, 1),
+    FirstName       NVARCHAR(10) NOT NULL,
+    LastName        NVARCHAR(10) NOT NULL,
+    PhoneNumber     INT          NOT NULL,
+    EmergencyName   NVARCHAR(10) NOT NULL,
+    EmergencyNumber INT          NOT NULL,
+    Notes           NVARCHAR(MAX)
+)
+
+CREATE TABLE RoomStatus
+(
+    RoomStatus INT PRIMARY KEY IDENTITY (1, 1),
+    Notes      VARCHAR(MAX)
+)
+
+CREATE TABLE RoomTypes
+(
+    RoomType INT PRIMARY KEY IDENTITY (1, 1),
+    Notes    NVARCHAR(MAX)
+)
+
+CREATE TABLE BedTypes
+(
+    BedType INT PRIMARY KEY IDENTITY (1, 1),
+    Notes   NVARCHAR(MAX)
+)
+
+CREATE TABLE Rooms
+(
+    RoomNumber INT PRIMARY KEY IDENTITY (1, 1),
+    RoomType   INT           NOT NULL FOREIGN KEY REFERENCES RoomTypes (RoomType),
+    BedType    INT           NOT NULL FOREIGN KEY REFERENCES BedTypes (BedType),
+    Rate       DECIMAL(3, 2) NOT NULL,
+    RoomStatus INT           NOT NULL FOREIGN KEY REFERENCES RoomStatus (RoomStatus),
+    Notes      NVARCHAR(MAX)
+)
+
+CREATE TABLE Payments
+(
+    Id                INT PRIMARY KEY IDENTITY (1, 1),
+    EmployeeId        INT           NOT NULL FOREIGN KEY REFERENCES Employees (Id),
+    PaymentDate       DATE          NOT NULL,
+    AccountNumber     INT           NOT NULL FOREIGN KEY REFERENCES Customers (AccountNumber),
+    FirstDateOccupied DATE          NOT NULL,
+    LastDateOccupied  DATE          NOT NULL,
+    TotalDays         INT           NOT NULL,
+    AmountCharged     DECIMAL(6, 2) NOT NULL,
+    TaxRate           DECIMAL(3, 2) NOT NULL,
+    TaxAmount         DECIMAL(4, 2) NOT NULL,
+    PaymentTotal      DECIMAL(7, 2) NOT NULL,
+    Notes             NVARCHAR(MAX)
+)
+
+CREATE TABLE Occupancies
+(
+    Id            INT PRIMARY KEY IDENTITY (1, 1),
+    EmployeeId    INT           NOT NULL FOREIGN KEY REFERENCES Employees (Id),
+    DateOccupied  DATE          NOT NULL,
+    AccountNumber INT           NOT NULL FOREIGN KEY REFERENCES Customers (AccountNumber),
+    RoomNumber    INT           NOT NULL FOREIGN KEY REFERENCES Rooms (RoomNumber),
+    RateApplied   DECIMAL(3, 2) NOT NULL,
+    PhoneCharge   DECIMAL(3, 2) NOT NULL,
+    Notes         NVARCHAR(MAX)
+)
+
+INSERT INTO Employees(FirstName, LastName, Title)
+VALUES ('A', 'A', 'A'),
+       ('B', 'B', 'B'),
+       ('C', 'C', 'C')
+
+INSERT INTO Customers(FirstName, LastName, PhoneNumber, EmergencyName, EmergencyNumber)
+VALUES ('A', 'A', 1, 'A', 1),
+       ('B', 'B', 2, 'B', 2),
+       ('C', 'C', 3, 'C', 3)
+
+INSERT INTO RoomStatus(Notes)
+VALUES ('A'),
+       ('B'),
+       ('C')
+
+INSERT INTO RoomTypes(Notes)
+VALUES ('A'),
+       ('B'),
+       ('C')
+
+INSERT INTO BedTypes(Notes)
+VALUES ('A'),
+       ('B'),
+       ('C')
+
+INSERT INTO Rooms(RoomType, BedType, Rate, RoomStatus)
+VALUES (1, 1, 1, 1),
+       (2, 2, 2, 2),
+       (3, 3, 3, 3)
+
+INSERT INTO Payments(EmployeeId, PaymentDate, AccountNumber, FirstDateOccupied, LastDateOccupied, TotalDays,
+                     AmountCharged, TaxRate, TaxAmount, PaymentTotal)
+VALUES (1, '2023-01-01', 1, '2023-01-01', '2023-02-02', 32, 1000.0, 0.18, 10, 1010),
+       (2, '2023-01-01', 2, '2023-01-01', '2023-02-02', 32, 1000.0, 0.18, 10, 1010),
+       (3, '2023-01-01', 3, '2023-01-01', '2023-02-02', 32, 1000.0, 0.18, 10, 1010)
+
+INSERT INTO Occupancies(EmployeeId, DateOccupied, AccountNumber, RoomNumber, RateApplied, PhoneCharge)
+VALUES (1, '2023-01-01', 1, 1, 1, 1),
+       (2, '2023-01-01', 2, 2, 2, 2),
+       (3, '2023-01-01', 3, 3, 3, 3)
