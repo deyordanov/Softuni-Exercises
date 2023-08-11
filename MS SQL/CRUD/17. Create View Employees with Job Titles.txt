@@ -1,0 +1,3 @@
+CREATE VIEW V_EmployeeNameJobTitle AS
+SELECT CONCAT(FirstName, ' ', MiddleName, ' ', LastName) AS [Full Name], JobTItle AS [Job Title]
+FROM Employees
