@@ -1,0 +1,39 @@
+CREATE TABLE Cities
+(
+    CityID INT PRIMARY KEY IDENTITY,
+    Name   NVARCHAR(70) NOT NULL
+)
+
+CREATE TABLE Customers
+(
+    CustomerID INT PRIMARY KEY IDENTITY,
+    Name       NVARCHAR(30) NOT NULL,
+    Birthday   DATE         NOT NULL,
+    CityID     INT FOREIGN KEY REFERENCES Cities (CityID)
+)
+
+CREATE TABLE Orders
+(
+    OrderID    INT PRIMARY KEY IDENTITY,
+    CustomerID INT FOREIGN KEY REFERENCES Customers (CustomerID)
+)
+
+CREATE TABLE ItemTypes
+(
+    ItemTypeID INT PRIMARY KEY IDENTITY,
+    Name       NVARCHAR(40) NOT NULL
+)
+
+CREATE TABLE Items
+(
+    ItemID     INT PRIMARY KEY IDENTITY,
+    Name       NVARCHAR(40) NOT NULL,
+    ItemTypeID INT FOREIGN KEY REFERENCES ItemTypes (ItemTypeID)
+)
+
+CREATE TABLE OrderItems
+(
+    OrderID INT FOREIGN KEY REFERENCES Orders (OrderID),
+    ItemID  INT FOREIGN KEY REFERENCES Items (ItemID),
+    PRIMARY KEY (OrderID, ItemID)
+)
