@@ -1,0 +1,18 @@
+SELECT TownID, Name
+FROM Towns
+WHERE Name LIKE('[^RBD]%')
+ORDER BY NAME
+
+-----------------------------
+
+SELECT TownID, Name
+FROM Towns
+WHERE Name NOT LIKE('[RDB]%')
+ORDER BY Name
+
+-----------------------------
+
+SELECT TownID, Name
+FROM Towns
+WHERE LEFT(Name, 1) NOT IN ('R', 'B', 'D')
+ORDER BY Name
