@@ -1,0 +1,6 @@
+SELECT c.CountryCode, COUNT(m.MountainRange)
+FROM Countries c
+         LEFT JOIN MountainsCountries mc ON c.CountryCode = mc.CountryCode
+         LEFT JOIN Mountains m ON mc.MountainId = m.Id
+WHERE c.CountryCode IN ('US', 'RU', 'BG')
+GROUP BY(c.CountryCode)
