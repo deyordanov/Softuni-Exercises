@@ -1,0 +1,17 @@
+SELECT TOP (5) CountryName
+             , Elevation AS [HighestPeakElevation]
+             , Length[LongestRiverLength]
+FROM (SELECT c.CountryName
+           , p.Elevation
+           , r.Length
+           , DENSE_RANK() OVER (PARTITION BY c.CountryName ORDER BY p.Elevation DESC) AS [MountatinRanking]
+           , DENSE_RANK() OVER (PARTITION BY c.CountryName ORDER BY r.Length DESC)    AS [RiverRanking]
+      FROM Countries c
+               LEFT JOIN MountainsCountries mc ON c.CountryCode = mc.CountryCode
+               LEFT JOIN Peaks p ON mc.MountainId = p.MountainId
+               LEFT JOIN CountriesRivers cr ON c.CountryCode = cr.CountryCode
+               LEFT JOIN Rivers r ON cr.RiverId = r.Id
+      GROUP BY c.CountryName, p.Elevation, r.Length) AS [Query]
+WHERE MountatinRanking = 1
+  AND RiverRanking = 1
+ORDER BY Elevation DESC, Length DESC, CountryName
