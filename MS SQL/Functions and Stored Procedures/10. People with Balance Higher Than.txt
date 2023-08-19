@@ -1,0 +1,11 @@
+CREATE PROCEDURE usp_GetHoldersWithBalanceHigherThan @money MONEY
+AS
+BEGIN
+    SELECT FirstName
+         , LastName
+    FROM AccountHolders ah
+             LEFT JOIN Accounts a ON ah.Id = a.AccountHolderId
+    GROUP BY FirstName, LastName, AccountHolderId
+    HAVING SUM(Balance) > @money
+    ORDER BY FirstName, LastName
+END
