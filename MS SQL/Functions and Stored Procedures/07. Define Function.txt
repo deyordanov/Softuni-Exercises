@@ -1,0 +1,30 @@
+CREATE OR ALTER FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(70), @word NVARCHAR(70))
+    RETURNS BIT
+AS
+BEGIN
+    DECLARE @I INT = 1;
+    DECLARE @isValid BIT = 0;
+    WHILE(@I <= LEN(@word))
+    BEGIN
+        DECLARE @currentLetterWord NVARCHAR(1) = SUBSTRING(@word, @I, 1);
+        DECLARE @J INT = 1;
+        WHILE(@J <= LEN(@setOfLetters))
+        BEGIN
+            DECLARE @currentLetter NVARCHAR(1) = SUBSTRING(@setOfLetters, @J, 1);
+            IF(@currentLetter = @currentLetterWord)
+            BEGIN
+                SET @isValid = 1;
+                BREAK;
+            END
+           SET @J += 1;
+        END
+        IF(@isValid = 0)
+        BEGIN
+            RETURN 0;
+        END
+        ELSE
+        SET @isValid = 0;
+        SET @I += 1;
+    END
+    RETURN 1;
+END
