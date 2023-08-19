@@ -1,0 +1,12 @@
+CREATE PROCEDURE usp_CalculateFutureValueForAccount @accountID INT, @interestRate FLOAT
+AS
+BEGIN
+    SELECT a.Id
+         , FirstName
+         , LastName
+         , Balance
+         , dbo.ufn_CalculateFutureValue(Balance, @interestRate, 5)
+    FROM AccountHolders ah
+             LEFT JOIN Accounts a ON ah.Id = a.AccountHolderId
+    WHERE a.Id = @accountID
+END
