@@ -1,0 +1,8 @@
+CREATE OR ALTER PROCEDURE usp_EmployeesBySalaryLevel @level NVARCHAR(8)
+AS
+BEGIN
+    SELECT FirstName
+         , LastName
+    FROM Employees
+    WHERE dbo.ufn_GetSalaryLevel(Salary) = @level
+END
