@@ -1,0 +1,11 @@
+CREATE FUNCTION ufn_CashInUsersGames(@gameName NVARCHAR(50))
+    RETURNS TABLE
+        AS RETURN
+            (
+                (SELECT SUM(Cash) AS [SumCash]
+                 FROM (SELECT ug.Cash AS [Cash], ROW_NUMBER() OVER (ORDER BY Cash DESC) AS [Rank]
+                       FROM Games g
+                                LEFT JOIN UsersGames ug ON g.Id = ug.GameId
+                       WHERE g.Name = @gameName) AS [Query]
+                 WHERE Rank % 2 <> 0)
+            )
