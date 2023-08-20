@@ -1,0 +1,25 @@
+CREATE PROCEDURE usp_TransferMoney @SenderId INT, @ReceiverId INT, @Amount MONEY
+AS
+BEGIN TRANSACTION
+    IF (@Amount <= 0)
+    BEGIN
+        ROLLBACK;
+        THROW 50001, 'Invalid @Amount', 1;
+    END
+
+    IF ((SELECT Balance FROM Accounts WHERE Id = 2) < @Amount)
+    BEGIN
+        ROLLBACK;
+        THROW 50002, 'Sender does not have enough @Amount', 1;
+    END
+
+    IF ((SELECT COUNT(*) FROM Accounts WHERE Id = @ReceiverId) < 1) OR
+        ((SELECT COUNT(*) FROM Accounts WHERE Id = @SenderId) < 1)
+    BEGIN
+       ROLLBACK;
+        THROW 50003, 'Invalid user!', 1;
+    END
+
+    EXECUTE usp_WithdrawMoney @SenderId, @Amount
+    EXECUTE usp_DepositMoney  @ReceiverId, @Amount
+COMMIT
