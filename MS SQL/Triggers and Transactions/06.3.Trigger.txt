@@ -1,0 +1,54 @@
+CREATE PROCEDURE udp_BuyItem @userId INT, @itemId INT, @gameId INT
+    AS
+        BEGIN TRANSACTION
+    DECLARE
+        @user INT = (SELECT Id
+                     FROM Users
+                     WHERE Id = @userId)
+    DECLARE
+        @item INT = (SELECT Id
+                     FROM Items
+                     WHERE Id = @itemId)
+    DECLARE
+        @game INT = (SELECT Id
+                     FROM Games
+                     WHERE Id = @gameId)
+        IF (@user IS NULL OR @item IS NULL OR @game IS NULL)
+            BEGIN
+                ROLLBACK;
+                THROW 50001, 'Invalid user or item or game!', 1;
+            END
+
+    DECLARE
+        @userCash MONEY = (SELECT Cash
+                           FROM UsersGames
+                           WHERE UserId = @userId)
+    DECLARE
+        @itemPrice MONEY = (SELECT Price
+                            FROM Items
+                            WHERE Id = @itemId)
+        IF (@userCash - @itemPrice < 0)
+            BEGIN
+                ROLLBACK;
+                THROW 50002, 'Not enough cash!', 2;
+            END
+        IF NOT (@userId IN (SELECT UserId
+                            FROM UsersGames
+                            WHERE GameId = @gameId))
+            BEGIN
+                ROLLBACK;
+                THROW 50003, 'User does not exist in the given game!', 3;
+            END
+
+    DECLARE
+        @gameName NVARCHAR(50) = (SELECT Name
+                                  FROM Games
+                                  WHERE Id = @gameId)
+
+    INSERT INTO UserGameItems(ItemId, UserGameId)
+    VALUES(@itemId, @gameId)
+
+    UPDATE UsersGames
+    SET Cash -= @itemPrice
+    WHERE UserId = @userId AND GameId = @gameId
+COMMIT
