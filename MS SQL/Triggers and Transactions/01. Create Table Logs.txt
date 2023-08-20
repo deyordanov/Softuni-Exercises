@@ -1,0 +1,11 @@
+CREATE TRIGGER tr_CreateEntryInLogs
+    ON Accounts
+    FOR UPDATE
+    AS
+BEGIN
+    INSERT INTO Logs (AccountId, OldSum, NewSum)
+    SELECT d.Id, d.Balance, i.Balance
+    FROM inserted i
+             JOIN deleted d ON i.Id = d.Id
+    WHERE d.Balance <> i.Balance
+END
