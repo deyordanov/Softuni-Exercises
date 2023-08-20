@@ -1,0 +1,23 @@
+CREATE OR ALTER TRIGGER tr_RestrictItems
+    ON UserGameItems
+    INSTEAD OF INSERT
+    AS
+BEGIN
+    DECLARE @itemId INT = (SELECT ItemId FROM inserted)
+    DECLARE @gameId INT = (SELECT UserGameId FROM inserted)
+
+    DECLARE @itemLevel INT = (SELECT MinLevel FROM Items WHERE Id = @itemId)
+    DECLARE @gameLevel INT = (SELECT Level FROM UsersGames WHERE Id = @gameId)
+
+    IF (@itemLevel > @gameLevel)
+        BEGIN
+            THROW 50005, 'Item level is greater than game level!', 4;
+        END
+
+    INSERT INTO UserGameItems (ItemId, UserGameId)
+    VALUES (@itemId, @gameId)
+END
+
+--This will not work since the trigger is active and game level < item level
+    INSERT INTO UserGameItems(ItemId, UserGameId)
+    VALUES (1, 5)
