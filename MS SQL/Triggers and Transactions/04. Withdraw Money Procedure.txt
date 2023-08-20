@@ -1,0 +1,7 @@
+CREATE PROCEDURE usp_WithdrawMoney @AccountId INT, @MoneyAmount MONEY
+AS
+BEGIN
+    UPDATE Accounts
+    SET Balance -= @MoneyAmount
+    WHERE Id = @AccountId
+END
