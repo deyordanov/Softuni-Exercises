@@ -1,0 +1,7 @@
+    UPDATE UsersGames
+    SET Cash += 50000
+    WHERE GameId = (SELECT Games.Id FROM Games WHERE Name = 'Bali')
+      AND UserId IN (SELECT Users.Id
+                     FROM Users
+                     WHERE Username
+                               IN ('baleremuda', 'loosenoise', 'inguinalself', 'buildingdeltoid', 'monoxidecos'))
