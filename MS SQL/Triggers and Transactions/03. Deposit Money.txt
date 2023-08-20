@@ -1,0 +1,7 @@
+CREATE OR ALTER PROCEDURE usp_DepositMoney @AccountId INT, @MoneyAmount DECIMAL(18, 4)
+AS
+BEGIN
+    UPDATE Accounts
+    SET Balance += @MoneyAmount
+    WHERE Id = @AccountId
+END
