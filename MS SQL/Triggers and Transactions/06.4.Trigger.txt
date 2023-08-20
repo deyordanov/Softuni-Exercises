@@ -1,0 +1,6 @@
+SELECT u.Username, g.Name AS [Name], ug.Cash AS [Cash], i.Name AS [Item Name] FROM Users u
+JOIN UsersGames ug ON u.Id = ug.UserId
+JOIN UserGameItems ugi ON ug.GameId = ugi.UserGameId
+JOIN Items i ON ugi.ItemId = i.Id
+JOIN Games g ON ug.GameId = g.Id
+WHERE g.Name = 'Bali'
