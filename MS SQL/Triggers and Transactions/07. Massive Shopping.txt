@@ -1,0 +1,40 @@
+    DECLARE @itemsPrice MONEY = (SELECT SUM(Price) FROM Items WHERE MinLevel BETWEEN 11 AND 12)
+    DECLARE @userGameId INT = (SELECT Id FROM UsersGames WHERE UserId = 9 AND GameId = 87)
+    DECLARE @userCash MONEY = (SELECT Cash FROM UsersGames WHERE Id = @userGameId)
+
+IF(@userCash >= @itemsPrice)
+BEGIN
+   BEGIN TRANSACTION
+       UPDATE UsersGames
+       SET Cash -= @itemsPrice
+       WHERE Id = @userGameId
+
+        INSERT INTO UserGameItems (ItemId, UserGameId)
+        SELECT Id, @userGameId FROM Items WHERE MinLevel BETWEEN 11 AND 12
+    COMMIT
+END
+
+    SET @itemsPrice = (SELECT SUM(Price) FROM Items WHERE MinLevel BETWEEN 19 AND 21)
+    SET @userGameId = (SELECT Id FROM UsersGames WHERE UserId = 9 AND GameId = 87)
+    SET @userCash = (SELECT Cash FROM UsersGames WHERE Id = @userGameId)
+
+IF(@userCash >= @itemsPrice)
+BEGIN
+   BEGIN TRANSACTION
+        UPDATE UsersGames
+        SET Cash -= @itemsPrice
+        WHERE Id = @userGameId
+
+        INSERT INTO UserGameItems (ItemId, UserGameId)
+        SELECT Id, @userGameId FROM Items WHERE MinLevel BETWEEN 19 AND 21
+    COMMIT
+END
+
+SELECT i.Name AS [Item Name] FROM Users u
+JOIN UsersGames ug ON u.Id = ug.UserId
+JOIN UserGameItems ugi ON ug.GameId = ugi.UserGameId
+JOIN Items i ON ugi.ItemId = i.Id
+JOIN Games g ON ug.GameId = g.Id
+WHERE ugi.UserGameId = @userGameId
+ORDER BY i.Name
+
