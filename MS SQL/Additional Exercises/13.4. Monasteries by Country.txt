@@ -1,0 +1,7 @@
+SELECT m.Name        AS [Monastery],
+       c.CountryName AS [Country]
+FROM Monasteries m
+         INNER JOIN Countries c
+                    ON c.CountryCode = m.CountryCode
+WHERE c.IsDeleted = 0
+ORDER BY m.Name
