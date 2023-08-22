@@ -1,0 +1,6 @@
+CREATE TABLE Monasteries
+(
+    Id          INT           PRIMARY KEY IDENTITY,
+    Name        NVARCHAR(100) NOT NULL,
+    CountryCode CHAR(2) NOT NULL FOREIGN KEY REFERENCES Countries(CountryCode)
+)
