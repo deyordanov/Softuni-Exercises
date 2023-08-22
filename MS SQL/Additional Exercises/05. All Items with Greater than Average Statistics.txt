@@ -1,0 +1,13 @@
+SELECT i.Name, i.Price, i.MinLevel, s.Strength, s.Defence, s.Speed, s.Luck, s.Mind
+FROM Items i
+         LEFT JOIN [Statistics] s ON i.StatisticId = s.Id
+WHERE s.Mind > (SELECT SUM(Mind) / COUNT(Mind)
+                FROM [Statistics] s
+                WHERE s.Id IN (SELECT StatisticId FROM Items))
+  AND s.Luck > (SELECT SUM(Luck) / COUNT(Luck)
+                FROM [Statistics] s
+                WHERE s.Id IN (SELECT StatisticId FROM Items))
+  AND s.Speed > (SELECT SUM(Speed) / COUNT(Speed)
+                 FROM [Statistics] s
+                 WHERE s.Id IN (SELECT StatisticId FROM Items))
+ORDER BY i.Name
