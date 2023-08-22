@@ -1,0 +1,8 @@
+UPDATE Countries
+SET IsDeleted = 1
+WHERE CountryCode IN (SELECT c.CountryCode
+                      FROM Countries c
+                               LEFT JOIN CountriesRivers cr ON c.CountryCode = cr.CountryCode
+                               LEFT JOIN Rivers r ON cr.RiverId = r.Id
+                      GROUP BY(c.CountryCode)
+                      HAVING COUNT(r.RiverName) > 3)
