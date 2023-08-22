@@ -1,0 +1,3 @@
+ALTER TABLE Countries
+    ADD IsDeleted BIT NOT NULL
+        CONSTRAINT DF_IsDeleted DEFAULT 0
