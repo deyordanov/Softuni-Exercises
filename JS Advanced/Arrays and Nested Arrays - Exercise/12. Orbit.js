@@ -7,5 +7,3 @@ function solve([rows, cols, row, col]) {
   }
   console.log(matrix.map((arr) => arr.join(" ")).join("\n"));
 }
-
-solve([4, 4, 0, 0]);
