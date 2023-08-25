@@ -29,5 +29,3 @@ function solve(args) {
     console.log(result[0]);
   }
 }
-
-solve([15, "/"]);
