@@ -1,0 +1,33 @@
+﻿using AutoMapper;
+
+namespace CarDealer
+{
+    using Data;
+    using DTOs.Import;
+    using Models;
+
+    public class CarDealerProfile : Profile
+    {
+        public CarDealerProfile()
+        {
+            //IMPORT
+
+            //Supplier
+            this.CreateMap<ImportSupplierDto, Supplier>();
+
+            //Part
+            this.CreateMap<ImportPartDto, Part>();
+
+            //Car
+            CreateMap<ImportCarDto, Car>()
+                .ForMember(dest => dest.PartsCars,
+                    opt => opt.MapFrom(src => src
+                        .Parts
+                        .DistinctBy(x => x.PartId)
+                        .Select(pi => new PartCar()
+                        {
+                            PartId = pi.PartId,
+                        })));
+        }
+    }
+}
