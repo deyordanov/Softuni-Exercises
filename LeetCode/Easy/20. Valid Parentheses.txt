@@ -1,0 +1,12 @@
+public class Solution {
+    public bool IsValid(string s) {
+        Stack<char> stack = new Stack<char>();
+        foreach(char symbol in s){
+            if(symbol == '(') { stack.Push(')'); continue; };
+            if(symbol == '{') { stack.Push('}'); continue; };
+            if(symbol == '[') { stack.Push(']'); continue; };
+            if(stack.Count == 0 || symbol != stack.Pop()) { return false; };
+        }
+        return stack.Count == 0;
+    }
+}
