@@ -1,0 +1,17 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void DeleteNode(ListNode node) {
+        //if we have 4 5 1 9, we take 5 and make its' value 1
+        node.val = node.next.val;
+        //now we have 4 1 1 9, we need to change the current node's next reference
+        node.next = node.next.next;
+        //the result is 4 1 9, since we have skipped over one node by changing the reference
+    }
+}
