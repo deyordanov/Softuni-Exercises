@@ -1,0 +1,5 @@
+SELECT B.Id, B.Name, B.Yearpublished, C.Name
+FROM Boardgames B
+         JOIN Categories C ON B.Categoryid = C.Id
+WHERE C.Name IN ('Strategy Games', 'Wargames')
+ORDER BY B.Yearpublished DESC
