@@ -1,0 +1,8 @@
+SELECT C.Lastname, CEILING(AVG(B.Rating)) AS [AverageRating], P.Name AS [PublisherName]
+FROM Creatorsboardgames Cb
+         JOIN Creators C ON Cb.Creatorid = C.Id
+         JOIN Boardgames B ON Cb.Boardgameid = B.Id
+         JOIN Publishers P ON B.Publisherid = P.Id
+WHERE P.Name = 'Stonemaier Games'
+GROUP BY C.Lastname, P.Name
+ORDER BY AVG(B.Rating) DESC
