@@ -1,0 +1,7 @@
+SELECT TOP (5) B.Name, B.Rating, C.Name
+FROM Boardgames B
+         JOIN Playersranges Pr ON B.Playersrangeid = Pr.Id
+         JOIN Categories C ON B.Categoryid = C.Id
+WHERE B.Rating > 7.00 AND B.Name LIKE '%a%'
+   OR B.Rating > 7.50 AND Pr.Playersmin = 2 AND Pr.Playersmax = 5
+ORDER BY B.Name, B.Rating DESC
