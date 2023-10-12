@@ -1,0 +1,6 @@
+SELECT CONCAT(C.Firstname, ' ', C.Lastname), c.Email, MAX(b.Rating) AS [Name]
+FROM Creators C
+         JOIN Creatorsboardgames Cb ON C.Id = Cb.Creatorid
+         JOIN Boardgames B ON Cb.Boardgameid = B.Id
+WHERE Email LIKE '%.com'
+GROUP BY CONCAT(C.Firstname, ' ', C.Lastname), c.Email
