@@ -1,0 +1,11 @@
+CREATE FUNCTION Udf_Creatorwithboardgames(@Name NVARCHAR(30))
+    RETURNS INT
+AS
+BEGIN
+    DECLARE @Creatorid INT = (SELECT Id FROM Creators WHERE Firstname = @Name)
+    DECLARE @Result INT = (SELECT COUNT(*)
+                           FROM Creatorsboardgames Cb
+                                    JOIN Boardgames B ON Cb.Boardgameid = B.Id
+                           WHERE Cb.Creatorid = @Creatorid)
+    return @Result
+END
