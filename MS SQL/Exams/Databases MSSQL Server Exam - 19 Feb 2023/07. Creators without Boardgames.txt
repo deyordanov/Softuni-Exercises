@@ -1,0 +1,5 @@
+SELECT Id, Firstname + ' ' + Lastname AS [Name], Email
+FROM Creators
+WHERE Id NOT IN (SELECT Creatorid
+             FROM Creatorsboardgames)
+ORDER BY Name
