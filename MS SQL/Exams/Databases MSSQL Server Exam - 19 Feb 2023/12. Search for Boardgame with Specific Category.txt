@@ -1,0 +1,15 @@
+CREATE PROCEDURE Usp_Searchbycategory(@Category NVARCHAR(50))
+AS
+SELECT B.Name,
+       B.Yearpublished,
+       B.Rating,
+       C.Name,
+       P.Name,
+       CONCAT(Pr.Playersmin, ' ', 'people'),
+       CONCAT(Pr.Playersmax, ' ', 'people')
+FROM Boardgames B
+         JOIN Publishers P ON B.Publisherid = P.Id
+         JOIN Playersranges Pr ON B.Playersrangeid = Pr.Id
+         JOIN Categories C ON B.Categoryid = C.Id
+WHERE C.Name = @Category
+ORDER BY P.Name, B.Yearpublished DESC
