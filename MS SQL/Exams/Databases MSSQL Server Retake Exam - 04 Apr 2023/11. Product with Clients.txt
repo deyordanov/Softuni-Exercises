@@ -1,0 +1,12 @@
+CREATE FUNCTION dbo.udf_ProductWithClients(@name NVARCHAR(30))
+    RETURNS INT
+AS
+BEGIN
+    DECLARE @result INT = (SELECT COUNT(*)
+    FROM ProductsClients
+             JOIN Products p ON ProductsClients.ProductId = p.Id
+    WHERE p.Name = @name
+    GROUP BY p.Name)
+
+    RETURN @result
+END
