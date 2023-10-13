@@ -1,0 +1,6 @@
+SELECT TOP (7) i.Number, i.Amount, c.Name
+FROM Invoices i
+         JOIN Clients c ON i.ClientId = c.Id
+WHERE i.IssueDate < '2023-01-01' AND i.Currency = 'EUR'
+   OR i.Amount > 500.00 AND NumberVAT LIKE 'DE%'
+ORDER BY i.Number, i.Amount DESC
