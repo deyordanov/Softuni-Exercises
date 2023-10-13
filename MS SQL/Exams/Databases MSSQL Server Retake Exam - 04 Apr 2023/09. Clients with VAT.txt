@@ -1,0 +1,7 @@
+SELECT c.Name, MAX(p.Price) AS Price, c.NumberVAT
+FROM ProductsClients pc
+         JOIN Clients c ON pc.ClientId = c.Id
+         JOIN Products p ON pc.ProductId = p.Id
+WHERE c.Name NOT LIKE '%KG'
+GROUP BY c.Name, c.NumberVAT
+ORDER BY Price DESC
