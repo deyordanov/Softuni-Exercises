@@ -1,0 +1,8 @@
+SELECT c.Name, FLOOR(AVG(p.Price)) AS [Average Price]
+FROM Clients c
+         JOIN ProductsClients pc ON c.Id = pc.ClientId
+         JOIN Products p ON pc.ProductId = p.Id
+         JOIN Vendors v ON p.VendorId = v.Id
+WHERE v.NumberVAT LIKE '%FR%'
+GROUP BY c.Name
+ORDER BY [Average Price], c.Name DESC
