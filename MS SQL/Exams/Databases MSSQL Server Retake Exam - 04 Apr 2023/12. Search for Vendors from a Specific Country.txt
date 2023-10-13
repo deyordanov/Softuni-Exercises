@@ -1,0 +1,8 @@
+CREATE PROCEDURE usp_SearchByCountry(@country NVARCHAR(10))
+AS
+SELECT v.Name, v.NumberVAT, CONCAT(a.StreetName, ' ', a.StreetNumber), CONCAT(a.City, ' ', a.PostCode)
+FROM Vendors v
+         JOIN Addresses a ON v.AddressId = a.Id
+         JOIN Countries c ON a.CountryId = c.Id
+WHERE c.Name = @country
+ORDER BY v.Name, a.City
