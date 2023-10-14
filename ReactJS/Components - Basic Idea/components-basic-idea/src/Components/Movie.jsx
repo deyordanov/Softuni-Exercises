@@ -13,7 +13,7 @@ const Movie = ({ title, year, cast }) => {
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
   year: PropTypes.number.isRequired,
-  cast: PropTypes.object.isRequired,
+  cast: PropTypes.array.isRequired,
 };
 
 export default Movie;
