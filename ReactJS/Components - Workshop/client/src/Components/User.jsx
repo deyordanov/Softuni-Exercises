@@ -12,6 +12,7 @@ export default function User({
     createdAt,
     onInfoClick,
     onUserEdit,
+    onUserDelete,
 }) {
     return (
         <tr>
@@ -46,7 +47,11 @@ export default function User({
                         ></path>
                     </svg>
                 </button>
-                <button className="btn delete-btn" title="Delete">
+                <button
+                    onClick={() => onUserDelete(_id)}
+                    className="btn delete-btn"
+                    title="Delete"
+                >
                     <svg
                         aria-hidden="true"
                         focusable="false"
@@ -99,4 +104,5 @@ User.propTypes = {
     createdAt: PropTypes.string,
     onInfoClick: PropTypes.func,
     onUserEdit: PropTypes.func,
+    onUserDelete: PropTypes.func,
 };

@@ -5,12 +5,15 @@ import User from "./User";
 import UserDetails from "./UserDetails";
 import EditUser from "./EditUser";
 import * as userService from "../Services/userService";
+import DeleteUser from "./DeleteUser";
+import Pagination from "./Pagination";
 
 const ACTIONS = {
     USER_INFO: "user-info",
     USER_EXIT: "user-exit",
     USER_EDIT: "user-edit",
     USER_ADD: "user-add",
+    USER_DELETE: "user-delete",
 };
 
 function reducer(state, action) {
@@ -21,6 +24,7 @@ function reducer(state, action) {
                 info: true,
                 edit: false,
                 add: false,
+                delete: false,
             };
         case ACTIONS.USER_EXIT:
             return {
@@ -28,6 +32,7 @@ function reducer(state, action) {
                 info: false,
                 edit: false,
                 add: false,
+                delete: false,
             };
         case ACTIONS.USER_EDIT:
             return {
@@ -35,6 +40,7 @@ function reducer(state, action) {
                 info: false,
                 edit: true,
                 add: false,
+                delete: false,
             };
         case ACTIONS.USER_ADD:
             return {
@@ -42,6 +48,15 @@ function reducer(state, action) {
                 info: false,
                 edit: false,
                 add: true,
+                delete: false,
+            };
+        case ACTIONS.USER_DELETE:
+            return {
+                user: action.payload.user,
+                info: false,
+                edit: false,
+                add: false,
+                delete: true,
             };
     }
 }
@@ -52,6 +67,7 @@ export default function UserList({ users }) {
         info: false,
         edit: false,
         add: false,
+        delete: false,
     });
 
     const onInfoClick = async (userId) => {
@@ -85,6 +101,17 @@ export default function UserList({ users }) {
         dispatch({ type: ACTIONS.USER_ADD, payload: { user } });
     };
 
+    const onUserDelete = async (userId) => {
+        const user = await userService.getOne(userId);
+
+        dispatch({ type: ACTIONS.USER_DELETE, payload: { user } });
+    };
+
+    const handleDelete = async () => {
+        await userService.deleteOne(selectedUser.user._id);
+        onExitClick();
+    };
+
     return (
         <>
             {selectedUser.info && (
@@ -98,6 +125,14 @@ export default function UserList({ users }) {
             {selectedUser.add && (
                 <EditUser {...selectedUser.user} onExitClick={onExitClick} />
             )}
+
+            {selectedUser.delete && (
+                <DeleteUser
+                    handleDelete={handleDelete}
+                    onExitClick={onExitClick}
+                />
+            )}
+
             <div className="table-wrapper">
                 {/* Overlap components
             <div className="loading-shade">
@@ -265,6 +300,7 @@ export default function UserList({ users }) {
                                 {...user}
                                 onInfoClick={onInfoClick}
                                 onUserEdit={onUserEdit}
+                                onUserDelete={onUserDelete}
                             />
                         ))}
                     </tbody>
@@ -273,6 +309,7 @@ export default function UserList({ users }) {
             <button onClick={() => onUserAdd()} className="btn-add btn">
                 Add new user
             </button>
+            <Pagination />
         </>
     );
 }

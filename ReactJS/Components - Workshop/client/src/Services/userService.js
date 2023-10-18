@@ -23,13 +23,13 @@ export const updateOne = async (userId, formData) => {
 };
 
 export const createOne = async (user) => {
-    const response = await fetch(baseUrl, {
+    await fetch(baseUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
     });
+};
 
-    const data = await response.json();
-
-    console.log(data);
+export const deleteOne = async (userId) => {
+    await fetch(`${baseUrl}/${userId}`, { method: "DELETE" });
 };
