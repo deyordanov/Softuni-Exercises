@@ -84,6 +84,7 @@ export default function UserList({ users, setUsers }) {
 
     const handleDelete = async () => {
         await userService.deleteOne(selectedUser.user._id);
+        setUsers(await userService.getAll());
         onExitClick();
     };
 
@@ -222,7 +223,8 @@ export default function UserList({ users, setUsers }) {
             <button onClick={() => onUserAdd()} className="btn-add btn">
                 Add new user
             </button>
-            <Pagination />
+            {/* FIX -> USERS FETCH */}
+            <Pagination setUsers={setUsers} />
         </>
     );
 }
