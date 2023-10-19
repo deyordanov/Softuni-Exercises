@@ -22,16 +22,27 @@ function App() {
             .catch((err) => {
                 console.log(err);
             });
-    }, [users]);
+    }, []);
+
+    async function handleSearch(criteria, value) {
+        const users = await userService.getAll();
+        setUsers(
+            users.filter((u) => (value === "" ? true : u[criteria] === value))
+        );
+    }
 
     return (
         <>
             <Header />
             <main className="main">
                 <section className="card users-container">
-                    <SearchBar />
+                    <SearchBar handleSearch={handleSearch} />
 
-                    <UserList users={users} />
+                    <UserList
+                        users={users}
+                        handleSearch={handleSearch}
+                        setUsers={setUsers}
+                    />
                 </section>
             </main>
             <Footer />

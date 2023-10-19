@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 
 import inputValidator from "../Utils/inputValidator";
@@ -14,6 +14,22 @@ export default function EditComponent({
     formData,
 }) {
     const [error, setError] = useState(false);
+
+    //Handle validation has to be wrapper in a callback hook
+    const handleValidation = useCallback(
+        (e) => {
+            const isValid = inputValidator(type, e.currentTarget.value);
+            setCanSubmit(!isValid);
+            setError(isValid);
+        },
+        [type, setCanSubmit, setError]
+    );
+
+    //On load validation
+    useEffect(() => {
+        handleValidation({ currentTarget: { value: value || "" } });
+    }, [handleValidation, label, value]);
+
     return (
         <>
             <label htmlFor={type}>{label}</label>
@@ -26,16 +42,7 @@ export default function EditComponent({
                     name={type}
                     type="text"
                     defaultValue={value}
-                    onInput={(e) => {
-                        {
-                            setCanSubmit(
-                                !inputValidator(type, e.currentTarget.value)
-                            );
-                            setError(
-                                inputValidator(type, e.currentTarget.value)
-                            );
-                        }
-                    }}
+                    onInput={(e) => handleValidation(e)}
                     onChange={(e) =>
                         setFormData({
                             ...formData,
@@ -50,7 +57,7 @@ export default function EditComponent({
 }
 
 EditComponent.propTypes = {
-    value: PropTypes.string,
+    value: PropTypes.any,
     label: PropTypes.string,
     type: PropTypes.string,
     setCanSubmit: PropTypes.func,
