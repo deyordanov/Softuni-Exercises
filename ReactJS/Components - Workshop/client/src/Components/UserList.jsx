@@ -7,83 +7,55 @@ import EditUser from "./EditUser";
 import * as userService from "../Services/userService";
 import DeleteUser from "./DeleteUser";
 import Pagination from "./Pagination";
+import ArrowDownSvg from "./ArrowDownSvg";
 
+const VIEWS = {
+    INFO: "info",
+    EDIT: "edit",
+    ADD: "add",
+    DELETE: "delete",
+    NONE: "none",
+};
 const ACTIONS = {
-    USER_INFO: "user-info",
-    USER_EXIT: "user-exit",
-    USER_EDIT: "user-edit",
-    USER_ADD: "user-add",
-    USER_DELETE: "user-delete",
+    USER_SET_VIEW: "set-view",
 };
 
 function reducer(state, action) {
     switch (action.type) {
-        case ACTIONS.USER_INFO:
+        case ACTIONS.USER_SET_VIEW:
             return {
+                view: action.payload.view,
                 user: action.payload.user,
-                info: true,
-                edit: false,
-                add: false,
-                delete: false,
-            };
-        case ACTIONS.USER_EXIT:
-            return {
-                user: action.payload.user,
-                info: false,
-                edit: false,
-                add: false,
-                delete: false,
-            };
-        case ACTIONS.USER_EDIT:
-            return {
-                user: action.payload.user,
-                info: false,
-                edit: true,
-                add: false,
-                delete: false,
-            };
-        case ACTIONS.USER_ADD:
-            return {
-                user: action.payload.user,
-                info: false,
-                edit: false,
-                add: true,
-                delete: false,
-            };
-        case ACTIONS.USER_DELETE:
-            return {
-                user: action.payload.user,
-                info: false,
-                edit: false,
-                add: false,
-                delete: true,
             };
     }
 }
 
-export default function UserList({ users }) {
+export default function UserList({ users, setUsers }) {
     const [selectedUser, dispatch] = useReducer(reducer, {
+        view: "none",
         user: null,
-        info: false,
-        edit: false,
-        add: false,
-        delete: false,
     });
 
     const onInfoClick = async (userId) => {
         const user = await userService.getOne(userId);
+        const view = VIEWS.INFO;
 
-        dispatch({ type: ACTIONS.USER_INFO, payload: { user } });
+        dispatch({ type: ACTIONS.USER_SET_VIEW, payload: { user, view } });
     };
 
     const onExitClick = () => {
-        dispatch({ type: ACTIONS.USER_EXIT, payload: { user: null } });
+        const view = VIEWS.NONE;
+        dispatch({
+            type: ACTIONS.USER_SET_VIEW,
+            payload: { user: null, view },
+        });
     };
 
     const onUserEdit = async (userId) => {
         const user = await userService.getOne(userId);
+        const view = VIEWS.EDIT;
 
-        dispatch({ type: ACTIONS.USER_EDIT, payload: { user } });
+        dispatch({ type: ACTIONS.USER_SET_VIEW, payload: { user, view } });
     };
 
     const onUserAdd = async () => {
@@ -98,13 +70,16 @@ export default function UserList({ users }) {
             add: true,
         };
 
-        dispatch({ type: ACTIONS.USER_ADD, payload: { user } });
+        const view = VIEWS.ADD;
+
+        dispatch({ type: ACTIONS.USER_SET_VIEW, payload: { user, view } });
     };
 
     const onUserDelete = async (userId) => {
         const user = await userService.getOne(userId);
+        const view = VIEWS.DELETE;
 
-        dispatch({ type: ACTIONS.USER_DELETE, payload: { user } });
+        dispatch({ type: ACTIONS.USER_SET_VIEW, payload: { user, view } });
     };
 
     const handleDelete = async () => {
@@ -114,19 +89,27 @@ export default function UserList({ users }) {
 
     return (
         <>
-            {selectedUser.info && (
+            {selectedUser.view === VIEWS.INFO && (
                 <UserDetails {...selectedUser.user} onExitClick={onExitClick} />
             )}
 
-            {selectedUser.edit && (
-                <EditUser {...selectedUser.user} onExitClick={onExitClick} />
+            {selectedUser.view === VIEWS.EDIT && (
+                <EditUser
+                    {...selectedUser.user}
+                    onExitClick={onExitClick}
+                    setUsers={setUsers}
+                />
             )}
 
-            {selectedUser.add && (
-                <EditUser {...selectedUser.user} onExitClick={onExitClick} />
+            {selectedUser.view === VIEWS.ADD && (
+                <EditUser
+                    {...selectedUser.user}
+                    onExitClick={onExitClick}
+                    setUsers={setUsers}
+                />
             )}
 
-            {selectedUser.delete && (
+            {selectedUser.view === VIEWS.DELETE && (
                 <DeleteUser
                     handleDelete={handleDelete}
                     onExitClick={onExitClick}
@@ -202,93 +185,23 @@ export default function UserList({ users }) {
                             <th>Image</th>
                             <th>
                                 First name
-                                <svg
-                                    className="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="arrow-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
-                                    ></path>
-                                </svg>
+                                <ArrowDownSvg />
                             </th>
                             <th>
                                 Last name
-                                <svg
-                                    className="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="arrow-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
-                                    ></path>
-                                </svg>
+                                <ArrowDownSvg />
                             </th>
                             <th>
                                 Email
-                                <svg
-                                    className="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="arrow-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
-                                    ></path>
-                                </svg>
+                                <ArrowDownSvg />
                             </th>
                             <th>
                                 Phone
-                                <svg
-                                    className="icon svg-inline--fa fa-arrow-down Table_icon__+HHgn"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="arrow-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
-                                    ></path>
-                                </svg>
+                                <ArrowDownSvg />
                             </th>
                             <th>
                                 Created
-                                <svg
-                                    className="icon activ svg-inline--fa fa-arrow-down Table_icon__+HHgne-icon"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                    data-prefix="fas"
-                                    data-icon="arrow-down"
-                                    role="img"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M374.6 310.6l-160 160C208.4 476.9 200.2 480 192 480s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 370.8V64c0-17.69 14.33-31.1 31.1-31.1S224 46.31 224 64v306.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0S387.1 298.1 374.6 310.6z"
-                                    ></path>
-                                </svg>
+                                <ArrowDownSvg />
                             </th>
                             <th>Actions</th>
                         </tr>
@@ -316,4 +229,5 @@ export default function UserList({ users }) {
 
 UserList.propTypes = {
     users: PropTypes.array,
+    setUsers: PropTypes.func,
 };

@@ -18,15 +18,39 @@ export const updateOne = async (userId, formData) => {
     await fetch(`${baseUrl}/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+            address: {
+                country: formData.country,
+                city: formData.city,
+                street: formData.street,
+                streetNumber: formData.streetNumber,
+            },
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            imageUrl: formData.imageUrl,
+            phoneNumber: formData.phoneNumber,
+        }),
     });
 };
 
-export const createOne = async (user) => {
+export const createOne = async (formData) => {
     await fetch(baseUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
+        body: JSON.stringify({
+            address: {
+                country: formData.country,
+                city: formData.city,
+                street: formData.street,
+                streetNumber: formData.streetNumber,
+            },
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            imageUrl: formData.imageUrl,
+            phoneNumber: formData.phoneNumber,
+        }),
     });
 };
 
