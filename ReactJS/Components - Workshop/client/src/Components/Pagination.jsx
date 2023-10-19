@@ -1,7 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import PropTypes from "prop-types";
 
-export default function Pagination() {
+import * as userService from "../Services/userService";
+
+export default function Pagination({ setUsers }) {
     const [limit, setLimit] = useState(5);
+    const [page, setPage] = useState(1);
+    const [maxPages, setMaxPages] = useState(1);
+    const [usersCount, setUsersCount] = useState(0);
+
+    //Load users when the page is changed
+    const handlePage = (page) => {
+        setPage(page);
+        userService
+            .getByPage(page, limit, "", "", "", "")
+            .then((data) => setUsers(data.users));
+    };
+
+    //Getting the count of all users
+    useEffect(() => {
+        userService.getCount().then((data) => setUsersCount(data));
+    }, []);
+
+    //Setting the number of max pages when the limit / usersCount is changed
+    useEffect(() => {
+        setMaxPages(Math.ceil(usersCount / limit));
+    }, [usersCount, limit]);
+
+    //Loading in the users per page
+    useEffect(() => {
+        userService.getByPage(page, limit, "", "", "", "").then((data) => {
+            setUsers(data.users);
+        });
+    }, [page, limit, setUsers]);
 
     return (
         <section>
@@ -22,7 +53,12 @@ export default function Pagination() {
                 </div>
                 <p className="pages">1 - 1 of 1</p>
                 <div className="actions">
-                    <button className="btn" title="First Page">
+                    <button
+                        onClick={() => handlePage(1)}
+                        className="btn"
+                        title="First Page"
+                        disabled={page === 1}
+                    >
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -40,7 +76,12 @@ export default function Pagination() {
                         </svg>
                     </button>
 
-                    <button className="btn" title="Previous Page">
+                    <button
+                        onClick={() => handlePage(page - 1)}
+                        className="btn"
+                        title="Previous Page"
+                        disabled={page === 1}
+                    >
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -57,7 +98,12 @@ export default function Pagination() {
                             ></path>
                         </svg>
                     </button>
-                    <button className="btn" title="Next Page">
+                    <button
+                        onClick={() => handlePage(page + 1)}
+                        className="btn"
+                        title="Next Page"
+                        disabled={page === maxPages}
+                    >
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -75,7 +121,12 @@ export default function Pagination() {
                         </svg>
                     </button>
 
-                    <button className="btn" title="Last Page">
+                    <button
+                        onClick={() => handlePage(maxPages)}
+                        className="btn"
+                        title="Last Page"
+                        disabled={page === maxPages}
+                    >
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -97,3 +148,8 @@ export default function Pagination() {
         </section>
     );
 }
+
+Pagination.propTypes = {
+    usersCount: PropTypes.number,
+    handlePageLoading: PropTypes.func,
+};
