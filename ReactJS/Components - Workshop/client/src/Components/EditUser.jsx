@@ -14,6 +14,7 @@ export default function EditUser({
     address,
     add,
     onExitClick,
+    setUsers,
 }) {
     //Error handling -> submit
     const [canSubmit, setCanSubmit] = useState(true);
@@ -29,32 +30,16 @@ export default function EditUser({
         streetNumber: address.streetNumber,
     });
 
-    //    country: string,
-    // city: string;
-    // street: string;
-    // streetNumber: number;
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         //Not the best way to seperate the post / put requests
-        if (add) {
-            console.log("ADDING");
-            userService.createOne({
-                address: {
-                    country: formData.country,
-                    city: formData.city,
-                    street: formData.street,
-                    streetNumber: formData.streetNumber,
-                },
-                firstName: formData.firstName,
-                lastName: formData.lastName,
-                email: formData.email,
-                imageUrl: formData.imageUrl,
-                phoneNumber: formData.phoneNumber,
-            });
+        if (add && canSubmit) {
+            userService.createOne(formData);
+            setUsers(await userService.getAll());
             onExitClick();
         } else if (canSubmit) {
             userService.updateOne(_id, formData);
+            setUsers(await userService.getAll());
             onExitClick();
         }
     };
@@ -227,4 +212,5 @@ EditUser.propTypes = {
     address: PropTypes.object,
     onExitClick: PropTypes.func,
     add: PropTypes.bool,
+    setUsers: PropTypes.func,
 };

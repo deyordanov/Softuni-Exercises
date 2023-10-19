@@ -1,6 +1,12 @@
-export default function SearchBar() {
+import { useState } from "react";
+import PropTypes from "prop-types";
+
+export default function SearchBar({ handleSearch }) {
+    const [input, setInput] = useState("");
+    const [criteria, setCriteria] = useState("");
+
     return (
-        <form className="search-form">
+        <form onSubmit={(e) => e.preventDefault()} className="search-form">
             <h2>
                 <svg
                     aria-hidden="true"
@@ -24,13 +30,23 @@ export default function SearchBar() {
                     type="text"
                     placeholder="Please, select the search criteria"
                     name="search"
+                    value={input}
+                    onInput={(e) => setInput(e.currentTarget.value)}
                 />
                 {/* <!-- Show the clear button only if input field length !== 0 --> */}
-                <button className="btn close-btn">
-                    <i className="fa-solid fa-xmark"></i>
-                </button>
+                {input.length > 0 && (
+                    <button
+                        onClick={() => setInput("")}
+                        className="btn close-btn"
+                    >
+                        <i className="fa-solid fa-xmark"></i>
+                    </button>
+                )}
 
                 <button
+                    onClick={() => {
+                        handleSearch(criteria, input);
+                    }}
                     className="btn"
                     title="Please, select the search criteria"
                 >
@@ -40,14 +56,22 @@ export default function SearchBar() {
 
             <div className="filter">
                 <span>Search Criteria:</span>
-                <select name="criteria" className="criteria">
-                    <option value="">Not selected</option>
-                    <option value="">First Name</option>
-                    <option value="">Last Name</option>
-                    <option value="">Email</option>
-                    <option value="">Phone</option>
+                <select
+                    onChange={(e) => setCriteria(e.currentTarget.value)}
+                    name="criteria"
+                    className="criteria"
+                >
+                    <option value="not-selected">Not selected</option>
+                    <option value="firstName">First Name</option>
+                    <option value="lastName">Last Name</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
                 </select>
             </div>
         </form>
     );
 }
+
+SearchBar.propTypes = {
+    handleSearch: PropTypes.func,
+};
