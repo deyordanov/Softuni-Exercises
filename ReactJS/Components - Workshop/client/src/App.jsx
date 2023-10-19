@@ -25,7 +25,12 @@ function App() {
     }, []);
 
     async function handleSearch(criteria, value) {
+        console.log("searching...");
         const users = await userService.getAll();
+        console.log(users);
+        console.log(
+            users.filter((u) => (value === "" ? true : u[criteria] === value))
+        );
         setUsers(
             users.filter((u) => (value === "" ? true : u[criteria] === value))
         );
