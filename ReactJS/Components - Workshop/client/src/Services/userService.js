@@ -57,3 +57,25 @@ export const createOne = async (formData) => {
 export const deleteOne = async (userId) => {
     await fetch(`${baseUrl}/${userId}`, { method: "DELETE" });
 };
+
+export const getCount = async () => {
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+
+    return data.count;
+};
+
+export const getByPage = async (
+    pageNumber,
+    pageLimit,
+    searchTerm,
+    criteria,
+    sort,
+    order
+) => {
+    const queryString = `?page=${pageNumber}&limit=${pageLimit}&search=${searchTerm}&criteria=${criteria}&sort=${sort}&order=${order}`;
+    const response = await fetch(`${baseUrl}${queryString}`);
+    const data = response.json();
+
+    return data;
+};
