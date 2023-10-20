@@ -2,66 +2,28 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const [username, setUsername] = useState("nanami.god");
-  const [password, setPassword] = useState("nanamiiscool");
-  const [occupation, setOccupation] = useState("sorcerer");
-  const [gender, setGender] = useState("male");
-  const [experience, setExperience] = useState("None");
-  const [grade, setGrade] = useState("grade4");
+  const [formValues, setFormValues] = useState({
+    username: "nanami.god",
+    password: "nanamiiscool",
+    occupation: "sorcerer",
+    gender: "male",
+    "previous-experience": "None",
+    grade: "grade4",
+  });
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setUsername("megumi.dog");
+  //   }, 3000);
+  // }, []);
+
+  const onChangeHandler = (e) => {
+    setFormValues((state) => ({ ...state, [e.target.name]: e.target.value }));
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-      setUsername("megumi.dog");
-    }, 3000);
-  }, []);
-
-  const onUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(username);
-  // }, [username]);
-
-  const onPasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(password);
-  // }, [password]);
-
-  const onOccupationChange = (e) => {
-    setOccupation(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(occupation);
-  // }, [occupation]);
-
-  const onGenderChange = (e) => {
-    setGender(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(gender);
-  // }, [gender]);
-
-  const onExperienceChange = (e) => {
-    setExperience(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(experience);
-  // }, [experience]);
-
-  const onGradeChange = (e) => {
-    setGrade(e.target.value);
-  };
-
-  // useEffect(() => {
-  //   console.log(grade);
-  // }, [grade]);
+    console.log(JSON.stringify(formValues));
+  }, [formValues]);
 
   //Controlled form -> 'value" + 'onChange'
   //Controlled select -> 'value' + 'onChange'
@@ -71,8 +33,8 @@ function App() {
         <div>
           <label htmlFor="username">Username </label>
           <input
-            value={username}
-            onChange={onUsernameChange}
+            value={formValues.username}
+            onChange={onChangeHandler}
             type="text"
             name="username"
             id="username"
@@ -81,32 +43,20 @@ function App() {
         <div>
           <label htmlFor="password">Password </label>
           <input
-            value={password}
-            onChange={onPasswordChange}
+            value={formValues.password}
+            onChange={onChangeHandler}
             type="password"
             name="password"
             id="password"
           />
         </div>
 
-        {/* {username === "nanamikento" ? <p>Hello there!</p> : <p>No!</p>} */}
-
-        {/* Uncontrolled Select */}
-        {/* <div>
-          <label htmlFor="occupation">Occupation </label>
-          <select name="occupation" id="occupation" defaultValue="sorcerer">
-            <option value="sorcerer">Sorcerer</option>
-            <option value="curse">Curse</option>
-            <option value="assistant">Assistant</option>
-          </select>
-        </div> */}
-
         {/* Controlled Select */}
         <div>
           <label htmlFor="occupation">Occupation </label>
           <select
-            value={occupation}
-            onChange={onOccupationChange}
+            value={formValues.occupation}
+            onChange={onChangeHandler}
             name="occupation"
             id="occupation"
           >
@@ -124,8 +74,8 @@ function App() {
             name="gender"
             id="male"
             value="male"
-            checked={gender === "male"}
-            onChange={onGenderChange}
+            checked={formValues.gender === "male"}
+            onChange={onChangeHandler}
           />
           <label htmlFor="female">Female</label>
           <input
@@ -133,8 +83,8 @@ function App() {
             name="gender"
             id="female"
             value="female"
-            checked={gender === "female"}
-            onChange={onGenderChange}
+            checked={formValues.gender === "female"}
+            onChange={onChangeHandler}
           />
         </div>
 
@@ -146,8 +96,8 @@ function App() {
             id="previous-experience"
             cols="30"
             rows="6"
-            value={experience}
-            onChange={onExperienceChange}
+            value={formValues.experience}
+            onChange={onChangeHandler}
           ></textarea>
         </div>
 
@@ -158,50 +108,50 @@ function App() {
 
       {/* Controlled Checkboxes */}
       <div>
-        <label htmlFor="grade4"> Grade 4 </label>
+        <label htmlFor="grade"> Grade 4 </label>
         <input
           type="checkbox"
-          name="grade4"
+          name="grade"
           id="grade4"
           value="grade4"
-          checked={grade === "grade4"}
-          onChange={onGradeChange}
+          checked={formValues.grade === "grade4"}
+          onChange={onChangeHandler}
         />
         <label htmlFor="grade3"> Grade 3 </label>
         <input
           type="checkbox"
-          name="grade3"
+          name="grade"
           id="grade3"
           value="grade3"
-          checked={grade === "grade3"}
-          onChange={onGradeChange}
+          checked={formValues.grade === "grade3"}
+          onChange={onChangeHandler}
         />
         <label htmlFor="grade2"> Grade 2 </label>
         <input
           type="checkbox"
-          name="grade2"
+          name="grade"
           id="grade2"
           value="grade2"
-          checked={grade === "grade2"}
-          onChange={onGradeChange}
+          checked={formValues.grade === "grade2"}
+          onChange={onChangeHandler}
         />
         <label htmlFor="grade1"> Grade 1 </label>
         <input
           type="checkbox"
-          name="grade1"
+          name="grade"
           id="grade1"
           value="grade1"
-          checked={grade === "grade1"}
-          onChange={onGradeChange}
+          checked={formValues.grade === "grade1"}
+          onChange={onChangeHandler}
         />
         <label htmlFor="special-grade"> Special Grade </label>
         <input
           type="checkbox"
-          name="special-grade"
+          name="grade"
           id="special-grade"
           value="special-grade"
-          checked={grade === "special-grade"}
-          onChange={onGradeChange}
+          checked={formValues.grade === "special-grade"}
+          onChange={onChangeHandler}
         />
       </div>
     </>
