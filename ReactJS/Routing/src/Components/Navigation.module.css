@@ -1,0 +1,16 @@
+.navigation {
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navigation li:hover {
+    text-decoration: underline;
+}
+
+.nav-active {
+    border: 2px solid white;
+}
