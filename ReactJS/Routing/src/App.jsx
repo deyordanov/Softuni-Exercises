@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Error from "./Components/Error";
-import Navigation from "./Components/Navigation";
+import MainNavigation from "./Components/MainNavigation";
 import CharacterList from "./Components/CharacterList";
 import Character from "./Components/Character";
 import Movie from "./Components/Movie";
@@ -13,7 +13,7 @@ import Vehicle from "./Components/Vehicle";
 function App() {
     return (
         <>
-            <Navigation />
+            <MainNavigation />
             <Routes>
                 <Route path="*" element={<Error />} />
                 <Route path="/" element={<Home />} />
