@@ -16,5 +16,9 @@ export default function Movie() {
             });
     }, [movieId]);
 
-    return <h1>{movie.title}</h1>;
+    return (
+        <h1>
+            {movie.title} - {movie["release_date"]}
+        </h1>
+    );
 }
