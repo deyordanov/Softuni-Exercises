@@ -16,6 +16,7 @@ export const getOne = async (gameId) => {
 };
 
 export const create = async (data) => {
+    //Remapping the object since the properties have different names
     data = {
         title: data.title,
         imageUrl: data.imageUrl,

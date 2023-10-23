@@ -17,15 +17,10 @@ export const request = async (method, headers, body, url) => {
     }
 };
 
-export const get = request.bind(
-    null,
-    "GET",
-    { "Content-Type": "json/application" },
-    {}
-);
+export const get = request.bind(null, "GET", {}, {});
 
 export const post = request.bind(null, "POST", {
-    "Content-Type": "json/application",
+    "content-type": "application/json",
 });
 
 //..........
