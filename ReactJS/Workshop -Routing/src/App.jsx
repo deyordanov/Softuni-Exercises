@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Header from "./Components/Header/Header";
@@ -14,6 +14,7 @@ import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
 
 function App() {
     const [games, setGames] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         gameService
@@ -28,6 +29,8 @@ function App() {
         const newGame = await gameService.create(data);
 
         setGames((state) => [...state, newGame]);
+
+        navigate("/catalogue");
     };
 
     return (
