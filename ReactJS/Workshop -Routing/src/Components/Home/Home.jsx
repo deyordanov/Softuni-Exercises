@@ -1,22 +1,22 @@
 export default function Home() {
-  return (
-    <section id="welcome-world">
-      <div className="welcome-message">
-        <h2>ALL new games are</h2>
-        <h3>Only in GamesPlay</h3>
-      </div>
-      <img
-        src="./images/DBD-Alien.png"
-        alt="hero"
-        width={"900px"}
-        height={"900px"}
-      />
+    return (
+        <section id="welcome-world">
+            <div className="welcome-message">
+                <h2>ALL new games are</h2>
+                <h3>Only in GamesPlay</h3>
+            </div>
+            <img
+                src="./images/DBD-Alien.png"
+                alt="hero"
+                width={"900px"}
+                height={"900px"}
+            />
 
-      <div id="home-page">
-        <h1>Latest Games</h1>
+            <div id="home-page">
+                <h1>Latest Games</h1>
 
-        {/* <!-- Display div: with information about every game (if any) --> */}
-        <div className="game">
+                {/* <!-- Display div: with information about every game (if any) --> */}
+                {/* <div className="game">
           <div className="image-wrap">
             <img src="./images/CoverFire.png" />
           </div>
@@ -69,11 +69,11 @@ export default function Home() {
               Details
             </a>
           </div>
-        </div>
+        </div> */}
 
-        {/* <!-- Display paragraph: If there is no games  --> */}
-        <p className="no-articles">No games yet</p>
-      </div>
-    </section>
-  );
+                {/* <!-- Display paragraph: If there is no games  --> */}
+                <p className="no-articles">No games yet</p>
+            </div>
+        </section>
+    );
 }
