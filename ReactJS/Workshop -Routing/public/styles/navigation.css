@@ -18,7 +18,6 @@ body {
 
 header,
 footer {
-    background-color: #29303c;
     width: 100%;
     overflow: hidden;
     color: white;
@@ -36,7 +35,6 @@ header {
 
 header h1 {
     display: inline-block;
-    background-color: #29303c;
     color: white;
     margin-bottom: auto;
 }
@@ -50,6 +48,7 @@ header nav {
 }
 
 header nav > * {
+    font-size: 20px;
     float: left;
 }
 

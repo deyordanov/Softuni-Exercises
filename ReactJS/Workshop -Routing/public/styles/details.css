@@ -8,7 +8,7 @@
     transition: all 0.4s;
 }
 
-#game-details>h1 {
+#game-details > h1 {
     color: #fff;
     font-family: "Agency FB";
     font-size: 55px;
@@ -34,14 +34,14 @@
     height: 40%;
 }
 
-.game_header>h1 {
+.game_header > h1 {
     color: black;
     margin-top: 5px;
     font-size: 36px;
     font-weight: 400;
 }
 
-.game_header>h4 {
+.game_header > h4 {
     color: #555;
     font-size: 23px;
     font-weight: 400;
@@ -65,16 +65,17 @@
 }
 
 .game-img {
-    position: relative;
+    object-fit: cover;
     float: left;
     margin-left: 15px;
     margin-right: 22px;
-    height: 220px;
+    height: 160px;
+    width: 150px;
     border-radius: 50%;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
-.info-section>.text {
+.info-section > .text {
     margin-top: 30px;
     padding: 60px;
     height: 50%;
@@ -123,4 +124,3 @@
     background-color: #6f5d9c;
     color: white;
 }
-

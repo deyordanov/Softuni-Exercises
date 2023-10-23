@@ -7,11 +7,10 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Create from "./Components/Create/Create";
-import Edit from "./Components/Edit/Edit";
-import Details from "./Components/Details/Details";
 import Catalogue from "./Components/Catalogue/Catalogue";
 
 import * as gameService from "./Services/gameService";
+import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
 
 function App() {
     const [games, setGames] = useState([]);
@@ -20,11 +19,16 @@ function App() {
         gameService
             .getAll()
             .then((data) => {
-                console.log(data);
                 setGames(data);
             })
             .catch((error) => console.log(error));
     }, []);
+
+    const onCreateSubmit = async (data) => {
+        const newGame = await gameService.create(data);
+
+        setGames((state) => [...state, newGame]);
+    };
 
     return (
         <>
@@ -36,8 +40,18 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />}></Route>
                     <Route path="/register" element={<Register />}></Route>
-                    <Route path="/create" element={<Create />}></Route>
-                    <Route path="/catalogue" element={<Catalogue />}></Route>
+                    <Route
+                        path="/create"
+                        element={<Create onCreateSubmit={onCreateSubmit} />}
+                    ></Route>
+                    <Route
+                        path="/catalogue"
+                        element={<Catalogue games={games} />}
+                    ></Route>
+                    <Route
+                        path="/catalogue/:gameId"
+                        element={<Details />}
+                    ></Route>
                 </Routes>
             </div>
         </>
