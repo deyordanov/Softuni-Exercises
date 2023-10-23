@@ -1,47 +1,88 @@
-export default function Create() {
-  return (
-    <section id="create-page" className="auth">
-      <form id="create">
-        <div className="container">
-          <h1>Create Game</h1>
-          <label htmlFor="leg-title">Legendary title:</label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Enter game title..."
-          />
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-          <label htmlFor="category">Category:</label>
-          <input
-            type="text"
-            id="category"
-            name="category"
-            placeholder="Enter game category..."
-          />
+export default function Create({ onCreateSubmit }) {
+    const [data, setData] = useState({
+        title: "",
+        category: "",
+        maxLevel: "",
+        imageUrl: "",
+        summary: "",
+    });
 
-          <label htmlFor="levels">MaxLevel:</label>
-          <input
-            type="number"
-            id="maxLevel"
-            name="maxLevel"
-            min="1"
-            placeholder="1"
-          />
+    const onChangeHandler = (e) => {
+        setData((state) => ({ ...state, [e.target.name]: e.target.value }));
+    };
 
-          <label htmlFor="game-img">Image:</label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            placeholder="Upload a photo..."
-          />
+    const onSubmit = (e) => {
+        e.preventDefault();
+        onCreateSubmit(data);
+    };
 
-          <label htmlFor="summary">Summary:</label>
-          <textarea name="summary" id="summary"></textarea>
-          <input className="btn submit" type="submit" value="Create Game" />
-        </div>
-      </form>
-    </section>
-  );
+    return (
+        <section id="create-page" className="auth">
+            <form id="create" onSubmit={onSubmit}>
+                <div className="container">
+                    <h1>Create Game</h1>
+                    <label htmlFor="leg-title">Legendary title:</label>
+                    <input
+                        value={data.title}
+                        onChange={onChangeHandler}
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Enter game title..."
+                    />
+
+                    <label htmlFor="category">Category:</label>
+                    <input
+                        value={data.category}
+                        onChange={onChangeHandler}
+                        type="text"
+                        id="category"
+                        name="category"
+                        placeholder="Enter game category..."
+                    />
+
+                    <label htmlFor="levels">MaxLevel:</label>
+                    <input
+                        value={data.maxLevel}
+                        onChange={onChangeHandler}
+                        type="number"
+                        id="maxLevel"
+                        name="maxLevel"
+                        min="1"
+                        placeholder="1"
+                    />
+
+                    <label htmlFor="game-img">Image:</label>
+                    <input
+                        value={data.imageUrl}
+                        onChange={onChangeHandler}
+                        type="text"
+                        id="imageUrl"
+                        name="imageUrl"
+                        placeholder="Upload a photo..."
+                    />
+
+                    <label htmlFor="summary">Summary:</label>
+                    <textarea
+                        value={data.summary}
+                        onChange={onChangeHandler}
+                        name="summary"
+                        id="summary"
+                    ></textarea>
+                    <input
+                        className="btn submit"
+                        type="submit"
+                        value="Create Game"
+                    />
+                </div>
+            </form>
+        </section>
+    );
 }
+
+Create.propTypes = {
+    onCreateSubmit: PropTypes.func,
+};
