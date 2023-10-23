@@ -7,13 +7,6 @@
         "description": "An action-adventure game set in an open world where players can explore the landscape of Hyrule and defeat the evil Calamity Ganon."
     },
     {
-        "name": "Super Mario Odyssey",
-        "imageUrl": "https://assets1.ignimgs.com/2017/09/01/super-mario-odyssey-button-fin-1504225715322.jpg",
-        "maxLevel": 50,
-        "genres": "Platformer, Adventure",
-        "description": "Join Mario on a globe-trotting 3D adventure and use his new abilities to collect Moons and power up the Odyssey airship."
-    },
-    {
         "name": "Red Dead Redemption 2",
         "imageUrl": "https://cdn.suwalls.com/wallpapers/games/red-dead-redemption-14422-1920x1200.jpg",
         "maxLevel": 100,
@@ -33,5 +26,96 @@
         "maxLevel": 200,
         "genres": "Sandbox, Survival",
         "description": "A block-building sandbox game where players can create, explore, and survive in a vast, procedurally generated world."
+    },
+    {
+        "name": "God of War",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg",
+        "maxLevel": 100,
+        "genres": "Action, Adventure",
+        "description": "A story-driven action-adventure game that follows Kratos and his son Atreus on a journey across the realms of Norse mythology."
+    },
+    {
+        "name": "Final Fantasy XV",
+        "imageUrl": "https://assets2.ignimgs.com/2016/07/18/final-fantasy-xv-button-2016jpg-19b146.jpg",
+        "maxLevel": 120,
+        "genres": "Action, RPG",
+        "description": "An epic journey of Prince Noctis and his friends as they embark on a quest to reclaim their homeland from the clutches of an enemy empire."
+    },
+    {
+        "name": "The Elder Scrolls V: Skyrim",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.jpg",
+        "maxLevel": 80,
+        "genres": "Action, RPG, Open-world",
+        "description": "A fantasy RPG set in the continent of Tamriel where players can explore the world, join factions, and shape the fate of the land."
+    },
+    {
+        "name": "The Witcher 3: Wild Hunt",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
+        "maxLevel": 70,
+        "genres": "Action, RPG, Open-world",
+        "description": "Follow the story of Geralt of Rivia, a monster hunter, as he searches for his missing adopted daughter amidst a war-torn continent."
+    },
+    {
+        "name": "Dark Souls III",
+        "imageUrl": "https://static.bandainamcoent.eu/high/dark-souls/dark-souls-3/00-page-setup/ds3_game-thumbnail.jpg",
+        "maxLevel": 120,
+        "genres": "Action, RPG",
+        "description": "An unforgiving action-RPG that challenges players with intense combat and deep lore in a dark, interconnected world."
+    },
+    {
+        "name": "Assassin's Creed Odyssey",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f7/Assassin%27s_Creed_Odyssey_logo.png",
+        "maxLevel": 50,
+        "genres": "Action, RPG, Open-world",
+        "description": "Embark on an epic journey in Ancient Greece, where players can shape their own fate and become a legendary Spartan hero."
+    },
+    {
+        "name": "Apex Legends",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4f/Apex_Legends_cover_art.jpg",
+        "maxLevel": 500,
+        "genres": "First-person Shooter, Battle Royale",
+        "description": "A free-to-play battle royale game where players join forces in squads and battle for supremacy."
+    },
+    {
+        "name": "Sekiro: Shadows Die Twice",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/70/Sekiro_Shadows_Die_Twice_cover_art.jpg",
+        "maxLevel": 100,
+        "genres": "Action, Adventure",
+        "description": "A single-player game that puts players in the shoes of a shinobi on a mission to rescue his kidnapped lord and seek revenge on his arch-nemesis."
+    },
+    {
+        "name": "Cyberpunk 2077",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/95/Cyberpunk_2077_box_art.jpg",
+        "maxLevel": 50,
+        "genres": "Action, RPG, Open-world",
+        "description": "Set in a dystopian future, players explore the vast city of Night City and make choices that shape the story and world around them."
+    },
+    {
+        "name": "Monster Hunter: World",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9c/Monster_Hunter_World_cover_art.jpg",
+        "maxLevel": 100,
+        "genres": "Action, RPG",
+        "description": "Hunt gigantic monsters in lush ecosystems and use the materials gathered from fallen foes to craft new gear and take on bigger challenges."
+    },
+    {
+        "name": "Celeste",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/65/Celeste_cover_art.jpg",
+        "maxLevel": 100,
+        "genres": "Platformer, Indie",
+        "description": "A challenging platformer that tells the story of Madeline's journey to the top of Celeste Mountain."
+    },
+    {
+        "name": "Doom Eternal",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/5/57/Doom_Eternal_cover_art.jpg",
+        "maxLevel": 100,
+        "genres": "First-person Shooter",
+        "description": "The next leap in push-forward, first-person combat, as the DOOM Slayer returns to take on new and familiar demons."
+    },
+    {
+        "name": "Death Stranding",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/Death_Stranding_cover_art.jpg",
+        "maxLevel": 60,
+        "genres": "Action, Adventure",
+        "description": "From legendary game creator Hideo Kojima comes an all-new, genre-defying experience, as players traverse a ravaged wasteland to reconnect a fractured society."
     }
 ]
