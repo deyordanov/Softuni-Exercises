@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import { AuthContext } from "./Contexts/AuthContext";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Home from "./Components/Home/Home";
@@ -8,12 +9,14 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Create from "./Components/Create/Create";
 import Catalogue from "./Components/Catalogue/Catalogue";
+import "../public/styles/style.css";
 
 import * as gameService from "./Services/gameService";
 import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
 
 function App() {
     const [games, setGames] = useState([]);
+    const [auth, setAuth] = useState({});
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -33,9 +36,13 @@ function App() {
         navigate("/catalogue");
     };
 
+    const onLoginSubmit = async (data) => {
+        console.log(data);
+    };
+
     return (
-        <>
-            <div id="box">
+        <AuthContext.Provider value={{ onLoginSubmit }}>
+            <div id="box" className="flex flex-col w-full h-screen">
                 <Header />
                 <Main />
 
@@ -57,7 +64,7 @@ function App() {
                     ></Route>
                 </Routes>
             </div>
-        </>
+        </AuthContext.Provider>
     );
 }
 
