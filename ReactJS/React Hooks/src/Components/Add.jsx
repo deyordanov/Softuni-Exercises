@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "../hooks/useForm";
 
 export default function Add() {
+    const [error, setError] = useState(false);
     const { formValues, onChangeHandler, onSubmitHandler } = useForm({
         task: "",
         isCompleted: false,
@@ -21,6 +22,10 @@ export default function Add() {
         if (formRef.current && !formRef.current.contains(e.target)) {
             navigator("/");
         }
+    };
+
+    const onBlurErrorCheck = (e) => {
+        setError(e.target.value.length < 3);
     };
 
     return (
@@ -44,6 +49,7 @@ export default function Add() {
                         Task:
                     </label>
                     <input
+                        onInput={onBlurErrorCheck}
                         type="text"
                         name="task"
                         id="task"
@@ -53,10 +59,11 @@ export default function Add() {
                     />
                 </div>
 
-                {/* TODO: Add Error Validation */}
-                {/* <p className="text-xs text-red-600">
-                    Task must be at least 3 characters long!
-                </p> */}
+                {error && (
+                    <p className="text-xs text-red-600">
+                        Task must be at least 3 characters long!
+                    </p>
+                )}
 
                 <div className="flex w-60 items-center">
                     <label htmlFor="isCompleted" className="w-32">
@@ -74,7 +81,10 @@ export default function Add() {
 
                 <input
                     type="submit"
-                    className="bg-blue-500 rounded-lg p-0.5 ml-1 w-[30%] text-white"
+                    disabled={error}
+                    className={`${
+                        error ? "bg-slate-500" : "bg-blue-500"
+                    } rounded-lg p-0.5 ml-1 w-[30%] text-white`}
                 />
             </form>
         </div>

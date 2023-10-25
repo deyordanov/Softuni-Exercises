@@ -15,7 +15,7 @@ export default function Home() {
             .getAll()
             .then((response) => setTodos(response))
             .catch((error) => console.log(error));
-    }, []);
+    }, [todos]);
 
     const onTodoUpdate = async (data) => {
         const updatedTodo = await todoService.updateTodo(data);
@@ -26,11 +26,22 @@ export default function Home() {
             )
         );
     };
+
+    const onTodoDelete = async (todoId) => {
+        await todoService.remove(todoId);
+
+        setTodos((prevTodos) => prevTodos.map((todo) => todo._id !== todoId));
+    };
+
     return (
         <div className="flex flex-column items-center gap-3">
             <Header />
 
-            <TodoList todos={todos} onTodoUpdate={onTodoUpdate} />
+            <TodoList
+                todos={todos}
+                onTodoUpdate={onTodoUpdate}
+                onTodoDelete={onTodoDelete}
+            />
 
             <Button
                 variation="primary"
