@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .text-glow {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff,
+            0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff,
+            0 0 35px #ff00ff;
+    }
+    .text-slimy-green {
+        text-shadow: 0 0 5px #b0ff57, 0 0 10px #b0ff57, 0 0 15px #a3ff3b,
+            0 0 20px #a3ff3b, 0 0 25px #96ff1f, 0 0 30px #96ff1f,
+            0 0 35px #89ff04;
+    }
+}
