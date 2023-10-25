@@ -7,6 +7,12 @@ html {
     background-size: cover;
 }
 
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
     background: transparent;
 }
@@ -42,14 +48,6 @@ header h1 {
 header nav {
     font-size: auto;
     font-family: Georgia, "Times New Roman", Times, serif;
-    position: absolute;
-    right: 0;
-    bottom: 8px;
-}
-
-header nav > * {
-    font-size: 20px;
-    float: left;
 }
 
 footer {

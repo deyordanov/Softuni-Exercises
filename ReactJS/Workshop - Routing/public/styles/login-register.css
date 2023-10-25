@@ -3,9 +3,8 @@
     width: 650px;
     height: auto;
     border-radius: 20px;
-    padding: 40px;
+
     box-sizing: border-box;
-    background: #3e4443;
     box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
 }
 
@@ -27,21 +26,21 @@
 .brand-logo {
     height: 100px;
     width: 100px;
-    background: url("../images/icon-gamepad-2.png");
+    background: url("../images/baby-yoda.jpg");
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
+    object-fit: cover;
     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
 }
 
-.container>h1 {
+.container > h1 {
     margin-top: 15px;
     font-weight: 900;
     font-size: 2.7rem;
     text-align: center;
     color: white;
     letter-spacing: 1px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 17px;
 }
 
@@ -60,7 +59,7 @@ label {
     font-size: 27px;
     color: white;
     margin-top: 13px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 label:nth-of-type(2) {
@@ -69,8 +68,7 @@ label:nth-of-type(2) {
 
 input::placeholder {
     color: rgba(184, 179, 179, 0.678);
-};
-
+}
 
 label[for="female"] {
     margin-top: 10px;
@@ -90,26 +88,19 @@ input[type="email"] {
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
 
-label[for="terms"]>input {
+label[for="terms"] > input {
     display: inline;
 }
 
 .btn.submit {
     margin-top: 30px;
-    background: #778e9c;
     height: 60px;
     border-radius: 20px;
     color: white;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
     transition: 0.5s;
-}
-
-.btn.submit:hover {
-    color: white;
-    background-color: #8fa9b9;
 }
 
 .container {
@@ -117,14 +108,8 @@ label[for="terms"]>input {
     margin-top: 0px;
 }
 
-.field>span {
-    position: absolute;
-    font-size: 18px;
-    bottom: 17px;
-    right: 8px;
+.field > span {
     text-decoration: none;
-    color: black;
-    background: rgb(235, 157, 142);
     border-radius: 10px;
     padding: 5px;
 }
