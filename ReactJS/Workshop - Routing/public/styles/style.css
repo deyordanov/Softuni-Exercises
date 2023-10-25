@@ -1,3 +1,4 @@
+/* Import your custom CSS */
 @import "typography.css";
 @import "details.css";
 @import "login-register.css";
@@ -6,3 +7,8 @@
 @import "all-games.css";
 @import "navigation.css";
 @import "comments.css";
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
