@@ -27,4 +27,6 @@ export const put = request.bind(null, "PUT", {
     "content-type": "application/json",
 });
 
+export const remove = request.bind(null, "DELETE", {}, {});
+
 //..........

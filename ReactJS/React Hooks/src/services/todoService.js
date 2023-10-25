@@ -20,3 +20,7 @@ export const updateTodo = async (data) => {
 export const create = async (data) => {
     await requester.post(JSON.stringify(data), baseUrl);
 };
+
+export const remove = async (todoId) => {
+    await requester.remove(`${baseUrl}/${todoId}`);
+};
