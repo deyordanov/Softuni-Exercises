@@ -1,18 +1,20 @@
 export default function Home() {
     return (
-        <section id="welcome-world">
-            <div className="welcome-message">
-                <h2>ALL new games are</h2>
-                <h3>Only in GamesPlay</h3>
+        <section
+            className="flex flex-col h-screen font-mono"
+            id="welcome-world"
+        >
+            <div className="welcome-message flex flex-col items-center w-[40%]">
+                <h2>All new games are only in</h2>
+                <h3>PixelPulse</h3>
             </div>
             <img
                 src="./images/DBD-Alien.png"
                 alt="hero"
-                width={"900px"}
-                height={"900px"}
+                className="w-[70rem] h-[70rem]"
             />
 
-            <div id="home-page">
+            <div id="home-page" className="w-full h-full">
                 <h1>Latest Games</h1>
 
                 {/* <!-- Display div: with information about every game (if any) --> */}
