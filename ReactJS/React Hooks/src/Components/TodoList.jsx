@@ -2,11 +2,16 @@ import ListGroup from "react-bootstrap/ListGroup";
 import PropTypes from "prop-types";
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ todos, onTodoUpdate }) {
+export default function TodoList({ todos, onTodoUpdate, onTodoDelete }) {
     return (
         <ListGroup className="w-[50%] shadow-xl shadow-rose-500 border-solid border-black border-2">
             {todos.map((x) => (
-                <TodoItem key={x._id} {...x} onTodoUpdate={onTodoUpdate} />
+                <TodoItem
+                    key={x._id}
+                    {...x}
+                    onTodoUpdate={onTodoUpdate}
+                    onTodoDelete={onTodoDelete}
+                />
             ))}
         </ListGroup>
     );
@@ -15,4 +20,5 @@ export default function TodoList({ todos, onTodoUpdate }) {
 TodoList.propTypes = {
     todos: PropTypes.array,
     onTodoUpdate: PropTypes.func,
+    onTodoDelete: PropTypes.func,
 };
