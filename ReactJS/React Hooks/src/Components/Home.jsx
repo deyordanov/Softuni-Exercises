@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+import { TodoItemContext } from "../Contexts/TodoItemContext";
 export default function Home() {
     const [todos, setTodos] = useState([]);
 
@@ -37,11 +38,9 @@ export default function Home() {
         <div className="flex flex-column items-center gap-3">
             <Header />
 
-            <TodoList
-                todos={todos}
-                onTodoUpdate={onTodoUpdate}
-                onTodoDelete={onTodoDelete}
-            />
+            <TodoItemContext.Provider value={{ onTodoUpdate, onTodoDelete }}>
+                <TodoList todos={todos} />
+            </TodoItemContext.Provider>
 
             <Button
                 variation="primary"

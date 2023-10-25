@@ -1,13 +1,10 @@
 import { ListGroup, Button } from "react-bootstrap";
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { TodoItemContext } from "../Contexts/TodoItemContext";
 
-export default function TodoItem({
-    _id,
-    task,
-    isCompleted,
-    onTodoUpdate,
-    onTodoDelete,
-}) {
+export default function TodoItem({ _id, task, isCompleted }) {
+    const { onTodoDelete, onTodoUpdate } = useContext(TodoItemContext);
     const onChangeHandler = () => {
         onTodoUpdate({ _id, task, isCompleted: !isCompleted });
     };
@@ -16,8 +13,8 @@ export default function TodoItem({
         <>
             <ListGroup.Item
                 className={`${
-                    !isCompleted ? "focus:text-rose-500" : "text-green-500"
-                } hover:bg-slate-100 text-xs h-10 flex items-center border-b-black border-b-2 last:border-b-0 justify-between`}
+                    !isCompleted ? "" : "line-through"
+                } hover:bg-slate-100 text-s h-10 flex items-center border-b-black border-b-2 last:border-b-0 justify-between`}
             >
                 {task}
                 <div>
