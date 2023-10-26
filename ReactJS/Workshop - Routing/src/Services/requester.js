@@ -10,6 +10,10 @@ export const request = async (method, headers, body, url) => {
 
     const response = await fetch(url, options);
 
+    if (!response.ok) {
+        throw response;
+    }
+
     try {
         return await response.json();
     } catch (error) {
@@ -20,7 +24,9 @@ export const request = async (method, headers, body, url) => {
 export const get = request.bind(null, "GET", {}, {});
 
 export const post = request.bind(null, "POST", {
-    "content-type": "application/json",
+    "Content-Type": "application/json",
 });
+
+export const authorizationPost = request.bind(null, "POST");
 
 //..........
