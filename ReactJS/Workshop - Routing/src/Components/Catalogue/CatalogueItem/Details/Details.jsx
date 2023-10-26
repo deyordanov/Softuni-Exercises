@@ -27,6 +27,10 @@ export default function Details() {
             .catch((error) => console.log(error));
     }, [gameId]);
 
+    useEffect(() => {
+        console.log(comments.length);
+    }, [comments]);
+
     const onCommentSubmit = (e) => {
         e.preventDefault();
         commentService
@@ -44,7 +48,7 @@ export default function Details() {
     };
 
     return (
-        <section id="game-details">
+        <section id="game-details" className="flex flex-grow">
             <h1>Game Details</h1>
             <div className="info-section">
                 <div className="game-header">
@@ -58,16 +62,20 @@ export default function Details() {
 
                 {/* <!-- Bonus ( for Guests and Users ) --> */}
                 <div className="details-comments">
-                    <h2>Comments:</h2>
-                    <ul>
-                        {/* <!-- list all comments for current game (If any) --> */}
-                        {comments.map((x) => (
-                            <Comment key={x._id} {...x} />
-                        ))}
-                    </ul>
+                    {comments.length !== 0 && (
+                        <>
+                            <h2 className="text-2xl">Comments:</h2>
+                            <ul>
+                                {/* <!-- list all comments for current game (If any) --> */}
+                                {comments.map((x) => (
+                                    <Comment key={x._id} {...x} />
+                                ))}
+                            </ul>
+                        </>
+                    )}
 
                     {comments.length === 0 && (
-                        <p className="no-comment">No comments.</p>
+                        <p className="no-comment text-2xl">No comments.</p>
                     )}
                 </div>
 
