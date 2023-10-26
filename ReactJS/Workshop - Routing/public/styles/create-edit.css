@@ -1,12 +1,11 @@
 #create-page,
 #edit-page {
     position: relative;
-    width: 800px;
+    width: 65%;
     height: auto;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    text-align: center;
 }
 
 input[type="text"] {

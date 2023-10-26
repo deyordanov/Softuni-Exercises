@@ -15,6 +15,7 @@ import Register from "./Components/Register/Register";
 import Create from "./Components/Create/Create";
 import Catalogue from "./Components/Catalogue/Catalogue";
 import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
+import Edit from "./Components/Edit/Edit";
 import Logout from "./Components/Logout/Logout";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,13 +33,13 @@ function App() {
                 setGames(data);
             })
             .catch((error) => console.log(error));
-    }, [games]);
+    }, []);
 
     const onCreateSubmit = async (data) => {
-        const newGame = await gameService.create({
-            ...data,
-            token: auth.accessToken,
-        });
+        const newGame = await gameService.create(
+            { ...data, email: auth.email },
+            auth.accessToken
+        );
 
         setGames((state) => [...state, newGame]);
 
@@ -69,6 +70,28 @@ function App() {
         }
     };
 
+    const onEditSubmit = async (data, gameId) => {
+        //First we delete the given game from the server and filter it our from the games state
+        const deletedGameId = await gameService.remove(
+            gameId,
+            auth.accessToken
+        );
+        setGames((state) => state.filter((x) => x._id !== deletedGameId));
+
+        //Then we add the game back to the server and the games state with its updated data
+        const newGame = await gameService.create(data, auth.accessToken);
+        setGames((state) => [...state, newGame]);
+
+        navigate(`/catalogue/${newGame._id}`);
+    };
+
+    //The patch request dosen`t seem to be working properly - CORS
+    // const onEditSubmit = async (data, gameId) => {
+    //     const response = await gameService.edit(data, gameId, auth.accessToken);
+    //     console.log(response);
+    //     navigate(`/catalogue/${gameId}`);
+    // };
+
     const onLogout = async () => {
         // await authService.logout();
 
@@ -76,9 +99,12 @@ function App() {
     };
 
     const onGameDelete = async (gameId) => {
-        await gameService.remove(gameId, auth.accessToken);
+        const deletedGameId = await gameService.remove(
+            gameId,
+            auth.accessToken
+        );
 
-        navigate("/catalogue");
+        setGames((state) => state.filter((x) => x._id !== deletedGameId));
     };
 
     const authContextData = {
@@ -135,6 +161,10 @@ function App() {
                                 <Details />
                             </DetailsContext.Provider>
                         }
+                    ></Route>
+                    <Route
+                        path="/catalogue/:gameId/edit"
+                        element={<Edit onEditSubmit={onEditSubmit} />}
                     ></Route>
                 </Routes>
             </div>
