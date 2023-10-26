@@ -1,14 +1,22 @@
 import { useContext } from "react";
+import { useForm } from "react-hook-form";
 
 import { LoginFormKeys } from "../../utilities/constans";
-import { useForm } from "../../hooks/useForm";
 import { AuthContext } from "../../Contexts/AuthContext";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
-    const { values, onChangeHandler, onSubmit } = useForm(onLoginSubmit, {
-        [LoginFormKeys.EMAIL]: "",
-        [LoginFormKeys.PASSWORD]: "",
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        defaultValues: {
+            [LoginFormKeys.EMAIL]: "",
+            [LoginFormKeys.PASSWORD]: "",
+        },
+        mode: "onBlur",
     });
 
     return (
@@ -16,41 +24,51 @@ export default function Login() {
             id="login-page"
             className="auth bg-slate-800 flex items-center p-0 relative"
         >
-            <form id="login" onSubmit={onSubmit}>
+            <form id="login" onSubmit={handleSubmit(onLoginSubmit)}>
                 <div className="container flex flex-col items-center">
                     <h1 className="font-mono">Login</h1>
-                    <div>
-                        <label
-                            htmlFor={LoginFormKeys.EMAIL}
-                            className="font-mono"
-                        >
-                            Email:
-                        </label>
-                        <input
-                            value={values[LoginFormKeys.EMAIL]}
-                            onChange={onChangeHandler}
-                            type="email"
-                            id="email"
-                            name={LoginFormKeys.EMAIL}
-                            placeholder="nanami@gmail.com"
-                        />
-                    </div>
+                    <label htmlFor={LoginFormKeys.EMAIL} className="font-mono">
+                        Email:
+                    </label>
+                    <input
+                        {...register(LoginFormKeys.EMAIL, {
+                            required: "This field is required!",
+                            minLength: {
+                                value: 10,
+                                message:
+                                    "Email must be at least 10 characters long!",
+                            },
+                        })}
+                        type="email"
+                        id="email"
+                        name={LoginFormKeys.EMAIL}
+                        placeholder="nanami@gmail.com"
+                    />
+                    {errors[LoginFormKeys.EMAIL] && (
+                        <p className="mt-2 text-xl text-red-500">
+                            {`⚠ ${errors[LoginFormKeys.EMAIL].message}`}
+                        </p>
+                    )}
 
-                    <div>
-                        <label
-                            htmlFor={LoginFormKeys.PASSWORD}
-                            className="font-mono"
-                        >
-                            Password:
-                        </label>
-                        <input
-                            value={values[LoginFormKeys.PASSWORD]}
-                            onChange={onChangeHandler}
-                            type="password"
-                            id="login-password"
-                            name={LoginFormKeys.PASSWORD}
-                        />
-                    </div>
+                    <label
+                        htmlFor={LoginFormKeys.PASSWORD}
+                        className="font-mono"
+                    >
+                        Password:
+                    </label>
+                    <input
+                        {...register(LoginFormKeys.PASSWORD, {
+                            required: "This field is required!",
+                        })}
+                        type="password"
+                        id="login-password"
+                        name={LoginFormKeys.PASSWORD}
+                    />
+                    {errors[LoginFormKeys.PASSWORD] && (
+                        <p className="mt-2 text-xl text-red-500">
+                            {`⚠ ${errors[LoginFormKeys.PASSWORD].message}`}
+                        </p>
+                    )}
 
                     <input
                         type="submit"
