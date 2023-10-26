@@ -1,4 +1,4 @@
-.create-comment>.form>textarea {
+.create-comment > .form > textarea {
     resize: none;
     width: 100px;
     height: 100px;
@@ -24,7 +24,7 @@
     box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
 }
 
-.create-comment>label {
+.create-comment > label {
     color: white;
     font-size: 28px;
     text-align: center;
@@ -32,12 +32,12 @@
     line-height: normal;
 }
 
-.info-section>.details-comments li {
+.info-section > .details-comments li {
     width: 400px;
     display: inline-block;
-    position: static;
     margin: 20px auto 25px auto;
-    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
+        12px 12px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 16px;
     margin-left: 60px;
     background: #6f5d9c;
@@ -48,8 +48,7 @@
     padding: 16px;
 }
 
-
-.create-comment>.button:hover {
+.create-comment > .button:hover {
     background-color: #41425c;
     color: white;
     cursor: pointer;
