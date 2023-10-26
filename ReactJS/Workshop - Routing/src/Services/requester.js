@@ -27,6 +27,8 @@ export const post = request.bind(null, "POST", {
     "Content-Type": "application/json",
 });
 
+export const patch = request.bind(null, "PATCH");
+
 export const authorizationDelete = request.bind(null, "DELETE");
 
 export const authorizationPost = request.bind(null, "POST");

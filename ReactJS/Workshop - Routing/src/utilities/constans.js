@@ -11,3 +11,11 @@ export const CreateGameFormKeys = {
     IMAGE_URL: "imageUrl",
     DESCRIPTION: "description",
 };
+
+export const EditGameFormKeys = {
+    TITLE: "title",
+    GENRES: "genres",
+    MAX_LEVEL: "maxLevel",
+    IMAGE_URL: "imageUrl",
+    DESCRIPTION: "description",
+};
