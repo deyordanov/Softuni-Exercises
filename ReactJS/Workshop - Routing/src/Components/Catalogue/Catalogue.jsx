@@ -1,7 +1,11 @@
-import PropTypes from "prop-types";
 import CatalogueItem from "./CatalogueItem/CatalogueItem";
+import { useContext } from "react";
 
-export default function Catalogue({ games }) {
+import { CatalogueContext } from "../../Contexts/CatalogueContext";
+
+export default function Catalogue() {
+    const { games } = useContext(CatalogueContext);
+
     return (
         <section id="catalog-page">
             <h1>All Games</h1>
@@ -15,7 +19,3 @@ export default function Catalogue({ games }) {
         </section>
     );
 }
-
-Catalogue.propTypes = {
-    games: PropTypes.array,
-};
