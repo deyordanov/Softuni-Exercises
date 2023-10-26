@@ -2,6 +2,8 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { AuthContext } from "./Contexts/AuthContext";
+import { CatalogueContext } from "./Contexts/CatalogueContext";
+import { DetailsContext } from "./Contexts/DetailsContext";
 import * as gameService from "./Services/gameService";
 import * as authService from "./Services/authService";
 
@@ -30,7 +32,7 @@ function App() {
                 setGames(data);
             })
             .catch((error) => console.log(error));
-    }, []);
+    }, [games]);
 
     const onCreateSubmit = async (data) => {
         const newGame = await gameService.create({
@@ -73,7 +75,13 @@ function App() {
         setAuth({});
     };
 
-    const contextData = {
+    const onGameDelete = async (gameId) => {
+        await gameService.remove(gameId, auth.accessToken);
+
+        navigate("/catalogue");
+    };
+
+    const authContextData = {
         onLoginSubmit,
         onRegisterSubmit,
         onLogout,
@@ -83,8 +91,16 @@ function App() {
         isAuthenticated: !!auth.accessToken,
     };
 
+    const catalogueContextData = {
+        games,
+    };
+
+    const detailsContextData = {
+        onGameDelete,
+    };
+
     return (
-        <AuthContext.Provider value={contextData}>
+        <AuthContext.Provider value={authContextData}>
             <div
                 id="box"
                 className="flex flex-col w-full overflow-y-auto h-screen box-border"
@@ -92,6 +108,7 @@ function App() {
                 <Header />
                 <Main />
 
+                {/* Adding more contexts than necessary purely for practice! */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />}></Route>
@@ -103,11 +120,21 @@ function App() {
                     ></Route>
                     <Route
                         path="/catalogue"
-                        element={<Catalogue games={games} />}
+                        element={
+                            <CatalogueContext.Provider
+                                value={catalogueContextData}
+                            >
+                                <Catalogue />
+                            </CatalogueContext.Provider>
+                        }
                     ></Route>
                     <Route
                         path="/catalogue/:gameId"
-                        element={<Details />}
+                        element={
+                            <DetailsContext.Provider value={detailsContextData}>
+                                <Details />
+                            </DetailsContext.Provider>
+                        }
                     ></Route>
                 </Routes>
             </div>
