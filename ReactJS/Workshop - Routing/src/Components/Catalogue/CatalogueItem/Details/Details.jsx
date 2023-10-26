@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import * as gameService from "../../../../Services/gameService";
 import * as commentService from "../../../../Services/commentService";
@@ -9,7 +10,7 @@ import Comment from "./Comment/Comment";
 
 export default function Details() {
     const { onGameDelete } = useContext(DetailsContext);
-    const { token } = useContext(AuthContext);
+    const { userEmail } = useContext(AuthContext);
 
     const [data, setData] = useState({
         author: "",
@@ -32,11 +33,6 @@ export default function Details() {
             .catch((error) => console.log(error));
     }, [gameId]);
 
-    useEffect(() => {
-        console.log(token);
-        console.log(game.token);
-    }, [token, game]);
-
     const onCommentSubmit = (e) => {
         e.preventDefault();
         commentService
@@ -56,7 +52,7 @@ export default function Details() {
     return (
         <section id="game-details">
             <h1 className="font-mono">Game Details</h1>
-            <div className="info-section  bg-slate-800 mono shadow-2xl shadow-black">
+            <div className="info-section  bg-slate-800 shadow-2xl shadow-black">
                 <div className="game-header">
                     <img className="game-img" src={game.imageUrl} />
                     <h1>{game.title}</h1>
@@ -72,13 +68,11 @@ export default function Details() {
                     {game.description}
                 </p>
 
-                {/* <!-- Bonus ( for Guests and Users ) --> */}
                 <div className="details-comments">
                     {comments.length !== 0 && (
                         <>
                             <h2 className="text-2xl">Comments:</h2>
                             <ul>
-                                {/* <!-- list all comments for current game (If any) --> */}
                                 {comments.map((x) => (
                                     <Comment key={x._id} {...x} />
                                 ))}
@@ -92,28 +86,27 @@ export default function Details() {
                 </div>
 
                 {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}
-                {token === game.token && (
+                {userEmail === game.email && (
                     <div className="buttons">
-                        <a
-                            href="#"
+                        <Link
+                            to={"edit"}
                             className="button rounded-xl bg-slate-500 hover:bg-blue-500"
                         >
                             Edit
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             onClick={() => onGameDelete(gameId)}
-                            href="#"
                             className="button rounded-xl bg-slate-500 hover:bg-red-500"
+                            to={"/catalogue"}
                         >
                             Delete
-                        </a>
+                        </Link>
                     </div>
                 )}
             </div>
 
-            {/* <!-- Bonus --> */}
             {/* <!-- Add Comment ( Only for logged-in users, which is not creators of the current game ) --> */}
-            {token !== game.token && (
+            {userEmail !== game.email && (
                 <article className="create-comment  bg-slate-800 shadow-2xl shadow-black flex flex-col gap-2">
                     <label className="font-mono">Add new comment:</label>
                     <form className="form" onSubmit={onCommentSubmit}>

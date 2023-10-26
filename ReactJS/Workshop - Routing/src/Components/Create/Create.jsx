@@ -9,16 +9,17 @@ export default function Create({ onCreateSubmit }) {
         handleSubmit,
         formState: { errors },
     } = useForm({
-        [CreateGameFormKeys.TITLE]: "",
-        [CreateGameFormKeys.GENRES]: "",
-        [CreateGameFormKeys.MAX_LEVEL]: "",
-        [CreateGameFormKeys.IMAGE_URL]: "",
-        [CreateGameFormKeys.DESCRIPTION]: "",
+        defaultValues: {
+            [CreateGameFormKeys.TITLE]: "",
+            [CreateGameFormKeys.GENRES]: "",
+            [CreateGameFormKeys.MAX_LEVEL]: "",
+            [CreateGameFormKeys.IMAGE_URL]: "",
+            [CreateGameFormKeys.DESCRIPTION]: "",
+        },
         mode: "onChange",
     });
 
     const onSubmit = (data) => {
-        console.log(data);
         onCreateSubmit(data);
     };
 
