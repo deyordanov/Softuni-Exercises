@@ -16,59 +16,66 @@ export default function Login() {
             [LoginFormKeys.EMAIL]: "",
             [LoginFormKeys.PASSWORD]: "",
         },
-        mode: "onBlur",
+        mode: "onChange",
     });
 
     return (
         <section
             id="login-page"
-            className="auth bg-slate-800 flex items-center p-0 relative"
+            className="auth bg-slate-800 flex items-center p-0 relative w-[600px]"
         >
             <form id="login" onSubmit={handleSubmit(onLoginSubmit)}>
-                <div className="container flex flex-col items-center">
+                <div className="container flex flex-col items-center w-[500px]">
                     <h1 className="font-mono">Login</h1>
-                    <label htmlFor={LoginFormKeys.EMAIL} className="font-mono">
-                        Email:
-                    </label>
-                    <input
-                        {...register(LoginFormKeys.EMAIL, {
-                            required: "This field is required!",
-                            minLength: {
-                                value: 10,
-                                message:
-                                    "Email must be at least 10 characters long!",
-                            },
-                        })}
-                        type="email"
-                        id="email"
-                        name={LoginFormKeys.EMAIL}
-                        placeholder="nanami@gmail.com"
-                    />
-                    {errors[LoginFormKeys.EMAIL] && (
-                        <p className="mt-2 text-xl text-red-500">
-                            {`⚠ ${errors[LoginFormKeys.EMAIL].message}`}
-                        </p>
-                    )}
+                    <div className="w-full flex flex-col items-center">
+                        <label
+                            htmlFor={LoginFormKeys.EMAIL}
+                            className="font-mono"
+                        >
+                            Email:
+                        </label>
+                        <input
+                            {...register(LoginFormKeys.EMAIL, {
+                                required: "This field is required!",
+                                minLength: {
+                                    value: 10,
+                                    message:
+                                        "Email must be at least 10 characters long!",
+                                },
+                            })}
+                            type="email"
+                            id="email"
+                            name={LoginFormKeys.EMAIL}
+                            placeholder="nanami@gmail.com"
+                        />
+                        {errors[LoginFormKeys.EMAIL] && (
+                            <p className="mt-2 text-xl text-red-500">
+                                {`⚠ ${errors[LoginFormKeys.EMAIL].message}`}
+                            </p>
+                        )}
+                    </div>
 
-                    <label
-                        htmlFor={LoginFormKeys.PASSWORD}
-                        className="font-mono"
-                    >
-                        Password:
-                    </label>
-                    <input
-                        {...register(LoginFormKeys.PASSWORD, {
-                            required: "This field is required!",
-                        })}
-                        type="password"
-                        id="login-password"
-                        name={LoginFormKeys.PASSWORD}
-                    />
-                    {errors[LoginFormKeys.PASSWORD] && (
-                        <p className="mt-2 text-xl text-red-500">
-                            {`⚠ ${errors[LoginFormKeys.PASSWORD].message}`}
-                        </p>
-                    )}
+                    <div className="w-full flex flex-col items-center">
+                        <label
+                            htmlFor={LoginFormKeys.PASSWORD}
+                            className="font-mono"
+                        >
+                            Password:
+                        </label>
+                        <input
+                            {...register(LoginFormKeys.PASSWORD, {
+                                required: "This field is required!",
+                            })}
+                            type="password"
+                            id="login-password"
+                            name={LoginFormKeys.PASSWORD}
+                        />
+                        {errors[LoginFormKeys.PASSWORD] && (
+                            <p className="mt-2 text-xl text-red-500">
+                                {`⚠ ${errors[LoginFormKeys.PASSWORD].message}`}
+                            </p>
+                        )}
+                    </div>
 
                     <input
                         type="submit"
