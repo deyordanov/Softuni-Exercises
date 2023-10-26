@@ -25,7 +25,7 @@ export default function Login() {
             className="auth bg-slate-800 flex items-center p-0 relative w-[600px]"
         >
             <form id="login" onSubmit={handleSubmit(onLoginSubmit)}>
-                <div className="container flex flex-col items-center w-[500px]">
+                <div className="container flex flex-col items-center w-[500px] pb-5">
                     <h1 className="font-mono">Login</h1>
                     <div className="w-full flex flex-col items-center">
                         <label
