@@ -10,12 +10,8 @@
 
 #register-page {
     position: relative;
-    width: 650px;
-    height: auto;
     border-radius: 20px;
-    padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
     box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
 }
 
