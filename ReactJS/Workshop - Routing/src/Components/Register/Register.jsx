@@ -19,15 +19,13 @@ export default function Register() {
         mode: "onChange",
     });
 
-    console.log(errors);
-
     return (
         <section
             id="register-page"
             className="content auth bg-slate-800 flex items-center p-0 relative w-[600px]"
         >
             <form id="register" onSubmit={handleSubmit(onRegisterSubmit)}>
-                <div className="container flex flex-col items-center w-[500px]">
+                <div className="container flex flex-col items-center w-[500px] pb-5">
                     <h1 className="font-mono">Register</h1>
 
                     <div className="w-full flex flex-col items-center">
