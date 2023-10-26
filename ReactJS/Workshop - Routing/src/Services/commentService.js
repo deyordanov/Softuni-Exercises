@@ -9,7 +9,6 @@ export const getAll = async () => {
 };
 
 export const create = async (data) => {
-    console.log(data);
     const response = await requester.post(JSON.stringify(data), baseUrl);
 
     return response;

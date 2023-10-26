@@ -15,10 +15,10 @@ export const getOne = async (gameId) => {
     return response;
 };
 
-export const create = async (data) => {
+export const create = async (data, token) => {
     const headers = {
         "Content-Type": "application/json",
-        "X-Authorization": data.token,
+        "X-Authorization": token,
     };
 
     const response = await requester.authorizationPost(
@@ -36,13 +36,26 @@ export const remove = async (gameId, token) => {
         "X-Authorization": token,
     };
 
-    console.log(token);
+    await requester.authorizationDelete(headers, {}, `${baseUrl}/${gameId}`);
 
-    const response = await requester.authorizationDelete(
-        headers,
-        {},
-        `${baseUrl}/${gameId}`
-    );
-
-    return response;
+    return gameId;
 };
+
+//The patch request dosen`t seem to be working properly - CORS
+// export const edit = async (data, gameId, token) => {
+//     console.log(token);
+//     const headers = {
+//         "Content-Type": "application/json",
+//         "X-Authorization": token,
+//     };
+
+//     console.log(headers);
+//     console.log(data);
+//     const response = await requester.patch(
+//         headers,
+//         data,
+//         `${baseUrl}/${gameId}`
+//     );
+
+//     return response;
+// };
