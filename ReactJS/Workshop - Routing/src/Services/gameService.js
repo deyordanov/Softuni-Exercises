@@ -41,21 +41,17 @@ export const remove = async (gameId, token) => {
     return gameId;
 };
 
-//The patch request dosen`t seem to be working properly - CORS
-// export const edit = async (data, gameId, token) => {
-//     console.log(token);
-//     const headers = {
-//         "Content-Type": "application/json",
-//         "X-Authorization": token,
-//     };
+export const edit = async (data, gameId, token) => {
+    const headers = {
+        "Content-Type": "application/json",
+        "X-Authorization": token,
+    };
 
-//     console.log(headers);
-//     console.log(data);
-//     const response = await requester.patch(
-//         headers,
-//         data,
-//         `${baseUrl}/${gameId}`
-//     );
+    const response = await requester.put(
+        headers,
+        JSON.stringify(data),
+        `${baseUrl}/${gameId}`
+    );
 
-//     return response;
-// };
+    return response;
+};

@@ -71,14 +71,13 @@ export default function Details() {
                     {game.description}
                 </p>
 
-                {/* TODO: When editing the game -> all comments are deleted because we send a post request, not a patch request and the id changes */}
                 <div className="details-comments">
                     {comments.length !== 0 && (
                         <>
                             <h2 className="text-3xl text-zinc-300 ml-10">
                                 Comments:
                             </h2>
-                            <div className="grid grid-cols-2 ">
+                            <div className="grid grid-cols-2 mb-8">
                                 {comments.map((x) => (
                                     <Comment key={x._id} {...x} />
                                 ))}
