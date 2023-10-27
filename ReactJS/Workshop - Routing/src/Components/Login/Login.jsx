@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 import { LoginFormKeys } from "../../utilities/constans";
 import { AuthContext } from "../../Contexts/AuthContext";
+// import { withAuth } from "../../hoc/withAuth";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
@@ -85,9 +87,12 @@ export default function Login() {
                     <p className="field">
                         <span className="text-sm absolute bottom-2 right-2 w-auto text-white">
                             If you don`t have profile click{" "}
-                            <a href="#" className="text-red-500 underline">
+                            <Link
+                                to={"/register"}
+                                className="text-red-500 underline"
+                            >
                                 here
-                            </a>
+                            </Link>
                         </span>
                     </p>
                 </div>
@@ -95,3 +100,6 @@ export default function Login() {
         </section>
     );
 }
+
+//Using HOC
+// export default withAuth(Login);

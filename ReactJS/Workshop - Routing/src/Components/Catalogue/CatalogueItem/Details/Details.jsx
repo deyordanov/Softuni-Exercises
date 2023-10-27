@@ -49,8 +49,8 @@ export default function Details() {
         setData((state) => ({ ...state, [e.target.name]: e.target.value }));
     };
 
-    const isOwner = userId === game._ownerId;
-    const isNotOwner = userId !== game._ownerId;
+    const isOwner = userId && userId === game._ownerId;
+    const isNotOwner = userId && userId !== game._ownerId;
 
     return (
         <section id="game-details">
@@ -113,7 +113,7 @@ export default function Details() {
             </div>
 
             {/* <!-- Add Comment ( Only for logged-in users, which is not creators of the current game ) --> */}
-            {isNotOwner !== game.email && (
+            {isNotOwner && (
                 <article className="create-comment  bg-slate-800 shadow-2xl shadow-black flex flex-col gap-2">
                     <label className="font-mono">Add new comment:</label>
                     <form className="form" onSubmit={onCommentSubmit}>

@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../Contexts/AuthContext";
 import { LoginFormKeys } from "../../utilities/constans";
@@ -111,9 +112,12 @@ export default function Register() {
                     <p className="field">
                         <span className="text-sm absolute bottom-2 right-2 w-auto text-white">
                             If you already have profile click{" "}
-                            <a href="#" className="text-red-500 underline">
+                            <Link
+                                to={"/login"}
+                                className="text-red-500 underline"
+                            >
                                 here
-                            </a>
+                            </Link>
                         </span>
                     </p>
                 </div>
