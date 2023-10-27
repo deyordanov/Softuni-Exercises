@@ -68,26 +68,10 @@ function App() {
     };
 
     const onEditSubmit = async (data, gameId) => {
-        //First we delete the given game from the server and filter it our from the games state
-        const deletedGameId = await gameService.remove(
-            gameId,
-            auth.accessToken
-        );
-        setGames((state) => state.filter((x) => x._id !== deletedGameId));
-
-        //Then we add the game back to the server and the games state with its updated data
-        const newGame = await gameService.create(data, auth.accessToken);
-        setGames((state) => [...state, newGame]);
-
-        navigate(`/catalogue/${newGame._id}`);
+        const game = await gameService.edit(data, gameId, auth.accessToken);
+        setGames((state) => state.map((x) => (x._id === game._id ? game : x)));
+        navigate(`/catalogue/${gameId}`);
     };
-
-    //The patch request dosen`t seem to be working properly - CORS
-    // const onEditSubmit = async (data, gameId) => {
-    //     const response = await gameService.edit(data, gameId, auth.accessToken);
-    //     console.log(response);
-    //     navigate(`/catalogue/${gameId}`);
-    // };
 
     const onLogout = async () => {
         await authService.logout(auth.accessToken);
