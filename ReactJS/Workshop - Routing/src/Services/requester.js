@@ -33,4 +33,6 @@ export const authorizationDelete = request.bind(null, "DELETE");
 
 export const authorizationPost = request.bind(null, "POST");
 
+export const authorizationGet = request.bind(null, "GET");
+
 //..........

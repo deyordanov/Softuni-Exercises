@@ -15,4 +15,11 @@ export const register = (registerData) => {
     );
 };
 
-// export const logout = () => requester.get(, `${baseUrl}/logout`)
+export const logout = (token) => {
+    const headers = {
+        "Content-Type": "application/json",
+        "X-Authorization": token,
+    };
+
+    requester.authorizationGet(headers, {}, `${baseUrl}/logout`);
+};

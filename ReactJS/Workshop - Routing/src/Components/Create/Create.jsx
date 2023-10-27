@@ -26,7 +26,7 @@ export default function Create({ onCreateSubmit }) {
     return (
         <section
             id="create-page"
-            className="auth bg-slate-800 shadow-2xl shadow-black"
+            className="auth bg-slate-800 shadow-2xl shadow-black w-[600px]"
         >
             <form id="create" onSubmit={handleSubmit(onSubmit)}>
                 <div className="container w-[80%] flex flex-col items-center">
@@ -136,7 +136,7 @@ export default function Create({ onCreateSubmit }) {
                     </div>
 
                     <input
-                        className="btn submit bg-slate-700 w-[40%] hover:shadow-lg hover:shadow-white"
+                        className="btn submit bg-slate-700 w-[50%] hover:shadow-lg hover:shadow-white"
                         type="submit"
                         value="Create Game"
                     />
