@@ -41,6 +41,7 @@ export default function Edit({ onEditSubmit }) {
             id="edit-page"
             className="auth bg-slate-800 flex items-center relative w-[600px] shadow-2xl shadow-black"
         >
+            {/* TODO: When editing the game -> all comments are deleted because we send a post request, not a patch request and the id changes */}
             <form
                 id="edit"
                 onSubmit={handleSubmit((data) => onEditSubmit(data, gameId))}

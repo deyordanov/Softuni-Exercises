@@ -10,7 +10,7 @@ import Comment from "./Comment/Comment";
 
 export default function Details() {
     const { onGameDelete } = useContext(DetailsContext);
-    const { userEmail } = useContext(AuthContext);
+    const { userId } = useContext(AuthContext);
 
     const [data, setData] = useState({
         author: "",
@@ -49,6 +49,9 @@ export default function Details() {
         setData((state) => ({ ...state, [e.target.name]: e.target.value }));
     };
 
+    const isOwner = userId === game._ownerId;
+    const isNotOwner = userId !== game._ownerId;
+
     return (
         <section id="game-details">
             <h1 className="font-mono">Game Details</h1>
@@ -68,25 +71,30 @@ export default function Details() {
                     {game.description}
                 </p>
 
+                {/* TODO: When editing the game -> all comments are deleted because we send a post request, not a patch request and the id changes */}
                 <div className="details-comments">
                     {comments.length !== 0 && (
                         <>
-                            <h2 className="text-2xl">Comments:</h2>
-                            <ul>
+                            <h2 className="text-3xl text-zinc-300 ml-10">
+                                Comments:
+                            </h2>
+                            <div className="grid grid-cols-2 ">
                                 {comments.map((x) => (
                                     <Comment key={x._id} {...x} />
                                 ))}
-                            </ul>
+                            </div>
                         </>
                     )}
 
                     {comments.length === 0 && (
-                        <p className="no-comment text-2xl">No comments.</p>
+                        <p className="no-comment text-3xl text-zinc-300 p-4 shadow-2xl ml-10 mb-5">
+                            No comments.
+                        </p>
                     )}
                 </div>
 
                 {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}
-                {userEmail === game.email && (
+                {isOwner && (
                     <div className="buttons">
                         <Link
                             to={"edit"}
@@ -106,7 +114,7 @@ export default function Details() {
             </div>
 
             {/* <!-- Add Comment ( Only for logged-in users, which is not creators of the current game ) --> */}
-            {userEmail !== game.email && (
+            {isNotOwner !== game.email && (
                 <article className="create-comment  bg-slate-800 shadow-2xl shadow-black flex flex-col gap-2">
                     <label className="font-mono">Add new comment:</label>
                     <form className="form" onSubmit={onCommentSubmit}>
