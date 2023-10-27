@@ -1,12 +1,12 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import { AuthContext } from "./Contexts/AuthContext";
+import { AuthProvider } from "./Contexts/AuthContext";
 import { CatalogueContext } from "./Contexts/CatalogueContext";
 import { DetailsContext } from "./Contexts/DetailsContext";
 import * as gameService from "./Services/gameService";
-import * as authService from "./Services/authService";
 
+// import { withAuth } from "./hoc/withAuth";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Home from "./Components/Home/Home";
@@ -23,7 +23,6 @@ import "../public/styles/style.css";
 
 function App() {
     const [games, setGames] = useState([]);
-    const [auth, setAuth] = useState({});
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -36,66 +35,23 @@ function App() {
     }, []);
 
     const onCreateSubmit = async (data) => {
-        const newGame = await gameService.create(data, auth.accessToken);
+        const newGame = await gameService.create(data);
 
         setGames((state) => [...state, newGame]);
 
         navigate("/catalogue");
     };
 
-    const onLoginSubmit = async (data) => {
-        try {
-            const response = await authService.login(data);
-
-            setAuth(response);
-
-            navigate("/catalogue");
-        } catch (error) {
-            console.log("Invalid email or password!");
-        }
-    };
-
-    const onRegisterSubmit = async (data) => {
-        try {
-            const response = await authService.register(data);
-
-            setAuth(response);
-
-            navigate("/catalogue");
-        } catch (error) {
-            console.log("Couldn`t register!");
-        }
-    };
-
     const onEditSubmit = async (data, gameId) => {
-        const game = await gameService.edit(data, gameId, auth.accessToken);
+        const game = await gameService.edit(data, gameId);
         setGames((state) => state.map((x) => (x._id === game._id ? game : x)));
         navigate(`/catalogue/${gameId}`);
     };
 
-    const onLogout = async () => {
-        await authService.logout(auth.accessToken);
-
-        setAuth({});
-    };
-
     const onGameDelete = async (gameId) => {
-        const deletedGameId = await gameService.remove(
-            gameId,
-            auth.accessToken
-        );
+        const deletedGameId = await gameService.remove(gameId);
 
         setGames((state) => state.filter((x) => x._id !== deletedGameId));
-    };
-
-    const authContextData = {
-        onLoginSubmit,
-        onRegisterSubmit,
-        onLogout,
-        userId: auth._id,
-        userEmail: auth.email,
-        token: auth.accessToken,
-        isAuthenticated: !!auth.accessToken,
     };
 
     const catalogueContextData = {
@@ -106,8 +62,10 @@ function App() {
         onGameDelete,
     };
 
+    // const HOC = withAuth(Login);
+
     return (
-        <AuthContext.Provider value={authContextData}>
+        <AuthProvider>
             <div
                 id="box"
                 className="flex flex-col w-full overflow-y-auto h-screen box-border"
@@ -118,6 +76,7 @@ function App() {
                 {/* Adding more contexts than necessary purely for practice! */}
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    {/* <Route path="/login" element={<HOC props={props} />}></Route> */}
                     <Route path="/login" element={<Login />}></Route>
                     <Route path="/logout" element={<Logout />}></Route>
                     <Route path="/register" element={<Register />}></Route>
@@ -149,7 +108,7 @@ function App() {
                     ></Route>
                 </Routes>
             </div>
-        </AuthContext.Provider>
+        </AuthProvider>
     );
 }
 
