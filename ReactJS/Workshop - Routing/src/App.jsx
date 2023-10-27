@@ -36,10 +36,7 @@ function App() {
     }, []);
 
     const onCreateSubmit = async (data) => {
-        const newGame = await gameService.create(
-            { ...data, email: auth.email },
-            auth.accessToken
-        );
+        const newGame = await gameService.create(data, auth.accessToken);
 
         setGames((state) => [...state, newGame]);
 
@@ -93,7 +90,7 @@ function App() {
     // };
 
     const onLogout = async () => {
-        // await authService.logout();
+        await authService.logout(auth.accessToken);
 
         setAuth({});
     };

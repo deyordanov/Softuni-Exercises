@@ -1,7 +1,6 @@
 #create-page,
 #edit-page {
     position: relative;
-    width: 65%;
     height: auto;
     border-radius: 20px;
     padding: 40px;
@@ -21,7 +20,6 @@ input[type="text"] {
 
 textarea {
     width: 100%;
-    min-width: 20vw;
     min-height: 7em;
     border: 2px solid #86a480;
     border-radius: 0.7em;
