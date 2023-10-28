@@ -19,3 +19,8 @@ export const EditGameFormKeys = {
     IMAGE_URL: "imageUrl",
     DESCRIPTION: "description",
 };
+
+export const CreateCommentFormKeys = {
+    AUTHOR: "author",
+    COMMENT: "comment",
+};
