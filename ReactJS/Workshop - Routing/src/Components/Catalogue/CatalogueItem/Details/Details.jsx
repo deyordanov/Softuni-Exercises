@@ -1,21 +1,30 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 import * as gameService from "../../../../Services/gameService";
 import * as commentService from "../../../../Services/commentService";
 import { AuthContext } from "../../../../Contexts/AuthContext";
 import { DetailsContext } from "../../../../Contexts/DetailsContext";
 import Comment from "./Comment/Comment";
+import { CreateCommentFormKeys } from "../../../../utilities/constans";
 
 export default function Details() {
     const { onGameDelete } = useContext(DetailsContext);
     const { userId } = useContext(AuthContext);
-
-    const [data, setData] = useState({
-        author: "",
-        comment: "",
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm({
+        defaultValues: {
+            [CreateCommentFormKeys.AUTHOR]: "",
+            [CreateCommentFormKeys.COMMENT]: "",
+        },
     });
+
     const [comments, setComments] = useState([]);
     const { gameId } = useParams();
     const [game, setGame] = useState({});
@@ -33,20 +42,50 @@ export default function Details() {
             .catch((error) => console.log(error));
     }, [gameId]);
 
-    const onCommentSubmit = (e) => {
-        e.preventDefault();
+    const onCommentSubmit = (data) => {
         commentService
-            .create({ ...data, gameId })
-            .then((data) => setComments([...comments, data]))
+            .create({ ...data, gameId, likes: 0, likedBy: [] })
+            .then((newComment) => {
+                setComments([...comments, newComment]);
+                reset({
+                    // Reset the form fields
+                    [CreateCommentFormKeys.AUTHOR]: "",
+                    [CreateCommentFormKeys.COMMENT]: "",
+                });
+            })
             .catch((error) => console.log(error));
-        setData({
-            author: "",
-            comment: "",
-        });
     };
 
-    const onChangeHandler = (e) => {
-        setData((state) => ({ ...state, [e.target.name]: e.target.value }));
+    const onCommentLike = (comment, setLiked) => {
+        const isOwner = comment._ownerId === userId;
+
+        if (!isOwner) {
+            setLiked((state) => {
+                if (!state) {
+                    commentService
+                        .like(comment, "add", userId)
+                        .then((newComment) =>
+                            setComments((state) =>
+                                state.map((x) =>
+                                    x._id === newComment._id ? newComment : x
+                                )
+                            )
+                        );
+                } else {
+                    commentService
+                        .like(comment, "remove", userId)
+                        .then((newComment) =>
+                            setComments((state) =>
+                                state.map((x) =>
+                                    x._id === newComment._id ? newComment : x
+                                )
+                            )
+                        );
+                }
+
+                return !state;
+            });
+        }
     };
 
     const isOwner = userId && userId === game._ownerId;
@@ -71,7 +110,7 @@ export default function Details() {
                     {game.description}
                 </p>
 
-                <div className="details-comments">
+                <div className="details-comments w-full">
                     {comments.length !== 0 && (
                         <>
                             <h2 className="text-3xl text-zinc-300 ml-10">
@@ -79,7 +118,12 @@ export default function Details() {
                             </h2>
                             <div className="grid grid-cols-2 mb-8">
                                 {comments.map((x) => (
-                                    <Comment key={x._id} {...x} />
+                                    <Comment
+                                        key={x._id}
+                                        userId={userId}
+                                        comment={x}
+                                        onCommentLike={onCommentLike}
+                                    />
                                 ))}
                             </div>
                         </>
@@ -116,26 +160,31 @@ export default function Details() {
             {isNotOwner && (
                 <article className="create-comment  bg-slate-800 shadow-2xl shadow-black flex flex-col gap-2">
                     <label className="font-mono">Add new comment:</label>
-                    <form className="form" onSubmit={onCommentSubmit}>
+                    <form
+                        className="form"
+                        onSubmit={handleSubmit(onCommentSubmit)}
+                    >
                         <input
-                            value={data.author}
-                            onChange={onChangeHandler}
+                            {...register(CreateCommentFormKeys.AUTHOR, {
+                                required: "This field is required!",
+                            })}
                             type="text"
                             name="author"
                             id="author"
                             placeholder="Username...."
-                        />
+                        ></input>
                         <textarea
+                            {...register(CreateCommentFormKeys.COMMENT, {
+                                required: "This field is required!",
+                            })}
                             className="text-2xl"
-                            value={data.comment}
-                            onChange={onChangeHandler}
                             name="comment"
                             placeholder="Comment......"
                         ></textarea>
                         <input
+                            className="btn submit bg-slate-700 w-[40%] hover:shadow-lg hover:shadow-white"
                             type="submit"
-                            className="btn submit bg-slate-700 w-[45%] hover:shadow-lg hover:shadow-white"
-                            value="Add Comment"
+                            value="Edit"
                         />
                     </form>
                 </article>

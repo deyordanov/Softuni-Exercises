@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const onLogout = async () => {
-        authService.logout(auth.accessToken);
+        authService.logout();
         setAuth({});
     };
 
