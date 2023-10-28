@@ -2,7 +2,13 @@ import * as requester from "./requester.js";
 
 const baseUrl = "http://localhost:3030/users";
 
-const token = JSON.parse(localStorage.getItem("auth")).accessToken;
+const getAuthHeaders = () => {
+    const token = JSON.parse(localStorage.getItem("auth")).accessToken;
+    return {
+        "Content-Type": "application/json",
+        "X-Authorization": token,
+    };
+};
 
 export const login = (loginData) =>
     requester.post(JSON.stringify(loginData), `${baseUrl}/login`);
@@ -18,10 +24,7 @@ export const register = (registerData) => {
 };
 
 export const logout = () => {
-    const headers = {
-        "Content-Type": "application/json",
-        "X-Authorization": token,
-    };
+    const headers = getAuthHeaders();
 
     requester.authorizationGet(headers, {}, `${baseUrl}/logout`);
 };
