@@ -13,12 +13,7 @@ import { CreateCommentFormKeys } from "../../../../utilities/constans";
 export default function Details() {
     const { onGameDelete } = useContext(DetailsContext);
     const { userId } = useContext(AuthContext);
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset,
-    } = useForm({
+    const { register, handleSubmit, reset } = useForm({
         defaultValues: {
             [CreateCommentFormKeys.AUTHOR]: "",
             [CreateCommentFormKeys.COMMENT]: "",
@@ -44,7 +39,7 @@ export default function Details() {
 
     const onCommentSubmit = (data) => {
         commentService
-            .create({ ...data, gameId, likes: 0, likedBy: [] })
+            .create({ ...data, gameId, likedBy: [] })
             .then((newComment) => {
                 setComments([...comments, newComment]);
                 reset({
@@ -59,7 +54,8 @@ export default function Details() {
     const onCommentLike = (comment, setLiked) => {
         const isOwner = comment._ownerId === userId;
 
-        if (!isOwner) {
+        //Server limitations -> only the creator of the comment can like it....
+        if (isOwner) {
             setLiked((state) => {
                 if (!state) {
                     commentService
@@ -165,18 +161,14 @@ export default function Details() {
                         onSubmit={handleSubmit(onCommentSubmit)}
                     >
                         <input
-                            {...register(CreateCommentFormKeys.AUTHOR, {
-                                required: "This field is required!",
-                            })}
+                            {...register(CreateCommentFormKeys.AUTHOR)}
                             type="text"
                             name="author"
                             id="author"
                             placeholder="Username...."
                         ></input>
                         <textarea
-                            {...register(CreateCommentFormKeys.COMMENT, {
-                                required: "This field is required!",
-                            })}
+                            {...register(CreateCommentFormKeys.COMMENT)}
                             className="text-2xl"
                             name="comment"
                             placeholder="Comment......"

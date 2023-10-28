@@ -35,18 +35,18 @@ export const create = async (data) => {
 
 export const like = async (data, action, userId) => {
     //Due to server limitations in order to implement the like counter I have to take the 'ownerToken' from the comment and manually add it to the headers
-    const headers = {
-        "Content-Type": "application/json",
-        "X-Authorization": data.ownerToken,
-    };
+    // const headers = {
+    //     "Content-Type": "application/json",
+    //     "X-Authorization": data.ownerToken,
+    // };
     // add -> add like, remove -> remove like
+
+    const headers = getAuthHeaders();
     switch (action) {
         case "add":
-            data = { ...data, likes: data.likes + 1 };
             data.likedBy.push(userId);
             break;
         case "remove":
-            data = { ...data, likes: data.likes - 1 };
             data.likedBy = data.likedBy.filter((x) => x !== userId);
             break;
     }
@@ -56,7 +56,7 @@ export const like = async (data, action, userId) => {
         JSON.stringify(data),
         `${baseUrl}/${data._id}`
     );
-    console.log(response);
+
     return response;
 };
 

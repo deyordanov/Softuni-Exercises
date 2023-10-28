@@ -17,7 +17,7 @@ export default function Comment({ comment, onCommentLike, userId }) {
             </p>
 
             <div className="flex absolute bottom-0 right-0 gap-2.5 items-center">
-                <p className="text-2xl p-0">{comment.likes || 0}</p>
+                <p className="text-2xl p-0">{comment.likedBy.length}</p>
                 <FontAwesomeIcon
                     onClick={() => onCommentLike(comment, setLiked)}
                     className={`${
