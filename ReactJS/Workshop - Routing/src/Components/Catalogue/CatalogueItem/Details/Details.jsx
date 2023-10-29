@@ -39,7 +39,7 @@ export default function Details() {
 
     const onCommentSubmit = (data) => {
         commentService
-            .create({ ...data, gameId, likedBy: [] })
+            .create({ ...data, gameId, likedBy: [], userId })
             .then((newComment) => {
                 setComments([...comments, newComment]);
                 reset({
@@ -52,10 +52,14 @@ export default function Details() {
     };
 
     const onCommentLike = (comment, setLiked) => {
-        const isOwner = comment._ownerId === userId;
+        // When using 'data'
+        // const isOwner = comment._ownerId === userId;
 
+        const isOwner = comment.userId === userId;
+
+        //When using 'data':
         //Server limitations -> only the creator of the comment can like it....
-        if (isOwner) {
+        if (!isOwner) {
             setLiked((state) => {
                 if (!state) {
                     commentService
@@ -102,7 +106,7 @@ export default function Details() {
                     </p>
                 </div>
 
-                <p className="text  w-[95%] text-zinc-300 m-auto">
+                <p className="text  w-[95%] text-zinc-300 m-auto overflow-hidden break-all">
                     {game.description}
                 </p>
 

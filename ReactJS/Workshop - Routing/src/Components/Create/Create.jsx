@@ -2,27 +2,37 @@ import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 
 import { CreateGameFormKeys } from "../../utilities/constans";
+import ErrorMessage from "../../utilities/ErrorMessage";
 
 export default function Create({ onCreateSubmit }) {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        watch,
+        setValue,
     } = useForm({
         defaultValues: {
             [CreateGameFormKeys.TITLE]: "",
             [CreateGameFormKeys.GENRES]: "",
             [CreateGameFormKeys.MAX_LEVEL]: "",
-            [CreateGameFormKeys.IMAGE_URL]: "",
+            [CreateGameFormKeys.IMAGE_URL]: null,
             [CreateGameFormKeys.DESCRIPTION]: "",
         },
         mode: "onChange",
     });
 
     const onSubmit = (data) => {
-        onCreateSubmit(data);
+        const file = data[CreateGameFormKeys.IMAGE_URL][0];
+        const url = URL.createObjectURL(file);
+        onCreateSubmit({ ...data, [CreateGameFormKeys.IMAGE_URL]: url });
     };
 
+    const selectedFile = watch(CreateGameFormKeys.IMAGE_URL);
+
+    const onImageExit = () => {
+        setValue(CreateGameFormKeys.IMAGE_URL, null);
+    };
     return (
         <section
             id="create-page"
@@ -32,14 +42,14 @@ export default function Create({ onCreateSubmit }) {
                 <div className="container w-[80%] flex flex-col items-center">
                     <h1>Create Game</h1>
                     <div className="w-full flex flex-col items-center">
-                        <label htmlFor="leg-title">Title:</label>
+                        <label htmlFor="title">Title:</label>
                         <input
                             {...register(CreateGameFormKeys.TITLE, {
                                 required: "This field is required!",
                                 minLength: {
                                     value: 2,
                                     message:
-                                        "The title can`t be less than 2 characaters long!",
+                                        "The title can't be less than 2 characters long!",
                                 },
                             })}
                             type="text"
@@ -47,11 +57,10 @@ export default function Create({ onCreateSubmit }) {
                             name="title"
                             placeholder="Enter game title..."
                         />
-                        {errors[CreateGameFormKeys.TITLE] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[CreateGameFormKeys.TITLE].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={CreateGameFormKeys.TITLE}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -62,7 +71,7 @@ export default function Create({ onCreateSubmit }) {
                                 minLength: {
                                     value: 4,
                                     message:
-                                        "The genres can`t be less than 4 characters long!",
+                                        "The genres can't be less than 4 characters long!",
                                 },
                             })}
                             type="text"
@@ -70,15 +79,14 @@ export default function Create({ onCreateSubmit }) {
                             name="genres"
                             placeholder="Enter game genres..."
                         />
-                        {errors[CreateGameFormKeys.GENRES] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[CreateGameFormKeys.GENRES].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={CreateGameFormKeys.GENRES}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
-                        <label htmlFor="levels">MaxLevel:</label>
+                        <label htmlFor="maxLevel">MaxLevel:</label>
                         <input
                             {...register(CreateGameFormKeys.MAX_LEVEL, {
                                 required: "This field is required!",
@@ -89,29 +97,43 @@ export default function Create({ onCreateSubmit }) {
                             min="1"
                             placeholder="1"
                         />
-                        {errors[CreateGameFormKeys.MAX_LEVEL] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[CreateGameFormKeys.MAX_LEVEL].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={CreateGameFormKeys.MAX_LEVEL}
+                        />
                     </div>
-
                     <div className="w-full flex flex-col items-center">
                         <label htmlFor="game-img">Image:</label>
-                        <input
-                            {...register(CreateGameFormKeys.IMAGE_URL, {
-                                required: "This field is required!",
-                            })}
-                            type="text"
-                            id="imageUrl"
-                            name="imageUrl"
-                            placeholder="Upload a photo..."
-                        />
-                        {errors[CreateGameFormKeys.IMAGE_URL] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[CreateGameFormKeys.IMAGE_URL].message
-                            }`}</p>
+                        {!selectedFile && ( // Conditionally render the file input
+                            <input
+                                {...register(CreateGameFormKeys.IMAGE_URL, {
+                                    required: "This field is required!",
+                                })}
+                                type="file"
+                                id="imageUrl"
+                                name="imageUrl"
+                                accept=".png, .jpg, .jpeg"
+                            />
                         )}
+                        {selectedFile && selectedFile.length > 0 && (
+                            <div className="relative">
+                                <img
+                                    src={URL.createObjectURL(selectedFile[0])}
+                                    alt="Preview"
+                                    className="mb-4 max-w-[400px]"
+                                />
+                                <button
+                                    onClick={onImageExit}
+                                    className="absolute -top-1 right-1 text-red-500 text-2xl"
+                                >
+                                    X
+                                </button>
+                            </div>
+                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={CreateGameFormKeys.IMAGE_URL}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -122,17 +144,16 @@ export default function Create({ onCreateSubmit }) {
                                 minLength: {
                                     value: 10,
                                     message:
-                                        "The description can`t be less than 10 characters long!",
+                                        "The description can't be less than 10 characters long!",
                                 },
                             })}
                             name="description"
                             id="description"
                         ></textarea>
-                        {errors[CreateGameFormKeys.DESCRIPTION] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[CreateGameFormKeys.DESCRIPTION].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={CreateGameFormKeys.DESCRIPTION}
+                        />
                     </div>
 
                     <input
@@ -147,5 +168,5 @@ export default function Create({ onCreateSubmit }) {
 }
 
 Create.propTypes = {
-    onCreateSubmit: PropTypes.func,
+    onCreateSubmit: PropTypes.func.isRequired,
 };
