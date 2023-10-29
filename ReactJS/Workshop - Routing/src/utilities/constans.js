@@ -24,3 +24,9 @@ export const CreateCommentFormKeys = {
     AUTHOR: "author",
     COMMENT: "comment",
 };
+
+export const EditGameActions = {
+    SET_GAME: "set_game",
+    SET_FILE: "set_file",
+    RESET_FILE: "reset_file",
+};

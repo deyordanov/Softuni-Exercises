@@ -28,11 +28,12 @@ export default function Create({ onCreateSubmit }) {
         onCreateSubmit({ ...data, [CreateGameFormKeys.IMAGE_URL]: url });
     };
 
-    const selectedFile = watch(CreateGameFormKeys.IMAGE_URL);
-
     const onImageExit = () => {
         setValue(CreateGameFormKeys.IMAGE_URL, null);
     };
+
+    const selectedFile = watch(CreateGameFormKeys.IMAGE_URL);
+
     return (
         <section
             id="create-page"
