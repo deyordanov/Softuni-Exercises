@@ -2,8 +2,9 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-import { LoginFormKeys } from "../../utilities/constans";
+import { LoginOrRegisterFormKeys } from "../../utilities/constans";
 import { AuthContext } from "../../Contexts/AuthContext";
+import ErrorMessage from "../../utilities/ErrorMessage";
 // import { withAuth } from "../../hoc/withAuth";
 
 export default function Login() {
@@ -15,8 +16,8 @@ export default function Login() {
         formState: { errors },
     } = useForm({
         defaultValues: {
-            [LoginFormKeys.EMAIL]: "",
-            [LoginFormKeys.PASSWORD]: "",
+            [LoginOrRegisterFormKeys.EMAIL]: "",
+            [LoginOrRegisterFormKeys.PASSWORD]: "",
         },
         mode: "onChange",
     });
@@ -31,13 +32,13 @@ export default function Login() {
                     <h1 className="font-mono">Login</h1>
                     <div className="w-full flex flex-col items-center">
                         <label
-                            htmlFor={LoginFormKeys.EMAIL}
+                            htmlFor={LoginOrRegisterFormKeys.EMAIL}
                             className="font-mono"
                         >
                             Email:
                         </label>
                         <input
-                            {...register(LoginFormKeys.EMAIL, {
+                            {...register(LoginOrRegisterFormKeys.EMAIL, {
                                 required: "This field is required!",
                                 minLength: {
                                     value: 10,
@@ -47,36 +48,34 @@ export default function Login() {
                             })}
                             type="email"
                             id="email"
-                            name={LoginFormKeys.EMAIL}
+                            name={LoginOrRegisterFormKeys.EMAIL}
                             placeholder="nanami@gmail.com"
                         />
-                        {errors[LoginFormKeys.EMAIL] && (
-                            <p className="mt-2 text-xl text-red-500">
-                                {`⚠ ${errors[LoginFormKeys.EMAIL].message}`}
-                            </p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={LoginOrRegisterFormKeys.EMAIL}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
                         <label
-                            htmlFor={LoginFormKeys.PASSWORD}
+                            htmlFor={LoginOrRegisterFormKeys.PASSWORD}
                             className="font-mono"
                         >
                             Password:
                         </label>
                         <input
-                            {...register(LoginFormKeys.PASSWORD, {
+                            {...register(LoginOrRegisterFormKeys.PASSWORD, {
                                 required: "This field is required!",
                             })}
                             type="password"
                             id="login-password"
-                            name={LoginFormKeys.PASSWORD}
+                            name={LoginOrRegisterFormKeys.PASSWORD}
                         />
-                        {errors[LoginFormKeys.PASSWORD] && (
-                            <p className="mt-2 text-xl text-red-500">
-                                {`⚠ ${errors[LoginFormKeys.PASSWORD].message}`}
-                            </p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={LoginOrRegisterFormKeys.PASSWORD}
+                        />
                     </div>
 
                     <input

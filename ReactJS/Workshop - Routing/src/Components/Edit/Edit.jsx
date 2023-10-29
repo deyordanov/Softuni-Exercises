@@ -5,25 +5,36 @@ import { useForm } from "react-hook-form";
 
 import * as gameService from "../../Services/gameService";
 import { EditGameFormKeys } from "../../utilities/constans";
+import ErrorMessage from "../../utilities/ErrorMessage";
 
 export default function Edit({ onEditSubmit }) {
     const { gameId } = useParams();
     const [game, setGame] = useState({});
+    const [selectedFileState, setSelectedFileState] = useState(null);
     const {
         register,
         handleSubmit,
         setValue,
+        watch,
         formState: { errors },
     } = useForm({
         defaultValues: {
             [EditGameFormKeys.TITLE]: "",
             [EditGameFormKeys.GENRES]: "",
             [EditGameFormKeys.MAX_LEVEL]: "",
-            [EditGameFormKeys.IMAGE_URL]: "",
+            [EditGameFormKeys.IMAGE_URL]: null,
             [EditGameFormKeys.DESCRIPTION]: "",
         },
         mode: "onChange",
     });
+
+    const selectedFile = watch(EditGameFormKeys.IMAGE_URL);
+
+    useEffect(() => {
+        if (selectedFile && selectedFile.length > 0) {
+            setSelectedFileState(selectedFile[0]);
+        }
+    }, [selectedFile]);
 
     //We need to set the default values this way, because when the component is rendered the 'game' object is empty
     useEffect(() => {
@@ -36,6 +47,20 @@ export default function Edit({ onEditSubmit }) {
         gameService.getOne(gameId).then((response) => setGame(response));
     }, [gameId]);
 
+    const onSubmit = (data, gameId) => {
+        //We retrieve the file - if it exists => get data from data[EditGameFormKeys.IMAGE_URL][0], else it will be undefined
+        const file =
+            data[EditGameFormKeys.IMAGE_URL] &&
+            data[EditGameFormKeys.IMAGE_URL][0];
+        if (file instanceof File) {
+            data[EditGameFormKeys.IMAGE_URL] = URL.createObjectURL(file);
+        }
+        onEditSubmit(data, gameId);
+    };
+
+    const onImageExit = () => {
+        setValue(EditGameFormKeys.IMAGE_URL, null);
+    };
     return (
         <section
             id="edit-page"
@@ -43,7 +68,7 @@ export default function Edit({ onEditSubmit }) {
         >
             <form
                 id="edit"
-                onSubmit={handleSubmit((data) => onEditSubmit(data, gameId))}
+                onSubmit={handleSubmit((data) => onSubmit(data, gameId))}
             >
                 <div className="container flex flex-col items-center w-[500px]">
                     <h1>Edit Game</h1>
@@ -61,11 +86,10 @@ export default function Edit({ onEditSubmit }) {
                             id="title"
                             name="title"
                         />
-                        {errors[EditGameFormKeys.TITLE] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[EditGameFormKeys.TITLE].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={EditGameFormKeys.TITLE}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -82,11 +106,10 @@ export default function Edit({ onEditSubmit }) {
                             id="genres"
                             name="genres"
                         />
-                        {errors[EditGameFormKeys.GENRES] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[EditGameFormKeys.GENRES].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={EditGameFormKeys.GENRES}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -98,26 +121,57 @@ export default function Edit({ onEditSubmit }) {
                             name="maxLevel"
                             min="1"
                         />
-                        {errors[EditGameFormKeys.MAX_LEVEL] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[EditGameFormKeys.MAX_LEVEL].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={EditGameFormKeys.MAX_LEVEL}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
                         <label htmlFor="game-img">Image:</label>
-                        <input
-                            {...register(EditGameFormKeys.IMAGE_URL, {})}
-                            type="text"
-                            id="imageUrl"
-                            name="imageUrl"
-                        />
-                        {errors[EditGameFormKeys.IMAGE_URL] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[EditGameFormKeys.IMAGE_URL].message
-                            }`}</p>
+                        {selectedFile && selectedFile.length > 0 && (
+                            <div className="relative">
+                                {selectedFileState instanceof File ? (
+                                    <img
+                                        src={URL.createObjectURL(
+                                            selectedFileState
+                                        )}
+                                        alt="New Game Image"
+                                        className="mb-4 max-w-[400px]"
+                                    />
+                                ) : game.imageUrl ? (
+                                    <img
+                                        src={game.imageUrl}
+                                        alt="Current Game"
+                                        className="mb-4 max-w-[400px]"
+                                    />
+                                ) : null}
+
+                                <button
+                                    type="button"
+                                    onClick={onImageExit}
+                                    className="absolute -top-1 right-1 text-red-500 text-2xl"
+                                >
+                                    X
+                                </button>
+                            </div>
                         )}
+
+                        {!selectedFile && (
+                            <input
+                                {...register(EditGameFormKeys.IMAGE_URL, {
+                                    required: "This field is required!",
+                                })}
+                                type="file"
+                                id="imageUrl"
+                                name="imageUrl"
+                                accept=".png, .jpg, .jpeg"
+                            />
+                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={EditGameFormKeys.IMAGE_URL}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -133,11 +187,10 @@ export default function Edit({ onEditSubmit }) {
                             name="description"
                             id="description"
                         ></textarea>
-                        {errors[EditGameFormKeys.DESCRIPTION] && (
-                            <p className="mt-2 text-xl text-red-500">{`⚠ ${
-                                errors[EditGameFormKeys.DESCRIPTION].message
-                            }`}</p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={EditGameFormKeys.DESCRIPTION}
+                        />
                     </div>
 
                     <input
