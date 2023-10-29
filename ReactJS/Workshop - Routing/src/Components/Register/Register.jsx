@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../Contexts/AuthContext";
-import { LoginFormKeys } from "../../utilities/constans";
+import { LoginOrRegisterFormKeys } from "../../utilities/constans";
+import ErrorMessage from "../../utilities/ErrorMessage";
 
 export default function Register() {
     const { onRegisterSubmit } = useContext(AuthContext);
@@ -14,9 +15,9 @@ export default function Register() {
         watch,
         formState: { errors },
     } = useForm({
-        [LoginFormKeys.EMAIL]: "",
-        [LoginFormKeys.PASSWORD]: "",
-        [LoginFormKeys.PASSWORD_CONFIRMATION]: "",
+        [LoginOrRegisterFormKeys.EMAIL]: "",
+        [LoginOrRegisterFormKeys.PASSWORD]: "",
+        [LoginOrRegisterFormKeys.PASSWORD_CONFIRMATION]: "",
         mode: "onChange",
     });
 
@@ -34,7 +35,7 @@ export default function Register() {
                             Email:
                         </label>
                         <input
-                            {...register(LoginFormKeys.EMAIL, {
+                            {...register(LoginOrRegisterFormKeys.EMAIL, {
                                 required: "This field is required!",
                                 minLength: {
                                     value: 10,
@@ -47,11 +48,10 @@ export default function Register() {
                             name="email"
                             placeholder="megumi@gmail.com"
                         />
-                        {errors[LoginFormKeys.EMAIL] && (
-                            <p className="mt-2 text-xl text-red-500 text-center">
-                                {`⚠ ${errors[LoginFormKeys.EMAIL].message}`}
-                            </p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={LoginOrRegisterFormKeys.EMAIL}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -59,18 +59,17 @@ export default function Register() {
                             Password:
                         </label>
                         <input
-                            {...register(LoginFormKeys.PASSWORD, {
+                            {...register(LoginOrRegisterFormKeys.PASSWORD, {
                                 required: "This field is required!",
                             })}
                             type="password"
                             name="password"
                             id="register-password"
                         />
-                        {errors[LoginFormKeys.PASSWORD] && (
-                            <p className="mt-2 text-xl text-red-500 text-center">
-                                {`⚠ ${errors[LoginFormKeys.PASSWORD].message}`}
-                            </p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={LoginOrRegisterFormKeys.PASSWORD}
+                        />
                     </div>
 
                     <div className="w-full flex flex-col items-center">
@@ -78,29 +77,32 @@ export default function Register() {
                             Confirm Password:
                         </label>
                         <input
-                            {...register(LoginFormKeys.PASSWORD_CONFIRMATION, {
-                                required: "This field is required!",
-                                validate: (value) =>
-                                    value === watch(LoginFormKeys.PASSWORD) ||
-                                    "Passwords do not match!",
-                                pattern: {
-                                    value: /^(?=.*[A-Z])(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*]).+$/,
-                                    message:
-                                        "Password must contain at least one uppercase letter, one number, one lowercase letter, and one of the following symbols: !, @, #, $, %, ^, &, *.",
-                                },
-                            })}
+                            {...register(
+                                LoginOrRegisterFormKeys.PASSWORD_CONFIRMATION,
+                                {
+                                    required: "This field is required!",
+                                    validate: (value) =>
+                                        value ===
+                                            watch(
+                                                LoginOrRegisterFormKeys.PASSWORD
+                                            ) || "Passwords do not match!",
+                                    pattern: {
+                                        value: /^(?=.*[A-Z])(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*]).+$/,
+                                        message:
+                                            "Password must contain at least one uppercase letter, one number, one lowercase letter, and one of the following symbols: !, @, #, $, %, ^, &, *.",
+                                    },
+                                }
+                            )}
                             type="password"
                             name="password_confirmation"
                             id="confirm-password"
                         />
-                        {errors[LoginFormKeys.PASSWORD_CONFIRMATION] && (
-                            <p className="mt-2 text-xl text-red-500 text-center">
-                                {`⚠ ${
-                                    errors[LoginFormKeys.PASSWORD_CONFIRMATION]
-                                        .message
-                                }`}
-                            </p>
-                        )}
+                        <ErrorMessage
+                            errors={errors}
+                            fieldKey={
+                                LoginOrRegisterFormKeys.PASSWORD_CONFIRMATION
+                            }
+                        />
                     </div>
 
                     <input

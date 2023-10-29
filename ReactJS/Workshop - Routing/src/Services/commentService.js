@@ -1,6 +1,9 @@
 import * as requester from "./requester";
 
-const baseUrl = "http://localhost:3030/data/comments";
+//In order to implement the like button / like counter we need to use the 'jsonstore'
+//Since the 'data' doesn`t allow us to edit the comments (increment / decrement likes) from a user who hasn`t created the comment
+//I will leave the auth headers in case I need them later (used with 'data')
+const baseUrl = "http://localhost:3030/jsonstore/comments";
 
 const getAuthHeaders = () => {
     const token = JSON.parse(localStorage.getItem("auth")).accessToken;
@@ -17,11 +20,6 @@ export const getAll = async () => {
 };
 
 export const create = async (data) => {
-    //Due to server limitations in order to implement the like counter have to add the owner token to the comment itself
-    data = {
-        ...data,
-        ownerToken: JSON.parse(localStorage.getItem("auth")).accessToken,
-    };
     const headers = getAuthHeaders();
 
     const response = await requester.authorizationPost(
@@ -34,13 +32,6 @@ export const create = async (data) => {
 };
 
 export const like = async (data, action, userId) => {
-    //Due to server limitations in order to implement the like counter I have to take the 'ownerToken' from the comment and manually add it to the headers
-    // const headers = {
-    //     "Content-Type": "application/json",
-    //     "X-Authorization": data.ownerToken,
-    // };
-    // add -> add like, remove -> remove like
-
     const headers = getAuthHeaders();
     switch (action) {
         case "add":
@@ -61,8 +52,14 @@ export const like = async (data, action, userId) => {
 };
 
 export const getGameComments = async (gameId) => {
-    const query = encodeURIComponent(`gameId="${gameId}"`);
-    const gameComments = await requester.get(`${baseUrl}?where=${query}`);
+    // Can be used with 'data'
+    // const query = encodeURIComponent(`gameId="${gameId}"`);
+    // const gameComments = await requester.get(`${baseUrl}?where=${query}`);
+    let response = await getAll();
+
+    const gameComments = Object.values(response).filter(
+        (x) => x.gameId === gameId
+    );
 
     return gameComments;
 };
