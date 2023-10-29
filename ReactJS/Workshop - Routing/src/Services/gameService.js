@@ -37,12 +37,12 @@ export const remove = async (gameId) => {
     return gameId;
 };
 
-export const edit = async (data, gameId) => {
+export const edit = async (data) => {
     const headers = getAuthHeaders();
     const response = await requester.put(
         headers,
         JSON.stringify(data),
-        `${baseUrl}/${gameId}`
+        `${baseUrl}/${data._id}`
     );
     return response;
 };
