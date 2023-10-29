@@ -9,7 +9,7 @@ export default function Catalogue() {
     return (
         <section id="catalog-page">
             <h1>All Games</h1>
-            {Object.values(games).map((x) => (
+            {Object.values(games)?.map((x) => (
                 <CatalogueItem key={x._id} {...x} />
             ))}
 

@@ -1,10 +1,27 @@
 html {
+    position: relative;
     background-image: url("../images/background.png");
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+html::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.3
+    ); /* Change 0.5 to adjust opacity: 0 is fully transparent, 1 is fully opaque */
+    z-index: -1;
 }
 
 html,
