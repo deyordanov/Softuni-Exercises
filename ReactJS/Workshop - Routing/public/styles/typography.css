@@ -37,9 +37,6 @@ li {
 
 button {
     font-weight: bold;
-    padding: 0.2em;
-    margin: 0.2em;
-    border: 1px solid white;
     border-radius: 0.3em;
     background-color: transparent;
 }
@@ -56,7 +53,7 @@ blockquote {
     margin: 0.5em;
 }
 
-blockquote>cite {
+blockquote > cite {
     display: block;
     text-align: right;
     margin: 0.5em 2em;
