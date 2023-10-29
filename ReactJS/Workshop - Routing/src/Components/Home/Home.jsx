@@ -4,10 +4,12 @@ export default function Home() {
             className="flex flex-col h-screen font-mono"
             id="welcome-world"
         >
-            <div className="welcome-message flex flex-col items-center w-[40%]">
-                <h2>All new games are only in</h2>
-                <h3>PixelPulse</h3>
+            <div className="welcome-message flex flex-col items-center overflow-hidden break-words pb-14 w-full font-extrabold tracking-tight z-10 pt-24">
+                <p className="text-white text-5xl">
+                    Where Every Pixel Comes to Life.
+                </p>
             </div>
+
             <img
                 src="./images/DBD-Alien.png"
                 alt="hero"

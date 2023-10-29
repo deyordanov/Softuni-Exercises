@@ -7,14 +7,18 @@ export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
 
     return (
-        <header className="flex flex-row justify-between mb-24 overflow-visible">
+        <header className="flex justify-between max-w-[1200px] ">
             {/* <!-- Navigation --> */}
             <h1>
-                <Link className="home text-5xl font-mono" to="/">
-                    PixelPulse
+                <Link className="home" to="/">
+                    <img
+                        src="../../../public/images/logo.png"
+                        alt="PixelPulse"
+                        className="w-[230px]"
+                    />
                 </Link>
             </h1>
-            <nav className="flex items-center m-0 font-mono text-2xl">
+            <nav className="flex items-center m-0 font-mono text-3xl">
                 <Link to="/catalogue">All games</Link>
                 {/* <!-- Logged-in users --> */}
                 {isAuthenticated && (

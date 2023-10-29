@@ -129,8 +129,8 @@ export default function Details() {
                         </>
                     )}
 
-                    {comments.length === 0 && (
-                        <p className="no-comment text-3xl text-zinc-300 p-4 shadow-2xl ml-10 mb-5">
+                    {comments?.length === 0 && (
+                        <p className="no-comment text-3xl text-zinc-300 p-4  ml-10 mb-5">
                             No comments.
                         </p>
                     )}
