@@ -43,7 +43,7 @@ function App() {
     };
 
     const onEditSubmit = async (data, gameId) => {
-        const game = await gameService.edit(data, gameId);
+        const game = await gameService.edit(data);
         setGames((state) => state.map((x) => (x._id === game._id ? game : x)));
         navigate(`/catalogue/${gameId}`);
     };

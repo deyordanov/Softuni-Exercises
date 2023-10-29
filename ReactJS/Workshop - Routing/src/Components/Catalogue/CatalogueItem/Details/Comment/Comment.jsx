@@ -11,7 +11,7 @@ export default function Comment({ comment, onCommentLike, userId }) {
     }, [comment.likedBy, userId]);
 
     return (
-        <li className="comment bg-slate-500 flex items-center justify-center flex-col max-w-[300px] overflow-hidden break-all px-8 relative py-6">
+        <li className="comment bg-slate-500 flex items-center justify-center flex-col max-w-[300px] overflow-hidden break-words px-8 relative py-6">
             <p className="rounded-xl text-2xl text-center mb-3">
                 <b>{comment.author}</b>: {comment.comment}
             </p>
