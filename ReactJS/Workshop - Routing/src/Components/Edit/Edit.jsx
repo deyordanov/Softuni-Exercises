@@ -1,15 +1,27 @@
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import * as gameService from "../../Services/gameService";
-import { EditGameFormKeys } from "../../utilities/constans";
+import {
+    EditGameActions,
+    EditGameFormKeys,
+    defaultEditUseFormValues,
+    initialEditReducerValues,
+} from "../../utilities/constans";
 import ErrorMessage from "../../utilities/ErrorMessage";
 
+const reducer = (state, action) => {
+    switch (action.type) {
+        case EditGameActions.SET_GAME:
+            return { ...state, game: action.payload.game };
+    }
+};
+
 export default function Edit({ onEditSubmit }) {
+    const [state, dispatch] = useReducer(reducer, initialEditReducerValues);
     const { gameId } = useParams();
-    const [game, setGame] = useState({});
     const [selectedFileState, setSelectedFileState] = useState(null);
     const {
         register,
@@ -18,13 +30,7 @@ export default function Edit({ onEditSubmit }) {
         watch,
         formState: { errors },
     } = useForm({
-        defaultValues: {
-            [EditGameFormKeys.TITLE]: "",
-            [EditGameFormKeys.GENRES]: "",
-            [EditGameFormKeys.MAX_LEVEL]: "",
-            [EditGameFormKeys.IMAGE_URL]: null,
-            [EditGameFormKeys.DESCRIPTION]: "",
-        },
+        defaultValues: defaultEditUseFormValues,
         mode: "onChange",
     });
 
@@ -38,13 +44,18 @@ export default function Edit({ onEditSubmit }) {
 
     //We need to set the default values this way, because when the component is rendered the 'game' object is empty
     useEffect(() => {
-        for (let key in game) {
-            setValue(key, game[key]);
+        for (let key in state.game) {
+            setValue(key, state.game[key]);
         }
-    }, [game, setValue]);
+    }, [state.game, setValue]);
 
     useEffect(() => {
-        gameService.getOne(gameId).then((response) => setGame(response));
+        gameService.getOne(gameId).then((response) =>
+            dispatch({
+                type: EditGameActions.SET_GAME,
+                payload: { game: response },
+            })
+        );
     }, [gameId]);
 
     const onSubmit = (data, gameId) => {
@@ -61,6 +72,7 @@ export default function Edit({ onEditSubmit }) {
     const onImageExit = () => {
         setValue(EditGameFormKeys.IMAGE_URL, null);
     };
+
     return (
         <section
             id="edit-page"
@@ -139,9 +151,9 @@ export default function Edit({ onEditSubmit }) {
                                         alt="New Game Image"
                                         className="mb-4 max-w-[400px]"
                                     />
-                                ) : game.imageUrl ? (
+                                ) : state.game.imageUrl ? (
                                     <img
-                                        src={game.imageUrl}
+                                        src={state.game.imageUrl}
                                         alt="Current Game"
                                         className="mb-4 max-w-[400px]"
                                     />

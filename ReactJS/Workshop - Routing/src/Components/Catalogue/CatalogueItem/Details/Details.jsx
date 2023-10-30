@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext, useReducer } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
@@ -7,32 +7,47 @@ import * as gameService from "../../../../Services/gameService";
 import * as commentService from "../../../../Services/commentService";
 import { AuthContext } from "../../../../Contexts/AuthContext";
 import { DetailsContext } from "../../../../Contexts/DetailsContext";
+import { createReducer } from "../../../../reducers/createReducer";
+
 import Comment from "./Comment/Comment";
-import { CreateCommentFormKeys } from "../../../../utilities/constans";
+import {
+    CreateCommentFormKeys,
+    DetailsActions,
+    LikeCommentActions,
+    defaultDetailsUseFormValues,
+    initialDetailsReducerValues,
+} from "../../../../utilities/constans";
 
 export default function Details() {
-    const { onGameDelete } = useContext(DetailsContext);
+    const [state, dispatch] = useReducer(
+        createReducer,
+        initialDetailsReducerValues
+    );
+    const { onGameDelete } = useContext(DetailsContext); //
     const { userId } = useContext(AuthContext);
     const { register, handleSubmit, reset } = useForm({
-        defaultValues: {
-            [CreateCommentFormKeys.AUTHOR]: "",
-            [CreateCommentFormKeys.COMMENT]: "",
-        },
+        defaultValues: defaultDetailsUseFormValues,
     });
 
-    const [comments, setComments] = useState([]);
     const { gameId } = useParams();
-    const [game, setGame] = useState({});
 
     useEffect(() => {
-        gameService.getOne(gameId).then((response) => setGame(response));
+        gameService.getOne(gameId).then((response) =>
+            dispatch({
+                type: DetailsActions.SET_GAME,
+                payload: { game: response },
+            })
+        );
     }, [gameId]);
 
     useEffect(() => {
         commentService
             .getGameComments(gameId)
             .then((data) => {
-                setComments(data);
+                dispatch({
+                    type: DetailsActions.SET_COMMENTS,
+                    payload: { comments: data },
+                });
             })
             .catch((error) => console.log(error));
     }, [gameId]);
@@ -41,7 +56,11 @@ export default function Details() {
         commentService
             .create({ ...data, gameId, likedBy: [], userId })
             .then((newComment) => {
-                setComments([...comments, newComment]);
+                dispatch({
+                    type: DetailsActions.SET_COMMENTS,
+                    payload: { comments: [...state.comments, newComment] },
+                });
+
                 reset({
                     // Reset the form fields
                     [CreateCommentFormKeys.AUTHOR]: "",
@@ -61,63 +80,61 @@ export default function Details() {
         //Server limitations -> only the creator of the comment can like it....
         if (!isOwner) {
             setLiked((state) => {
-                if (!state) {
-                    commentService
-                        .like(comment, "add", userId)
-                        .then((newComment) =>
-                            setComments((state) =>
-                                state.map((x) =>
+                commentService
+                    .like(
+                        comment,
+                        !state
+                            ? LikeCommentActions.ADD
+                            : LikeCommentActions.REMOVE,
+                        userId
+                    )
+                    .then((newComment) =>
+                        dispatch({
+                            type: DetailsActions.SET_COMMENTS,
+                            payload: {
+                                comments: state.comments.map((x) =>
                                     x._id === newComment._id ? newComment : x
-                                )
-                            )
-                        );
-                } else {
-                    commentService
-                        .like(comment, "remove", userId)
-                        .then((newComment) =>
-                            setComments((state) =>
-                                state.map((x) =>
-                                    x._id === newComment._id ? newComment : x
-                                )
-                            )
-                        );
-                }
+                                ),
+                            },
+                        })
+                    )
+                    .catch((error) => console.log(error));
 
                 return !state;
             });
         }
     };
 
-    const isOwner = userId && userId === game._ownerId;
-    const isNotOwner = userId && userId !== game._ownerId;
+    const isOwner = userId && userId === state.game._ownerId;
+    const isNotOwner = userId && userId !== state.game._ownerId;
 
     return (
         <section id="game-details">
             <h1 className="font-mono">Game Details</h1>
             <div className="info-section  bg-slate-800 shadow-2xl shadow-black">
                 <div className="game-header">
-                    <img className="game-img" src={game.imageUrl} />
-                    <h1>{game.title}</h1>
+                    <img className="game-img" src={state.game.imageUrl} />
+                    <h1>{state.game.title}</h1>
                     <span className="levels bg-rose-500 text-black border-none text-lg rounded-lg">
-                        MaxLevel: {game.maxLevel}
+                        MaxLevel: {state.game.maxLevel}
                     </span>
                     <p className="type bg-green-500 p-2 rounded-lg border:none text-black text-lg">
-                        {game.genres}
+                        {state.game.genres}
                     </p>
                 </div>
 
                 <p className="text  w-[95%] text-zinc-300 m-auto overflow-hidden break-all">
-                    {game.description}
+                    {state.game.description}
                 </p>
 
                 <div className="details-comments w-full">
-                    {comments.length !== 0 && (
+                    {state.comments.length !== 0 && (
                         <>
                             <h2 className="text-3xl text-zinc-300 ml-10">
                                 Comments:
                             </h2>
                             <div className="grid grid-cols-2 mb-8">
-                                {comments.map((x) => (
+                                {state.comments.map((x) => (
                                     <Comment
                                         key={x._id}
                                         userId={userId}
@@ -129,7 +146,7 @@ export default function Details() {
                         </>
                     )}
 
-                    {comments?.length === 0 && (
+                    {state.comments?.length === 0 && (
                         <p className="no-comment text-3xl text-zinc-300 p-4  ml-10 mb-5">
                             No comments.
                         </p>

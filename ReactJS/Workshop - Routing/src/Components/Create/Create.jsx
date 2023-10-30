@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 
-import { CreateGameFormKeys } from "../../utilities/constans";
+import {
+    CreateGameFormKeys,
+    defaultCreateUseFormValues,
+} from "../../utilities/constans";
 import ErrorMessage from "../../utilities/ErrorMessage";
 
 export default function Create({ onCreateSubmit }) {
@@ -12,13 +15,7 @@ export default function Create({ onCreateSubmit }) {
         watch,
         setValue,
     } = useForm({
-        defaultValues: {
-            [CreateGameFormKeys.TITLE]: "",
-            [CreateGameFormKeys.GENRES]: "",
-            [CreateGameFormKeys.MAX_LEVEL]: "",
-            [CreateGameFormKeys.IMAGE_URL]: null,
-            [CreateGameFormKeys.DESCRIPTION]: "",
-        },
+        defaultValues: defaultCreateUseFormValues,
         mode: "onChange",
     });
 
