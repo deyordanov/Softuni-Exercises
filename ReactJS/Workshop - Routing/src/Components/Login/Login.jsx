@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-import { LoginOrRegisterFormKeys } from "../../utilities/constans";
+import {
+    LoginOrRegisterFormKeys,
+    defaultLoginUserFormValues,
+} from "../../utilities/constans";
 import { AuthContext } from "../../Contexts/AuthContext";
 import ErrorMessage from "../../utilities/ErrorMessage";
-// import { withAuth } from "../../hoc/withAuth";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
@@ -15,10 +17,7 @@ export default function Login() {
         handleSubmit,
         formState: { errors },
     } = useForm({
-        defaultValues: {
-            [LoginOrRegisterFormKeys.EMAIL]: "",
-            [LoginOrRegisterFormKeys.PASSWORD]: "",
-        },
+        defaultValues: defaultLoginUserFormValues,
         mode: "onChange",
     });
 

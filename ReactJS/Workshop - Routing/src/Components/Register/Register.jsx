@@ -3,7 +3,10 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../Contexts/AuthContext";
-import { LoginOrRegisterFormKeys } from "../../utilities/constans";
+import {
+    LoginOrRegisterFormKeys,
+    defaultRegisterFormValues,
+} from "../../utilities/constans";
 import ErrorMessage from "../../utilities/ErrorMessage";
 
 export default function Register() {
@@ -14,12 +17,7 @@ export default function Register() {
         handleSubmit,
         watch,
         formState: { errors },
-    } = useForm({
-        [LoginOrRegisterFormKeys.EMAIL]: "",
-        [LoginOrRegisterFormKeys.PASSWORD]: "",
-        [LoginOrRegisterFormKeys.PASSWORD_CONFIRMATION]: "",
-        mode: "onChange",
-    });
+    } = useForm({ defaultValues: defaultRegisterFormValues, mode: "onChange" });
 
     return (
         <section
