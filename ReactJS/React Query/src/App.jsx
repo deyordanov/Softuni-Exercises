@@ -3,6 +3,7 @@ import PostsList1 from "./PostsList1";
 import PostsList2 from "./PostsList2";
 import Post from "./Post";
 import { useState } from "react";
+import CreatePost from "./CreatePost";
 // /posts -> ["posts"]
 // /posts/1 -> ["posts", post.id]
 // /posts/?authorId=1 -> ["posts", { authorId: 1}]
@@ -20,8 +21,11 @@ function App() {
         <button onClick={() => setCurrentPage(<PostsList2 />)}>
           Posts List 2
         </button>
-        <button onClick={() => setCurrentPage(<Post id={1} />)}>
+        <button onClick={() => setCurrentPage(<Post id={"1"} />)}>
           First Post
+        </button>
+        <button onClick={() => setCurrentPage(<CreatePost />)}>
+          Create Post
         </button>
       </div>
       <br />
