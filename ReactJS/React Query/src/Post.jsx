@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPosts, getUser } from "./api/posts";
+import { getPosts, getUsers } from "./api/posts";
 
 export default function Post({ id }) {
   const postQuery = useQuery({
@@ -7,12 +7,19 @@ export default function Post({ id }) {
     queryFn: getPosts,
   });
 
-  const post = Object.values(postQuery.data).filter((x) => x.id === id)[0];
+  const post = postQuery.data
+    ? Object.values(postQuery?.data).filter((x) => x.id === id)[0]
+    : null;
 
-  //   const userQuery = useQuery({
-  //     queryKey: ["users", postQuery?.data?.userId],
-  //     queryFn: () => getUser(Object.values(postQuery.data).userId),
-  //   });
+  const userQuery = useQuery({
+    queryKey: ["users"],
+    enabled: post?.userId != null,
+    queryFn: getUsers,
+  });
+
+  const user = userQuery.data
+    ? Object.values(userQuery.data).filter((x) => `${x.id}` === post?.userId)[0]
+    : null;
 
   if (postQuery.isLoading) return <h1>Loading....</h1>;
   if (postQuery.isError) return <h1>{JSON.stringify(postQuery.error)}</h1>;
@@ -20,15 +27,17 @@ export default function Post({ id }) {
   return (
     <>
       <h1>
-        {post.title} <br />
-        UserId: {post.userId}
-        {/* <small>
+        {post.title} - {post.body}
+        <br />
+        {post.userId}
+        <small>
+          <br />
           {userQuery.isLoading
             ? "Loading User...."
             : userQuery.isError
             ? "Error Loading User"
-            : userQuery.data.name}
-        </small> */}
+            : user.name}
+        </small>
       </h1>
     </>
   );
