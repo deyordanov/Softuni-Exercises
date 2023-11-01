@@ -2,25 +2,19 @@ import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
     return (
-        <div className="flex h-screen  px-4 items-center justify-center">
-            <div className="text-center">
-                <h1 className="font-black text-gray-200 text-9xl">404</h1>
-
-                <p className="text-6xl font-bold tracking-tight text-red-600">
-                    Uh-oh!
-                </p>
-
-                <p className="mt-4 text-2xl text-gray-400">
-                    We can`t find that page.
-                </p>
-
-                <Link
-                    to="/"
-                    className="btn submit bg-slate-700  hover:shadow-lg hover:shadow-white hover:bg-slate-900"
-                >
-                    Go Back Home
-                </Link>
+        <main className="h-screen w-full flex flex-col justify-center items-center">
+            <h1 className="p-0 text-[280px] font-extrabold text-white tracking-widest">
+                404
+            </h1>
+            <div className="bg-[#FF6A3D] p-2 text-5xl rounded rotate-12 absolute">
+                Page Not Found
             </div>
-        </div>
+            <Link
+                to={"/"}
+                className="btn submit bg-slate-700 hover:shadow-lg hover:shadow-white hover:bg-slate-900"
+            >
+                Go Home
+            </Link>
+        </main>
     );
 }
