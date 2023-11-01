@@ -6,8 +6,6 @@ import { CatalogueContext } from "../../Contexts/CatalogueContext";
 export default function Catalogue() {
     const { games } = useContext(CatalogueContext);
 
-    console.log(games);
-
     return (
         <section id="catalog-page">
             <h1>All Games</h1>

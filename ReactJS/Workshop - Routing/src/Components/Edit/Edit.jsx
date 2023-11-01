@@ -10,7 +10,7 @@ import {
     defaultEditUseFormValues,
     initialEditReducerValues,
 } from "../../utilities/constans";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const reducer = (state, action) => {
     switch (action.type) {

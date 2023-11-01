@@ -5,7 +5,7 @@ import {
     CreateGameFormKeys,
     defaultCreateUseFormValues,
 } from "../../utilities/constans";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 export default function Create({ onCreateSubmit }) {
     const {
