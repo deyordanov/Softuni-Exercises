@@ -1,12 +1,16 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { AuthProvider } from "./Contexts/AuthContext";
 import { CatalogueContext } from "./Contexts/CatalogueContext";
 import { DetailsContext } from "./Contexts/DetailsContext";
-import * as gameService from "./Services/gameService";
-import { useAllGamesQuery, useCreateGameMutation } from "./queries/appQueries";
+
+import {
+    useAllGamesQuery,
+    useCreateGameMutation,
+    useDeleteGameMutation,
+    useEditGameMutation,
+} from "./queries/appQueries";
 
 // import { withAuth } from "./hoc/withAuth";
 import Header from "./Components/Header/Header";
@@ -26,71 +30,26 @@ import "../public/styles/style.css";
 
 function App() {
     const [games, setGames] = useState([]);
-    const navigate = useNavigate();
-
-    const queryClient = useQueryClient();
-
-    // const allGamesQuery = useQuery({
-    //     queryKey: ["games"],
-    //     queryFn: gameService.getAll,
-    // });
-
     const allGamesData = useAllGamesQuery();
+    const createGameMutation = useCreateGameMutation();
+    const deleteGameMutation = useDeleteGameMutation();
+    const editGameMutation = useEditGameMutation();
 
     useEffect(() => {
         setGames(allGamesData?.data);
     }, [allGamesData?.data]);
 
-    const createGameMutation = useCreateGameMutation();
-
-    const onCreateSubmit = async (data) => {
+    //Leaving these create/delete/edit functions for an easier understanding of what each one does
+    //Otherwise the wrappers can be used instead
+    const onCreateSubmit = (data) => {
         createGameMutation.mutate(data);
     };
 
-    const deleteGameMutation = useMutation({
-        mutationFn: (gameId) => gameService.remove(gameId),
-        onSuccess: async (data) => {
-            // data -> deleted game id
-
-            // queryClient.invalidateQueries(["games"]);
-
-            // await queryClient.refetchQueries(["games"]);
-            // Manually set the new games state
-            queryClient.setQueryData(["games"], (oldGames) =>
-                oldGames.filter((game) => game._id !== data)
-            );
-
-            //Invalidate the data to make sure it is up to date with the server
-            queryClient.invalidateQueries(["games"], { exact: true });
-
-            // Then navigate
-            navigate("/catalogue");
-        },
-    });
-
-    const onGameDelete = async (gameId) => {
+    const onGameDelete = (gameId) => {
         deleteGameMutation.mutate(gameId);
     };
 
-    const editGameMutation = useMutation({
-        mutationFn: ({ data }) => gameService.edit(data),
-        onSuccess: async (data) => {
-            // Manually set the new games state
-            queryClient.setQueryData(["games"], (oldGames) => {
-                return oldGames.map((game) =>
-                    game._id === data._id ? data : game
-                );
-            });
-
-            //Invalidate the data to make sure it is up to date with the server
-            queryClient.invalidateQueries(["games"], { exact: true });
-
-            // Then navigate
-            navigate(`/catalogue/${data._id}`);
-        },
-    });
-
-    const onEditSubmit = async (data) => {
+    const onEditSubmit = (data) => {
         editGameMutation.mutate(data);
     };
 
@@ -105,7 +64,8 @@ function App() {
     if (
         allGamesData.isPending ||
         createGameMutation.isPending ||
-        deleteGameMutation.isIdle
+        deleteGameMutation.isPending ||
+        editGameMutation.isPending
     )
         return <IsLoading />;
 
