@@ -5,6 +5,7 @@ import { AuthProvider } from "./Contexts/AuthContext";
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import { CatalogueContext } from "./Contexts/CatalogueContext";
 import { DetailsContext } from "./Contexts/DetailsContext";
+import RouteGuard from "./Components/common/RouteGuard";
 
 import {
     useAllGamesQuery,
@@ -89,17 +90,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         {/* <Route path="/login" element={<HOC props={props} />}></Route> */}
                         <Route path="/login" element={<Login />}></Route>
-                        <Route path="/logout" element={<Logout />}></Route>
                         <Route path="/register" element={<Register />}></Route>
-                        <Route
-                            path="/create"
-                            element={
-                                <Create
-                                    // onCreateSubmit={createGameMutation.mutate}
-                                    onCreateSubmit={onCreateSubmit}
-                                />
-                            }
-                        ></Route>
                         <Route
                             path="/catalogue"
                             element={
@@ -110,20 +101,34 @@ function App() {
                                 </CatalogueContext.Provider>
                             }
                         ></Route>
-                        <Route
-                            path="/catalogue/:gameId"
-                            element={
-                                <DetailsContext.Provider
-                                    value={detailsContextData}
-                                >
-                                    <Details />
-                                </DetailsContext.Provider>
-                            }
-                        ></Route>
-                        <Route
-                            path="/catalogue/:gameId/edit"
-                            element={<Edit onEditSubmit={onEditSubmit} />}
-                        ></Route>
+
+                        <Route element={<RouteGuard />}>
+                            <Route
+                                path="/create"
+                                element={
+                                    <Create
+                                        // onCreateSubmit={createGameMutation.mutate}
+                                        onCreateSubmit={onCreateSubmit}
+                                    />
+                                }
+                            ></Route>
+                            <Route
+                                path="/catalogue/:gameId/edit"
+                                element={<Edit onEditSubmit={onEditSubmit} />}
+                            ></Route>
+                            <Route
+                                path="/catalogue/:gameId"
+                                element={
+                                    <DetailsContext.Provider
+                                        value={detailsContextData}
+                                    >
+                                        <Details />
+                                    </DetailsContext.Provider>
+                                }
+                            ></Route>
+                            <Route path="/logout" element={<Logout />}></Route>
+                        </Route>
+
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>
                 </div>
