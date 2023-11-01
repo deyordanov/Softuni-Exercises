@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import { AuthProvider } from "./Contexts/AuthContext";
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import { CatalogueContext } from "./Contexts/CatalogueContext";
 import { DetailsContext } from "./Contexts/DetailsContext";
 
@@ -23,12 +24,14 @@ import Catalogue from "./Components/Catalogue/Catalogue";
 import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
 import Edit from "./Components/Edit/Edit";
 import Logout from "./Components/Logout/Logout";
-import IsLoading from "./utilities/IsLoading";
+import IsLoading from "./Components/IsLoading/IsLoading";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/style.css";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 function App() {
+    //Can be simplified even further by extracting the 'game' logic in a different context
     const [games, setGames] = useState([]);
     const allGamesData = useAllGamesQuery();
     const createGameMutation = useCreateGameMutation();
@@ -40,7 +43,7 @@ function App() {
     }, [allGamesData?.data]);
 
     //Leaving these create/delete/edit functions for an easier understanding of what each one does
-    //Otherwise the wrappers can be used instead
+    //Otherwise the wrappers can be used
     const onCreateSubmit = (data) => {
         createGameMutation.mutate(data);
     };
@@ -72,55 +75,60 @@ function App() {
     // const HOC = withAuth(Login);
 
     return (
-        <AuthProvider>
-            <div
-                id="box"
-                className="flex flex-col w-full overflow-y-auto h-screen box-border"
-            >
-                <Header />
-                <Main />
+        <ErrorBoundary>
+            <AuthProvider>
+                <div
+                    id="box"
+                    className="flex flex-col w-full overflow-y-auto h-screen box-border"
+                >
+                    <Header />
+                    <Main />
 
-                {/* Adding more contexts than necessary purely for practice! */}
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    {/* <Route path="/login" element={<HOC props={props} />}></Route> */}
-                    <Route path="/login" element={<Login />}></Route>
-                    <Route path="/logout" element={<Logout />}></Route>
-                    <Route path="/register" element={<Register />}></Route>
-                    <Route
-                        path="/create"
-                        element={
-                            <Create
-                                // onCreateSubmit={createGameMutation.mutate}
-                                onCreateSubmit={onCreateSubmit}
-                            />
-                        }
-                    ></Route>
-                    <Route
-                        path="/catalogue"
-                        element={
-                            <CatalogueContext.Provider
-                                value={catalogueContextData}
-                            >
-                                <Catalogue />
-                            </CatalogueContext.Provider>
-                        }
-                    ></Route>
-                    <Route
-                        path="/catalogue/:gameId"
-                        element={
-                            <DetailsContext.Provider value={detailsContextData}>
-                                <Details />
-                            </DetailsContext.Provider>
-                        }
-                    ></Route>
-                    <Route
-                        path="/catalogue/:gameId/edit"
-                        element={<Edit onEditSubmit={onEditSubmit} />}
-                    ></Route>
-                </Routes>
-            </div>
-        </AuthProvider>
+                    {/* Adding more contexts than necessary purely for practice! */}
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        {/* <Route path="/login" element={<HOC props={props} />}></Route> */}
+                        <Route path="/login" element={<Login />}></Route>
+                        <Route path="/logout" element={<Logout />}></Route>
+                        <Route path="/register" element={<Register />}></Route>
+                        <Route
+                            path="/create"
+                            element={
+                                <Create
+                                    // onCreateSubmit={createGameMutation.mutate}
+                                    onCreateSubmit={onCreateSubmit}
+                                />
+                            }
+                        ></Route>
+                        <Route
+                            path="/catalogue"
+                            element={
+                                <CatalogueContext.Provider
+                                    value={catalogueContextData}
+                                >
+                                    <Catalogue />
+                                </CatalogueContext.Provider>
+                            }
+                        ></Route>
+                        <Route
+                            path="/catalogue/:gameId"
+                            element={
+                                <DetailsContext.Provider
+                                    value={detailsContextData}
+                                >
+                                    <Details />
+                                </DetailsContext.Provider>
+                            }
+                        ></Route>
+                        <Route
+                            path="/catalogue/:gameId/edit"
+                            element={<Edit onEditSubmit={onEditSubmit} />}
+                        ></Route>
+                        <Route path="*" element={<ErrorPage />} />
+                    </Routes>
+                </div>
+            </AuthProvider>
+        </ErrorBoundary>
     );
 }
 
