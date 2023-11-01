@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import {
     LoginOrRegisterFormKeys,
@@ -8,9 +8,13 @@ import {
 } from "../../utilities/constans";
 import { AuthContext } from "../../Contexts/AuthContext";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import usePreviousLocation from "../../hooks/usePreviousLocation";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
+    const location = useLocation();
+
+    const previousLocation = usePreviousLocation();
 
     const {
         register,
@@ -26,7 +30,12 @@ export default function Login() {
             id="login-page"
             className="auth bg-slate-800 flex items-center relative w-[600px]"
         >
-            <form id="login" onSubmit={handleSubmit(onLoginSubmit)}>
+            <form
+                id="login"
+                onSubmit={handleSubmit((data) =>
+                    onLoginSubmit(data, previousLocation)
+                )}
+            >
                 <div className="container flex flex-col items-center w-[500px] pb-5">
                     <h1 className="font-mono">Login</h1>
                     <div className="w-full flex flex-col items-center">
