@@ -1,10 +1,12 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { AuthProvider } from "./Contexts/AuthContext";
 import { CatalogueContext } from "./Contexts/CatalogueContext";
 import { DetailsContext } from "./Contexts/DetailsContext";
 import * as gameService from "./Services/gameService";
+import { useAllGamesQuery, useCreateGameMutation } from "./queries/appQueries";
 
 // import { withAuth } from "./hoc/withAuth";
 import Header from "./Components/Header/Header";
@@ -17,6 +19,7 @@ import Catalogue from "./Components/Catalogue/Catalogue";
 import Details from "./Components/Catalogue/CatalogueItem/Details/Details";
 import Edit from "./Components/Edit/Edit";
 import Logout from "./Components/Logout/Logout";
+import IsLoading from "./utilities/IsLoading";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/style.css";
@@ -25,42 +28,86 @@ function App() {
     const [games, setGames] = useState([]);
     const navigate = useNavigate();
 
+    const queryClient = useQueryClient();
+
+    // const allGamesQuery = useQuery({
+    //     queryKey: ["games"],
+    //     queryFn: gameService.getAll,
+    // });
+
+    const allGamesData = useAllGamesQuery();
+
     useEffect(() => {
-        gameService
-            .getAll()
-            .then((data) => {
-                setGames(data);
-            })
-            .catch((error) => console.log(error));
-    }, []);
+        setGames(allGamesData?.data);
+    }, [allGamesData?.data]);
+
+    const createGameMutation = useCreateGameMutation();
 
     const onCreateSubmit = async (data) => {
-        const newGame = await gameService.create(data);
-
-        setGames((state) => [...state, newGame]);
-
-        navigate("/catalogue");
+        createGameMutation.mutate(data);
     };
 
-    const onEditSubmit = async (data, gameId) => {
-        const game = await gameService.edit(data);
-        setGames((state) => state.map((x) => (x._id === game._id ? game : x)));
-        navigate(`/catalogue/${gameId}`);
-    };
+    const deleteGameMutation = useMutation({
+        mutationFn: (gameId) => gameService.remove(gameId),
+        onSuccess: async (data) => {
+            // data -> deleted game id
+
+            // queryClient.invalidateQueries(["games"]);
+
+            // await queryClient.refetchQueries(["games"]);
+            // Manually set the new games state
+            queryClient.setQueryData(["games"], (oldGames) =>
+                oldGames.filter((game) => game._id !== data)
+            );
+
+            //Invalidate the data to make sure it is up to date with the server
+            queryClient.invalidateQueries(["games"], { exact: true });
+
+            // Then navigate
+            navigate("/catalogue");
+        },
+    });
 
     const onGameDelete = async (gameId) => {
-        const deletedGameId = await gameService.remove(gameId);
+        deleteGameMutation.mutate(gameId);
+    };
 
-        setGames((state) => state.filter((x) => x._id !== deletedGameId));
+    const editGameMutation = useMutation({
+        mutationFn: ({ data }) => gameService.edit(data),
+        onSuccess: async (data) => {
+            // Manually set the new games state
+            queryClient.setQueryData(["games"], (oldGames) => {
+                return oldGames.map((game) =>
+                    game._id === data._id ? data : game
+                );
+            });
+
+            //Invalidate the data to make sure it is up to date with the server
+            queryClient.invalidateQueries(["games"], { exact: true });
+
+            // Then navigate
+            navigate(`/catalogue/${data._id}`);
+        },
+    });
+
+    const onEditSubmit = async (data) => {
+        editGameMutation.mutate(data);
     };
 
     const catalogueContextData = {
-        games,
+        games: games ?? [],
     };
 
     const detailsContextData = {
         onGameDelete,
     };
+
+    if (
+        allGamesData.isPending ||
+        createGameMutation.isPending ||
+        deleteGameMutation.isIdle
+    )
+        return <IsLoading />;
 
     // const HOC = withAuth(Login);
 
@@ -82,7 +129,12 @@ function App() {
                     <Route path="/register" element={<Register />}></Route>
                     <Route
                         path="/create"
-                        element={<Create onCreateSubmit={onCreateSubmit} />}
+                        element={
+                            <Create
+                                // onCreateSubmit={createGameMutation.mutate}
+                                onCreateSubmit={onCreateSubmit}
+                            />
+                        }
                     ></Route>
                     <Route
                         path="/catalogue"
