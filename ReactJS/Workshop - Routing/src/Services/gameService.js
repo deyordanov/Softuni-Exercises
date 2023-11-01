@@ -11,7 +11,7 @@ const getAuthHeaders = () => {
 };
 
 export const getAll = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     const response = await requester.get(baseUrl);
     const games = Object.values(response);
     return games;

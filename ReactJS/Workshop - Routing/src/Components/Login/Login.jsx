@@ -7,7 +7,7 @@ import {
     defaultLoginUserFormValues,
 } from "../../utilities/constans";
 import { AuthContext } from "../../Contexts/AuthContext";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);

@@ -7,7 +7,7 @@ import {
     LoginOrRegisterFormKeys,
     defaultRegisterFormValues,
 } from "../../utilities/constans";
-import ErrorMessage from "../../utilities/ErrorMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 export default function Register() {
     const { onRegisterSubmit } = useContext(AuthContext);
