@@ -11,13 +11,18 @@ export const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useLocalStorage("auth", {});
     const navigate = useNavigate();
 
-    const onLoginSubmit = async (data) => {
+    const onLoginSubmit = async (data, location) => {
         try {
+            //Returning to the last page we were at before logging in
+            const { from } = { from: { pathname: location.pathname } } || {
+                from: { pathname: "/" },
+            };
+
             const response = await authService.login(data);
 
             setAuth(response);
 
-            navigate("/catalogue");
+            navigate(from);
         } catch (error) {
             console.log("Invalid email or password!");
         }
