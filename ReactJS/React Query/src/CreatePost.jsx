@@ -1,51 +1,51 @@
 import { createPost } from "./api/posts";
-import { useState } from "react";
+import { useRef } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import Post from "./Post";
 
-export default function CreatePost() {
-  const [formValues, setFormValues] = useState({
-    title: "",
-    body: "",
-    id: 0,
-    userId: 0,
+// eslint-disable-next-line react/prop-types
+export default function CreatePost({ setCurrentPage }) {
+  const titleRef = useRef();
+  const bodyRef = useRef();
+  const queryClient = useQueryClient();
+  const createPostMutation = useMutation({
+    mutationFn: createPost,
+    onSuccess: (data) => {
+      queryClient.setQueryData(["posts", data._id], data);
+      queryClient.invalidateQueries(["posts"], { exat: true });
+      setCurrentPage(<Post id={data._id} />);
+    },
+    //Peformed before the mutationFn - here we create our context
+    // onMutate: (variables) => {
+    //   return { cat: "Meowskers" };
+    // },
   });
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    createPost(formValues);
-    setFormValues({
-      title: "",
-      body: "",
+    createPostMutation.mutate({
+      title: titleRef.current.value,
+      body: bodyRef.current.value,
     });
   };
 
-  const onChangeHandler = (e) => {
-    setFormValues((state) => ({ ...state, [e.target.name]: e.target.value }));
-  };
-
   return (
-    <form onSubmit={onSubmitHandler}>
-      <div>
-        <label htmlFor="title">Title: </label>
-        <input type="text" name="title" id="title" onChange={onChangeHandler} />
-      </div>
-      <div>
-        <label htmlFor="body">Body: </label>
-        <input type="text" name="body" id="body" onChange={onChangeHandler} />
-      </div>
-      <div>
-        <label htmlFor="id">Id: </label>
-        <input type="number" name="id" id="id" onChange={onChangeHandler} />
-      </div>
-      <div>
-        <label htmlFor="userId">User Id: </label>
-        <input
-          type="number"
-          name="userId"
-          id="userId"
-          onChange={onChangeHandler}
-        />
-      </div>
-      <button>Submit</button>
-    </form>
+    <>
+      {createPostMutation.isError && JSON.stringify(createPostMutation.error)}
+      <h1>Create Post</h1>
+      <form onSubmit={onSubmitHandler}>
+        <div>
+          <label htmlFor="title">Title: </label>
+          <input ref={titleRef} type="text" name="title" id="title" />
+        </div>
+        <div>
+          <label htmlFor="body">Body: </label>
+          <input ref={bodyRef} type="text" name="body" id="body" />
+        </div>
+        <button disabled={createPostMutation.isLoading}>
+          {createPostMutation.isLoading ? "Loading..." : "Create"}
+        </button>
+      </form>
+    </>
   );
 }
