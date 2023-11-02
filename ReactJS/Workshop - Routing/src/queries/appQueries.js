@@ -1,7 +1,7 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
 
 import * as gameService from "../Services/gameService";
-import { useAppQueryContext } from "../Contexts/AppQueryContext";
+import { useQueryContext } from "../Contexts/QueryContext";
 
 export const useAllGamesQuery = () => {
     return useQuery({
@@ -11,7 +11,7 @@ export const useAllGamesQuery = () => {
 };
 
 export const useCreateGameMutation = () => {
-    const { navigate, queryClient } = useAppQueryContext();
+    const { navigate, queryClient } = useQueryContext();
 
     return useMutation({
         mutationFn: (data) => gameService.create(data),
@@ -33,7 +33,7 @@ export const useCreateGameMutation = () => {
 };
 
 export const useDeleteGameMutation = () => {
-    const { navigate, queryClient } = useAppQueryContext();
+    const { navigate, queryClient } = useQueryContext();
 
     return useMutation({
         mutationFn: (gameId) => gameService.remove(gameId),
@@ -50,7 +50,7 @@ export const useDeleteGameMutation = () => {
 };
 
 export const useEditGameMutation = () => {
-    const { navigate, queryClient } = useAppQueryContext();
+    const { navigate, queryClient } = useQueryContext();
 
     return useMutation({
         mutationFn: (data) => gameService.edit(data),
