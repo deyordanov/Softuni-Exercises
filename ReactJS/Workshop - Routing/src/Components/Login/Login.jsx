@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
     LoginOrRegisterFormKeys,
@@ -12,7 +12,6 @@ import usePreviousLocation from "../../hooks/usePreviousLocation";
 
 export default function Login() {
     const { onLoginSubmit } = useContext(AuthContext);
-    const location = useLocation();
 
     const previousLocation = usePreviousLocation();
 

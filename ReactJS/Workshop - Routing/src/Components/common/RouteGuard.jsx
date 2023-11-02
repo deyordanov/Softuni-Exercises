@@ -10,6 +10,7 @@ export default function RouteGuard({ children }) {
 
     const { isAuthenticated } = useContext(AuthContext);
 
+    // 'replace' will not save the /create and instead it will be overwritten by /login -> we use 'usePreviousLocation' instead
     if (!isAuthenticated)
         return (
             <Navigate
@@ -17,6 +18,7 @@ export default function RouteGuard({ children }) {
                     pathname: "/login",
                     state: { from: previousLocation },
                 }}
+                replace
             />
         );
 

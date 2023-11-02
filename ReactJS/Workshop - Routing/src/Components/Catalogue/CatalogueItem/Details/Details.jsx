@@ -3,13 +3,19 @@ import { useEffect, useContext, useReducer } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-import * as gameService from "../../../../Services/gameService";
-import * as commentService from "../../../../Services/commentService";
+import {
+    useOneGameQuery,
+    useGetGameComments,
+    useCreateCommentMutation,
+    useCommentLikeMutation,
+} from "../../../../queries/detailsQueries";
+
 import { AuthContext } from "../../../../Contexts/AuthContext";
 import { DetailsContext } from "../../../../Contexts/DetailsContext";
 import { createReducer } from "../../../../reducers/createReducer";
 
 import Comment from "./Comment/Comment";
+import ErrorPage from "../../../ErrorPage/ErrorPage";
 import {
     CreateCommentFormKeys,
     DetailsActions,
@@ -31,82 +37,63 @@ export default function Details() {
 
     const { gameId } = useParams();
 
-    useEffect(() => {
-        gameService.getOne(gameId).then((response) =>
-            dispatch({
-                type: DetailsActions.SET_GAME,
-                payload: { game: response },
-            })
-        );
-    }, [gameId]);
+    const signleGameData = useOneGameQuery(gameId);
+    const gameCommentsData = useGetGameComments();
+    const createCommentMutation = useCreateCommentMutation();
+    const commentLikeMutation = useCommentLikeMutation();
 
     useEffect(() => {
-        commentService
-            .getGameComments(gameId)
-            .then((data) => {
-                dispatch({
-                    type: DetailsActions.SET_COMMENTS,
-                    payload: { comments: data },
-                });
-            })
-            .catch((error) => console.log(error));
-    }, [gameId]);
+        dispatch({
+            type: DetailsActions.SET_GAME,
+            payload: { game: signleGameData?.data ?? {} },
+        });
+    }, [signleGameData?.data]);
+
+    useEffect(() => {
+        dispatch({
+            type: DetailsActions.SET_COMMENTS,
+            payload: { comments: gameCommentsData?.data ?? [] },
+        });
+    }, [gameCommentsData?.data]);
 
     const onCommentSubmit = (data) => {
-        commentService
-            .create({ ...data, gameId, likedBy: [], userId })
-            .then((newComment) => {
-                dispatch({
-                    type: DetailsActions.SET_COMMENTS,
-                    payload: { comments: [...state.comments, newComment] },
-                });
+        createCommentMutation.mutate({ data, gameId, userId });
 
-                reset({
-                    // Reset the form fields
-                    [CreateCommentFormKeys.AUTHOR]: "",
-                    [CreateCommentFormKeys.COMMENT]: "",
-                });
-            })
-            .catch((error) => console.log(error));
+        reset({
+            // Reset the form fields
+            [CreateCommentFormKeys.AUTHOR]: "",
+            [CreateCommentFormKeys.COMMENT]: "",
+        });
     };
 
     const onCommentLike = (comment, setLiked) => {
-        // When using 'data'
-        // const isOwner = comment._ownerId === userId;
-
         const isOwner = comment.userId === userId;
 
-        //When using 'data':
-        //Server limitations -> only the creator of the comment can like it....
         if (!isOwner) {
-            setLiked((state) => {
-                commentService
-                    .like(
-                        comment,
-                        !state
-                            ? LikeCommentActions.ADD
-                            : LikeCommentActions.REMOVE,
-                        userId
-                    )
-                    .then((newComment) =>
-                        dispatch({
-                            type: DetailsActions.SET_COMMENTS,
-                            payload: {
-                                comments: state.comments.map((x) =>
-                                    x._id === newComment._id ? newComment : x
-                                ),
-                            },
-                        })
-                    )
-                    .catch((error) => console.log(error));
+            setLiked((currentLikeState) => {
+                commentLikeMutation.mutate({
+                    comment,
+                    action: !currentLikeState
+                        ? LikeCommentActions.ADD
+                        : LikeCommentActions.REMOVE,
+                    userId,
+                });
 
-                return !state;
+                return !currentLikeState;
             });
         }
     };
 
-    const isOwner = userId && userId === state.game._ownerId;
-    const isNotOwner = userId && userId !== state.game._ownerId;
+    if (
+        signleGameData.isError ||
+        gameCommentsData.isError ||
+        createCommentMutation.isError ||
+        commentLikeMutation.isError
+    )
+        return <ErrorPage />;
+
+    const isOwner = userId && state.game && userId === state.game._ownerId;
+    const isNotOwner = userId && state.game && userId !== state.game._ownerId;
 
     return (
         <section id="game-details">
@@ -197,7 +184,7 @@ export default function Details() {
                         <input
                             className="btn submit bg-slate-700 w-[40%] hover:shadow-lg hover:shadow-white"
                             type="submit"
-                            value="Edit"
+                            value="Comment"
                         />
                     </form>
                 </article>
