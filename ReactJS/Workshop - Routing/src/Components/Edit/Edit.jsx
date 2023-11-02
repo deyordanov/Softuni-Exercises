@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useReducer, useState } from "react";
 import { useForm } from "react-hook-form";
 
+import { useGameContext } from "../../Contexts/GameContext";
+
 import * as gameService from "../../Services/gameService";
 import {
     EditGameActions,
@@ -19,10 +21,7 @@ const reducer = (state, action) => {
     }
 };
 
-export default function Edit({ onEditSubmit }) {
-    const [state, dispatch] = useReducer(reducer, initialEditReducerValues);
-    const { gameId } = useParams();
-    const [selectedFileState, setSelectedFileState] = useState(null);
+export default function Edit() {
     const {
         register,
         handleSubmit,
@@ -33,6 +32,10 @@ export default function Edit({ onEditSubmit }) {
         defaultValues: defaultEditUseFormValues,
         mode: "onChange",
     });
+    const { onEditSubmit } = useGameContext();
+    const [state, dispatch] = useReducer(reducer, initialEditReducerValues);
+    const { gameId } = useParams();
+    const [selectedFileState, setSelectedFileState] = useState(null);
 
     const selectedFile = watch(EditGameFormKeys.IMAGE_URL);
 

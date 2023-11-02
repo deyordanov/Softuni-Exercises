@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 
 import {
     CreateGameFormKeys,
     defaultCreateUseFormValues,
 } from "../../utilities/constans";
+import { useGameContext } from "../../Contexts/GameContext";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
-export default function Create({ onCreateSubmit }) {
+export default function Create() {
     const {
         register,
         handleSubmit,
@@ -18,6 +18,8 @@ export default function Create({ onCreateSubmit }) {
         defaultValues: defaultCreateUseFormValues,
         mode: "onChange",
     });
+
+    const { onCreateSubmit } = useGameContext();
 
     const onSubmit = (data) => {
         const file = data[CreateGameFormKeys.IMAGE_URL][0];
@@ -164,7 +166,3 @@ export default function Create({ onCreateSubmit }) {
         </section>
     );
 }
-
-Create.propTypes = {
-    onCreateSubmit: PropTypes.func.isRequired,
-};
