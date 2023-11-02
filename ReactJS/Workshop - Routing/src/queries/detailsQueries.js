@@ -18,12 +18,12 @@ export const useGetGameComments = (gameId) => {
     });
 };
 
-export const useCreateCommentMutation = () => {
+export const useCreateCommentMutation = (gameId) => {
     const { queryClient } = useQueryContext();
 
     return useMutation({
         //mutationFn accepts a single parameter!
-        mutationFn: ({ data, gameId, userId }) => {
+        mutationFn: ({ data, userId }) => {
             return commentService.create({
                 ...data,
                 gameId,
@@ -32,22 +32,22 @@ export const useCreateCommentMutation = () => {
             });
         },
         onSuccess: async () => {
-            queryClient.invalidateQueries(["comments"]);
+            queryClient.invalidateQueries(["comments", gameId]);
 
-            await queryClient.refetchQueries(["comments"]);
+            await queryClient.refetchQueries(["comments", gameId]);
         },
     });
 };
 
-export const useCommentLikeMutation = () => {
+export const useCommentLikeMutation = (gameId) => {
     const { queryClient } = useQueryContext();
     return useMutation({
         mutationFn: ({ comment, action, userId }) =>
             commentService.like(comment, action, userId),
         onSuccess: async () => {
-            queryClient.invalidateQueries(["comments"]);
+            queryClient.invalidateQueries(["comments", gameId]);
 
-            await queryClient.refetchQueries(["comments"]);
+            await queryClient.refetchQueries(["comments", gameId]);
         },
     });
 };
