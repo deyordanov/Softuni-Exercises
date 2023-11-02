@@ -14,9 +14,14 @@ export const AuthProvider = ({ children }) => {
     const onLoginSubmit = async (data, location) => {
         try {
             //Returning to the last page we were at before logging in
-            const { from } = { from: { pathname: location.pathname } } || {
-                from: { pathname: "/" },
-            };
+            //Making sure the location pathname is not '/logout' since it would load the onLogout function again, but this time without a token and an error occurs
+            const from =
+                location.pathname == null || location.pathname === "/logout"
+                    ? "/"
+                    : location.pathname;
+            // location && location.pathname && location.pathname !== "/logout"
+            //     ? { pathname: location.pathname }
+            //     : { pathname: "/" };
 
             const response = await authService.login(data);
 

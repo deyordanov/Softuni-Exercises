@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import PropTypes from "prop-types";
 
-const AppQueryContext = createContext();
+const QueryContext = createContext();
 
-export const AppQueryProvider = ({ children }) => {
+export const QueryProvider = ({ children }) => {
     const navigate = useNavigate();
     const queryClient = useQueryClient();
 
@@ -19,16 +19,16 @@ export const AppQueryProvider = ({ children }) => {
     );
 
     return (
-        <AppQueryContext.Provider value={contextValues}>
+        <QueryContext.Provider value={contextValues}>
             {children}
-        </AppQueryContext.Provider>
+        </QueryContext.Provider>
     );
 };
 
-export const useAppQueryContext = () => {
-    return useContext(AppQueryContext);
+export const useQueryContext = () => {
+    return useContext(QueryContext);
 };
 
-AppQueryProvider.propTypes = {
+QueryProvider.propTypes = {
     children: PropTypes.object,
 };
