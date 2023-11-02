@@ -1,10 +1,11 @@
 import CatalogueItem from "./CatalogueItem/CatalogueItem";
-import { useContext } from "react";
 
-import { CatalogueContext } from "../../Contexts/CatalogueContext";
+import { useGameContext } from "../../Contexts/GameContext";
 
 export default function Catalogue() {
-    const { games } = useContext(CatalogueContext);
+    let { games } = useGameContext();
+
+    games = games ?? [];
 
     return (
         <section id="catalog-page">

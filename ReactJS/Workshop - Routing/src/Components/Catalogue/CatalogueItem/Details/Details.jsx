@@ -1,96 +1,24 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useContext, useReducer } from "react";
 import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
 
-import {
-    useOneGameQuery,
-    useGetGameComments,
-    useCreateCommentMutation,
-    useCommentLikeMutation,
-} from "../../../../queries/detailsQueries";
-
-import { AuthContext } from "../../../../Contexts/AuthContext";
-import { DetailsContext } from "../../../../Contexts/DetailsContext";
-import { createReducer } from "../../../../reducers/createReducer";
+import { useDetailsContext } from "../../../../Contexts/DetailsContext";
+import { useGameContext } from "../../../../Contexts/GameContext";
 
 import Comment from "./Comment/Comment";
-import ErrorPage from "../../../ErrorPage/ErrorPage";
-import {
-    CreateCommentFormKeys,
-    DetailsActions,
-    LikeCommentActions,
-    defaultDetailsUseFormValues,
-    initialDetailsReducerValues,
-} from "../../../../utilities/constans";
+
+import { CreateCommentFormKeys } from "../../../../utilities/constans";
 
 export default function Details() {
-    const [state, dispatch] = useReducer(
-        createReducer,
-        initialDetailsReducerValues
-    );
-    const { onGameDelete } = useContext(DetailsContext); //
-    const { userId } = useContext(AuthContext);
-    const { register, handleSubmit, reset } = useForm({
-        defaultValues: defaultDetailsUseFormValues,
-    });
+    const { onGameDelete } = useGameContext();
 
-    const { gameId } = useParams();
-
-    const signleGameData = useOneGameQuery(gameId);
-    const gameCommentsData = useGetGameComments();
-    const createCommentMutation = useCreateCommentMutation();
-    const commentLikeMutation = useCommentLikeMutation();
-
-    useEffect(() => {
-        dispatch({
-            type: DetailsActions.SET_GAME,
-            payload: { game: signleGameData?.data ?? {} },
-        });
-    }, [signleGameData?.data]);
-
-    useEffect(() => {
-        dispatch({
-            type: DetailsActions.SET_COMMENTS,
-            payload: { comments: gameCommentsData?.data ?? [] },
-        });
-    }, [gameCommentsData?.data]);
-
-    const onCommentSubmit = (data) => {
-        createCommentMutation.mutate({ data, gameId, userId });
-
-        reset({
-            // Reset the form fields
-            [CreateCommentFormKeys.AUTHOR]: "",
-            [CreateCommentFormKeys.COMMENT]: "",
-        });
-    };
-
-    const onCommentLike = (comment, setLiked) => {
-        const isOwner = comment.userId === userId;
-
-        if (!isOwner) {
-            setLiked((currentLikeState) => {
-                commentLikeMutation.mutate({
-                    comment,
-                    action: !currentLikeState
-                        ? LikeCommentActions.ADD
-                        : LikeCommentActions.REMOVE,
-                    userId,
-                });
-
-                return !currentLikeState;
-            });
-        }
-    };
-
-    if (
-        signleGameData.isError ||
-        gameCommentsData.isError ||
-        createCommentMutation.isError ||
-        commentLikeMutation.isError
-    )
-        return <ErrorPage />;
+    const {
+        onCommentSubmit,
+        onCommentLike,
+        register,
+        handleSubmit,
+        state,
+        userId,
+        gameId,
+    } = useDetailsContext();
 
     const isOwner = userId && state.game && userId === state.game._ownerId;
     const isNotOwner = userId && state.game && userId !== state.game._ownerId;
