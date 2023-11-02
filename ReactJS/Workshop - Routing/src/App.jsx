@@ -20,6 +20,7 @@ import Logout from "./Components/Logout/Logout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/styles/style.css";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
+import GameOwner from "./Components/common/GameOwner";
 
 function App() {
     // const HOC = withAuth(Login);
@@ -48,7 +49,13 @@ function App() {
                             <Route path="/create" element={<Create />}></Route>
                             <Route
                                 path="/catalogue/:gameId/edit"
-                                element={<Edit />}
+                                element={
+                                    <DetailsProvider>
+                                        <GameOwner>
+                                            <Edit />
+                                        </GameOwner>
+                                    </DetailsProvider>
+                                }
                             ></Route>
                             <Route
                                 path="/catalogue/:gameId"

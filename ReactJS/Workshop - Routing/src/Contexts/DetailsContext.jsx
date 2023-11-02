@@ -57,8 +57,6 @@ export const DetailsProvider = ({ children }) => {
     const onCommentSubmit = (data) => {
         createCommentMutation.mutate({ data, userId });
 
-        console.log(data);
-
         reset({
             // Reset the form fields
             [CreateCommentFormKeys.AUTHOR]: "",
