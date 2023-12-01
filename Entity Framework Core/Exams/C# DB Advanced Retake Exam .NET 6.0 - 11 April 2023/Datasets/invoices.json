@@ -1,0 +1,802 @@
+[
+  {
+    "Number": 1427940691,
+    "IssueDate": "2022-08-29T00:00:00",
+    "DueDate": "2022-10-28T00:00:00",
+    "Amount": 913.13,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 142796902,
+    "IssueDate": "2022-08-31T00:00:00",
+    "DueDate": "2022-10-30T00:00:00",
+    "Amount": 891.76,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1427940690,
+    "IssueDate": "2022-09-05T00:00:00",
+    "DueDate": "2022-11-04T00:00:00",
+    "Amount": 704.48,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 42125161,
+    "IssueDate": "2022-09-06T00:00:00",
+    "DueDate": "2022-11-05T00:00:00",
+    "Amount": 656.54,
+    "CurrencyType": 1,
+    "ClientId": 4
+  },
+  {
+    "Number": 1485624797,
+    "IssueDate": "2022-09-07T00:00:00",
+    "DueDate": "2022-11-06T00:00:00",
+    "Amount": 615.15,
+    "CurrencyType": 2,
+    "ClientId": 5
+  },
+  {
+    "Number": 1085925094,
+    "IssueDate": "2022-09-08T00:00:00",
+    "DueDate": "2022-11-07T00:00:00",
+    "Amount": 600.89,
+    "CurrencyType": 3,
+    "ClientId": 6
+  },
+  {
+    "Number": 1338374286,
+    "IssueDate": "2022-09-09T00:00:00",
+    "DueDate": "2022-11-08T00:00:00",
+    "Amount": 587.98,
+    "CurrencyType": 1,
+    "ClientId": 7
+  },
+  {
+    "Number": 1581133431,
+    "IssueDate": "2022-09-14T00:00:00",
+    "DueDate": "2022-11-13T00:00:00",
+    "Amount": 569.49,
+    "CurrencyType": 2,
+    "ClientId": 8
+  },
+  {
+    "Number": 1478802062,
+    "IssueDate": "2022-09-15T00:00:00",
+    "DueDate": "2022-11-14T00:00:00",
+    "Amount": 538.4,
+    "CurrencyType": 3,
+    "ClientId": 9
+  },
+  {
+    "Number": 1284062717,
+    "IssueDate": "2022-09-19T00:00:00",
+    "DueDate": "2022-11-18T00:00:00",
+    "Amount": 533.65,
+    "CurrencyType": 1,
+    "ClientId": 10
+  },
+  {
+    "Number": 54351321,
+    "IssueDate": "2022-09-29T00:00:00",
+    "DueDate": "2022-11-28T00:00:00",
+    "Amount": 461.35,
+    "CurrencyType": 2,
+    "ClientId": 11
+  },
+  {
+    "Number": 1183239581,
+    "IssueDate": "2022-09-30T00:00:00",
+    "DueDate": "2022-11-29T00:00:00",
+    "Amount": 426.12,
+    "CurrencyType": 3,
+    "ClientId": 12
+  },
+  {
+    "Number": 1315215484,
+    "IssueDate": "2022-10-03T00:00:00",
+    "DueDate": "2022-12-02T00:00:00",
+    "Amount": 420.6,
+    "CurrencyType": 1,
+    "ClientId": 13
+  },
+  {
+    "Number": 1423600230,
+    "IssueDate": "2022-10-04T00:00:00",
+    "DueDate": "2022-12-03T00:00:00",
+    "Amount": 406.81,
+    "CurrencyType": 2,
+    "ClientId": 14
+  },
+  {
+    "Number": 1518076342,
+    "IssueDate": "2022-10-08T00:00:00",
+    "DueDate": "2022-12-07T00:00:00",
+    "Amount": 391.17,
+    "CurrencyType": 3,
+    "ClientId": 15
+  },
+  {
+    "Number": 1409090891,
+    "IssueDate": "2022-10-09T00:00:00",
+    "DueDate": "2022-12-08T00:00:00",
+    "Amount": 370.16,
+    "CurrencyType": 1,
+    "ClientId": 16
+  },
+  {
+    "Number": 1155509940,
+    "IssueDate": "2022-10-10T00:00:00",
+    "DueDate": "2022-12-09T00:00:00",
+    "Amount": 288.05,
+    "CurrencyType": 2,
+    "ClientId": 17
+  },
+  {
+    "Number": 66179926,
+    "IssueDate": "2022-10-13T00:00:00",
+    "DueDate": "2022-12-12T00:00:00",
+    "Amount": 264.04,
+    "CurrencyType": 3,
+    "ClientId": 18
+  },
+  {
+    "Number": 1108430716,
+    "IssueDate": "2022-10-15T00:00:00",
+    "DueDate": "2022-12-14T00:00:00",
+    "Amount": 252.3,
+    "CurrencyType": 1,
+    "ClientId": 19
+  },
+  {
+    "Number": 1257958993,
+    "IssueDate": "2022-10-19T00:00:00",
+    "DueDate": "2022-12-18T00:00:00",
+    "Amount": 235.8,
+    "CurrencyType": 2,
+    "ClientId": 1
+  },
+  {
+    "Number": 1055718787,
+    "IssueDate": "2022-10-20T00:00:00",
+    "DueDate": "2022-12-19T00:00:00",
+    "Amount": 224.92,
+    "CurrencyType": 3,
+    "ClientId": 2
+  },
+  {
+    "Number": 1208400268,
+    "IssueDate": "2022-10-25T00:00:00",
+    "DueDate": "2022-12-24T00:00:00",
+    "Amount": 214.76,
+    "CurrencyType": 1,
+    "ClientId": 3
+  },
+  {
+    "Number": 1165604086,
+    "IssueDate": "2022-10-27T00:00:00",
+    "DueDate": "2022-12-26T00:00:00",
+    "Amount": 187.97,
+    "CurrencyType": 2,
+    "ClientId": 4
+  },
+  {
+    "Number": 1266019388,
+    "IssueDate": "2022-10-31T00:00:00",
+    "DueDate": "2022-12-30T00:00:00",
+    "Amount": 180.96,
+    "CurrencyType": 3,
+    "ClientId": 5
+  },
+  {
+    "Number": 1148115181,
+    "IssueDate": "2022-11-14T00:00:00",
+    "DueDate": "2023-01-13T00:00:00",
+    "Amount": 172.02,
+    "CurrencyType": 1,
+    "ClientId": 6
+  },
+  {
+    "Number": 1234474122,
+    "IssueDate": "2022-11-15T00:00:00",
+    "DueDate": "2023-01-14T00:00:00",
+    "Amount": 170.73,
+    "CurrencyType": 1,
+    "ClientId": 7
+  },
+  {
+    "Number": 1171146761,
+    "IssueDate": "2022-11-16T00:00:00",
+    "DueDate": "2023-01-15T00:00:00",
+    "Amount": 167.22,
+    "CurrencyType": 2,
+    "ClientId": 8
+  },
+  {
+    "Number": 1301895705,
+    "IssueDate": "2022-11-30T00:00:00",
+    "DueDate": "2023-01-29T00:00:00",
+    "Amount": 166.23,
+    "CurrencyType": 3,
+    "ClientId": 9
+  },
+  {
+    "Number": 1444905153,
+    "IssueDate": "2022-12-05T00:00:00",
+    "DueDate": "2023-02-03T00:00:00",
+    "Amount": 166.15,
+    "CurrencyType": 1,
+    "ClientId": 10
+  },
+  {
+    "Number": 1416723313,
+    "IssueDate": "2022-12-12T00:00:00",
+    "DueDate": "2023-02-10T00:00:00",
+    "Amount": 161.98,
+    "CurrencyType": 2,
+    "ClientId": 11
+  },
+  {
+    "Number": 1028920046,
+    "IssueDate": "2022-12-14T00:00:00",
+    "DueDate": "2023-02-12T00:00:00",
+    "Amount": 158.15,
+    "CurrencyType": 3,
+    "ClientId": 12
+  },
+  {
+    "Number": 1298858914,
+    "IssueDate": "2022-12-15T00:00:00",
+    "DueDate": "2023-02-13T00:00:00",
+    "Amount": 152.73,
+    "CurrencyType": 1,
+    "ClientId": 13
+  },
+  {
+    "Number": 1167712585,
+    "IssueDate": "2022-12-19T00:00:00",
+    "DueDate": "2023-02-17T00:00:00",
+    "Amount": 129.78,
+    "CurrencyType": 2,
+    "ClientId": 14
+  },
+  {
+    "Number": 1150836004,
+    "IssueDate": "2022-12-20T00:00:00",
+    "DueDate": "2023-02-18T00:00:00",
+    "Amount": 113.45,
+    "CurrencyType": 3,
+    "ClientId": 15
+  },
+  {
+    "Number": 1343280899,
+    "IssueDate": "2022-12-21T00:00:00",
+    "DueDate": "2023-02-19T00:00:00",
+    "Amount": 105.85,
+    "CurrencyType": 1,
+    "ClientId": 16
+  },
+  {
+    "Number": 1335911776,
+    "IssueDate": "2022-12-31T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 67.52,
+    "CurrencyType": 2,
+    "ClientId": 17
+  },
+  {
+    "Number": 1355888821,
+    "IssueDate": "2023-01-02T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 48.9,
+    "CurrencyType": 3,
+    "ClientId": 18
+  },
+  {
+    "Number": 1420442239,
+    "IssueDate": "2023-01-08T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 22.68,
+    "CurrencyType": 1,
+    "ClientId": 19
+  },
+  {
+    "Number": 1413665552,
+    "IssueDate": "2023-01-13T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 22.68,
+    "CurrencyType": 2,
+    "ClientId": 1
+  },
+  {
+    "Number": 1048693136,
+    "IssueDate": "2023-01-15T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 22.68,
+    "CurrencyType": 3,
+    "ClientId": 2
+  },
+  {
+    "Number": 1173367140,
+    "IssueDate": "2023-01-23T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 21.79,
+    "CurrencyType": 1,
+    "ClientId": 3
+  },
+  {
+    "Number": 1196967065,
+    "IssueDate": "2023-01-26T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 2,
+    "ClientId": 1
+  },
+  {
+    "Number": 1213637863,
+    "IssueDate": "2023-01-31T00:00:00",
+    "DueDate": "2023-04-01T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 3,
+    "ClientId": 2
+  },
+  {
+    "Number": 1193017635,
+    "IssueDate": "2023-02-01T00:00:00",
+    "DueDate": "2023-04-02T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 1,
+    "ClientId": 3
+  },
+  {
+    "Number": 5245465,
+    "IssueDate": "2023-02-02T00:00:00",
+    "DueDate": "2023-04-03T00:00:00",
+    "Amount": 21.59,
+    "CurrencyType": 2,
+    "ClientId": 1
+  },
+  {
+    "Number": 1266395005,
+    "IssueDate": "2023-02-15T00:00:00",
+    "DueDate": "2023-04-16T00:00:00",
+    "Amount": 21.52,
+    "CurrencyType": 3,
+    "ClientId": 2
+  },
+  {
+    "Number": 1408771891,
+    "IssueDate": "2023-02-28T00:00:00",
+    "DueDate": "2023-04-29T00:00:00",
+    "Amount": 17.6,
+    "CurrencyType": 1,
+    "ClientId": 3
+  },
+  {
+    "Number": 1063259096,
+    "IssueDate": "2022-08-29T00:00:00",
+    "DueDate": "2023-02-19T00:00:00",
+    "Amount": 167.22,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1184451197,
+    "IssueDate": "2022-08-31T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 166.23,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1361491019,
+    "IssueDate": "2022-09-05T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 166.15,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 1141515905,
+    "IssueDate": "2022-09-06T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 161.98,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1180590469,
+    "IssueDate": "2022-09-07T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 158.15,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 3541516,
+    "IssueDate": "2022-09-08T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 152.73,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 1002264336,
+    "IssueDate": "2022-09-09T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 214.76,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1290921175,
+    "IssueDate": "2022-09-14T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 187.97,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1188190463,
+    "IssueDate": "2022-09-15T00:00:00",
+    "DueDate": "2023-04-01T00:00:00",
+    "Amount": 180.96,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 1054945233,
+    "IssueDate": "2022-09-19T00:00:00",
+    "DueDate": "2023-04-02T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1260361568,
+    "IssueDate": "2022-09-29T00:00:00",
+    "DueDate": "2023-02-20T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1399114578,
+    "IssueDate": "2022-09-30T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 21.62,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 1335153144,
+    "IssueDate": "2022-10-03T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 180.96,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1446331856,
+    "IssueDate": "2022-10-04T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 172.02,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1330417492,
+    "IssueDate": "2022-10-08T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 170.73,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 652651651,
+    "IssueDate": "2022-10-09T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 252.3,
+    "CurrencyType": 1,
+    "ClientId": 1
+  },
+  {
+    "Number": 1107856343,
+    "IssueDate": "2022-10-10T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 235.8,
+    "CurrencyType": 2,
+    "ClientId": 2
+  },
+  {
+    "Number": 1197929356,
+    "IssueDate": "2022-10-13T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 224.92,
+    "CurrencyType": 3,
+    "ClientId": 3
+  },
+  {
+    "Number": 1246019426,
+    "IssueDate": "2022-10-15T00:00:00",
+    "DueDate": "2023-04-03T00:00:00",
+    "Amount": 21.59,
+    "CurrencyType": 1,
+    "ClientId": 8
+  },
+  {
+    "Number": 1095578321,
+    "IssueDate": "2022-10-19T00:00:00",
+    "DueDate": "2023-04-04T00:00:00",
+    "Amount": 21.52,
+    "CurrencyType": 2,
+    "ClientId": 9
+  },
+  {
+    "Number": 1423958123,
+    "IssueDate": "2022-10-20T00:00:00",
+    "DueDate": "2023-02-21T00:00:00",
+    "Amount": 172.02,
+    "CurrencyType": 3,
+    "ClientId": 10
+  },
+  {
+    "Number": 1292770804,
+    "IssueDate": "2022-10-25T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 170.73,
+    "CurrencyType": 1,
+    "ClientId": 11
+  },
+  {
+    "Number": 1222493053,
+    "IssueDate": "2022-10-27T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 167.22,
+    "CurrencyType": 2,
+    "ClientId": 12
+  },
+  {
+    "Number": 1421653572,
+    "IssueDate": "2022-10-31T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 166.23,
+    "CurrencyType": 3,
+    "ClientId": 13
+  },
+  {
+    "Number": 1300941213,
+    "IssueDate": "2022-11-14T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 252.3,
+    "CurrencyType": 1,
+    "ClientId": 14
+  },
+  {
+    "Number": 1458253589,
+    "IssueDate": "2022-11-15T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 235.8,
+    "CurrencyType": 1,
+    "ClientId": 15
+  },
+  {
+    "Number": 1370816186,
+    "IssueDate": "2022-11-16T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 224.92,
+    "CurrencyType": 2,
+    "ClientId": 16
+  },
+  {
+    "Number": 1457883820,
+    "IssueDate": "2022-11-30T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 654.54,
+    "CurrencyType": 3,
+    "ClientId": 17
+  },
+  {
+    "Number": 1092784873,
+    "IssueDate": "2022-12-05T00:00:00",
+    "DueDate": "2023-04-05T00:00:00",
+    "Amount": 51.52,
+    "CurrencyType": 1,
+    "ClientId": 18
+  },
+  {
+    "Number": 1215683128,
+    "IssueDate": "2022-12-12T00:00:00",
+    "DueDate": "2023-04-06T00:00:00",
+    "Amount": 7,
+    "CurrencyType": 2,
+    "ClientId": 19
+  },
+  {
+    "Number": 1403410652,
+    "IssueDate": "2022-12-14T00:00:00",
+    "DueDate": "2023-02-22T00:00:00",
+    "Amount": 106.52,
+    "CurrencyType": 3,
+    "ClientId": 8
+  },
+  {
+    "Number": 1078925467,
+    "IssueDate": "2022-12-15T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 254,
+    "CurrencyType": 1,
+    "ClientId": 9
+  },
+  {
+    "Number": 1374893986,
+    "IssueDate": "2022-12-19T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 939.86,
+    "CurrencyType": 2,
+    "ClientId": 10
+  },
+  {
+    "Number": 1376822794,
+    "IssueDate": "2022-12-20T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 229.84,
+    "CurrencyType": 3,
+    "ClientId": 11
+  },
+  {
+    "Number": 1439153899,
+    "IssueDate": "2022-12-21T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 83.99,
+    "CurrencyType": 1,
+    "ClientId": 12
+  },
+  {
+    "Number": 1515368898,
+    "IssueDate": "2022-12-31T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 88.98,
+    "CurrencyType": 2,
+    "ClientId": 13
+  },
+  {
+    "Number": 1259279768,
+    "IssueDate": "2023-01-02T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 797.68,
+    "CurrencyType": 3,
+    "ClientId": 14
+  },
+  {
+    "Number": 1354766486,
+    "IssueDate": "2023-01-08T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 7664.86,
+    "CurrencyType": 1,
+    "ClientId": 15
+  },
+  {
+    "Number": 4554464,
+    "IssueDate": "2023-01-13T00:00:00",
+    "DueDate": "2023-04-07T00:00:00",
+    "Amount": 44.64,
+    "CurrencyType": 2,
+    "ClientId": 16
+  },
+  {
+    "Number": 1243534308,
+    "IssueDate": "2023-01-15T00:00:00",
+    "DueDate": "2023-04-08T00:00:00",
+    "Amount": 34.08,
+    "CurrencyType": 3,
+    "ClientId": 17
+  },
+  {
+    "Number": 1272358980,
+    "IssueDate": "2023-01-23T00:00:00",
+    "DueDate": "2023-02-23T00:00:00",
+    "Amount": 98.8,
+    "CurrencyType": 1,
+    "ClientId": 18
+  },
+  {
+    "Number": 1069034541,
+    "IssueDate": "2023-01-26T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 345.51,
+    "CurrencyType": 2,
+    "ClientId": 19
+  },
+  {
+    "Number": 1066162059,
+    "IssueDate": "2023-01-31T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 620.59,
+    "CurrencyType": 3,
+    "ClientId": 8
+  },
+  {
+    "Number": 1405859652,
+    "IssueDate": "2023-02-01T00:00:00",
+    "DueDate": "2023-03-09T00:00:00",
+    "Amount": 956.54,
+    "CurrencyType": 1,
+    "ClientId": 9
+  },
+  {
+    "Number": 1372021149,
+    "IssueDate": "2023-02-02T00:00:00",
+    "DueDate": "2023-03-14T00:00:00",
+    "Amount": 11.49,
+    "CurrencyType": 2,
+    "ClientId": 10
+  },
+  {
+    "Number": 1310543160,
+    "IssueDate": "2023-02-15T00:00:00",
+    "DueDate": "2023-03-16T00:00:00",
+    "Amount": 31.5,
+    "CurrencyType": 3,
+    "ClientId": 11
+  },
+  {
+    "Number": 1570462605,
+    "IssueDate": "2023-02-28T00:00:00",
+    "DueDate": "2023-03-24T00:00:00",
+    "Amount": 26.05,
+    "CurrencyType": 1,
+    "ClientId": 12
+  },
+  {
+    "Number": 5416541,
+    "IssueDate": "2023-11-16T00:00:00",
+    "DueDate": "2023-03-27T00:00:00",
+    "Amount": 65.41,
+    "CurrencyType": 1,
+    "ClientId": 13
+  },
+  {
+    "Number": 1275892939,
+    "IssueDate": "2023-11-30T00:00:00",
+    "DueDate": "2023-04-09T00:00:00",
+    "Amount": 29.39,
+    "CurrencyType": 2,
+    "ClientId": 14
+  },
+  {
+    "Number": 1057304072,
+    "IssueDate": "2023-12-05T00:00:00",
+    "DueDate": "2023-04-10T00:00:00",
+    "Amount": 40.72,
+    "CurrencyType": 3,
+    "ClientId": 15
+  },
+  {
+    "Number": 1037181326,
+    "IssueDate": "2023-12-12T00:00:00",
+    "DueDate": "2023-02-24T00:00:00",
+    "Amount": 13.26,
+    "CurrencyType": 1,
+    "ClientId": 16
+  },
+  {
+    "Number": 1132771123,
+    "IssueDate": "2023-12-14T00:00:00",
+    "DueDate": "2023-03-01T00:00:00",
+    "Amount": 23.11,
+    "CurrencyType": 2,
+    "ClientId": 17
+  },
+  {
+    "Number": 1077819303,
+    "IssueDate": "2023-12-15T00:00:00",
+    "DueDate": "2023-03-03T00:00:00",
+    "Amount": 30.39,
+    "CurrencyType": 3,
+    "ClientId": 18
+  }
+]

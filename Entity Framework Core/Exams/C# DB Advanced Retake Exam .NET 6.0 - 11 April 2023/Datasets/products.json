@@ -1,0 +1,1517 @@
+[
+  {
+    "Name": "ADR plate",
+    "Price": 14.97,
+    "CategoryType": 1,
+    "Clients": [
+      1,
+      105,
+      1,
+      5,
+      15
+    ]
+  },
+  {
+    "Name": "ADR light",
+    "Price": 21.25,
+    "CategoryType": 1,
+    "Clients": [
+      1,
+      85,
+      81,
+      80,
+      5,
+      9
+    ]
+  },
+  {
+    "Name": "HENGST E82",
+    "Price": 271.51,
+    "CategoryType": 4,
+    "Clients": [
+      3,
+      9,
+      15,
+      5,
+      11,
+      10,
+      5,
+      5
+    ]
+  },
+  {
+    "Name": "MAHLE HX80",
+    "Price": 98.06,
+    "CategoryType": 4,
+    "Clients": [
+      100,
+      64,
+      89,
+      95
+    ]
+  },
+  {
+    "Name": "MAHLE LA50/1",
+    "Price": 14.48,
+    "CategoryType": 4,
+    "Clients": [
+      54,
+      59,
+      49,
+      48,
+      59,
+      58,
+      53,
+      53,
+      46,
+      46,
+      54,
+      56,
+      55,
+      54,
+      47
+    ]
+  },
+  {
+    "Name": "MAHLE OX434D",
+    "Price": 91.37,
+    "CategoryType": 4,
+    "Clients": [
+      3,
+      20,
+      41,
+      4,
+      79,
+      28,
+      72,
+      89,
+      31,
+      83,
+      8,
+      15,
+      38,
+      83,
+      56,
+      71,
+      95
+    ]
+  },
+  {
+    "Name": "ADR Kit C811",
+    "Price": 19.87,
+    "CategoryType": 1,
+    "Clients": [
+      100,
+      66,
+      78,
+      95,
+      41,
+      98,
+      55,
+      100
+    ]
+  },
+  {
+    "Name": "MAHLE KC 522D",
+    "Price": 108.3,
+    "CategoryType": 4,
+    "Clients": [
+      1,
+      8,
+      9,
+      2,
+      14,
+      9,
+      3,
+      14,
+      6,
+      14,
+      6,
+      5,
+      2,
+      1
+    ]
+  },
+  {
+    "Name": "MAHLE KX400KIT",
+    "Price": 26.13,
+    "CategoryType": 4,
+    "Clients": [
+      10,
+      2,
+      7,
+      6,
+      4,
+      4,
+      12,
+      5,
+      11
+    ]
+  },
+  {
+    "Name": "Tyre HELLA, H3",
+    "Price": 123,
+    "CategoryType": 4,
+    "Clients": [
+      78,
+      62,
+      72,
+      64,
+      72,
+      80,
+      66,
+      63,
+      63,
+      60,
+      61,
+      76
+    ]
+  },
+  {
+    "Name": "Tyre HELLA, H7",
+    "Price": 36.28,
+    "CategoryType": 4,
+    "Clients": [
+      39,
+      35,
+      43,
+      38,
+      40,
+      32,
+      35,
+      36,
+      43,
+      40,
+      34,
+      37,
+      31,
+      38,
+      34
+    ]
+  },
+  {
+    "Name": "ADR Kit PL420X",
+    "Price": 125.92,
+    "CategoryType": 1,
+    "Clients": [
+      96,
+      11,
+      74,
+      73,
+      8,
+      90
+    ]
+  },
+  {
+    "Name": "ADR Kit H601/4",
+    "Price": 6.05,
+    "CategoryType": 1,
+    "Clients": [
+      75,
+      23,
+      44,
+      56,
+      33,
+      4,
+      96,
+      7
+    ]
+  },
+  {
+    "Name": "MAN FILTER C811",
+    "Price": 19.87,
+    "CategoryType": 2,
+    "Clients": [
+      28,
+      27,
+      27,
+      26,
+      26,
+      19
+    ]
+  },
+  {
+    "Name": "DAF FILTER C811",
+    "Price": 9.71,
+    "CategoryType": 2,
+    "Clients": [
+      100,
+      55,
+      42,
+      66,
+      51,
+      70,
+      88,
+      100
+    ]
+  },
+  {
+    "Name": "Tyre H1 24V/70W",
+    "Price": 14.88,
+    "CategoryType": 4,
+    "Clients": [
+      73,
+      60,
+      69,
+      52,
+      46,
+      76
+    ]
+  },
+  {
+    "Name": "Tyre OS c10w 12",
+    "Price": 9.13,
+    "CategoryType": 4,
+    "Clients": [
+      5,
+      38,
+      18,
+      89,
+      2,
+      31,
+      43,
+      63,
+      2
+    ]
+  },
+  {
+    "Name": "ADR Kit PU1059X",
+    "Price": 31.67,
+    "CategoryType": 1,
+    "Clients": [
+      77,
+      64,
+      91,
+      39,
+      11,
+      42,
+      55,
+      83,
+      14,
+      34,
+      65
+    ]
+  },
+  {
+    "Name": "Tyre H11 24V/70W",
+    "Price": 49.96,
+    "CategoryType": 4,
+    "Clients": [
+      1,
+      20,
+      22,
+      7,
+      32,
+      9,
+      40,
+      45,
+      63,
+      19
+    ]
+  },
+  {
+    "Name": "Tyre P/W V/W BAY",
+    "Price": 172.47,
+    "CategoryType": 4,
+    "Clients": [
+      5,
+      50,
+      75,
+      20,
+      41,
+      12,
+      18,
+      20,
+      83
+    ]
+  },
+  {
+    "Name": "ADR Kit HU12140X",
+    "Price": 92.47,
+    "CategoryType": 1,
+    "Clients": [
+      6,
+      90,
+      75,
+      85,
+      80
+    ]
+  },
+  {
+    "Name": "ADR Kit HU12006Z",
+    "Price": 27.5,
+    "CategoryType": 1,
+    "Clients": [
+      2,
+      57,
+      84,
+      67,
+      68
+    ]
+  },
+  {
+    "Name": "ADR Kit U58/9KIT",
+    "Price": 84,
+    "CategoryType": 1,
+    "Clients": [
+      76,
+      59,
+      66,
+      10,
+      92,
+      73,
+      73,
+      93,
+      98,
+      96
+    ]
+  },
+  {
+    "Name": "ADR Kit HU12103X",
+    "Price": 4.07,
+    "CategoryType": 1,
+    "Clients": [
+      10,
+      5,
+      5,
+      8,
+      3,
+      4,
+      12,
+      3,
+      10
+    ]
+  },
+  {
+    "Name": "ADR Kit PU999/1X",
+    "Price": 51.7,
+    "CategoryType": 1,
+    "Clients": [
+      95,
+      94,
+      73,
+      91
+    ]
+  },
+  {
+    "Name": "Antifreeze liquid",
+    "Price": 4.56,
+    "CategoryType": 4,
+    "Clients": [
+      18,
+      23,
+      29,
+      16,
+      17,
+      21,
+      30
+    ]
+  },
+  {
+    "Name": "MAN Filter CU3855",
+    "Price": 31.67,
+    "CategoryType": 2,
+    "Clients": [
+      3,
+      38,
+      86,
+      14,
+      52,
+      82,
+      24,
+      25
+    ]
+  },
+  {
+    "Name": "MAN FILTER H601/4",
+    "Price": 6.05,
+    "CategoryType": 2,
+    "Clients": [
+      85,
+      85,
+      82,
+      52,
+      55,
+      91,
+      84
+    ]
+  },
+  {
+    "Name": "DAF FILTER PL420X",
+    "Price": 26.63,
+    "CategoryType": 2,
+    "Clients": [
+      75,
+      94,
+      75,
+      11,
+      13,
+      82
+    ]
+  },
+  {
+    "Name": "DAF FILTER H601/4",
+    "Price": 59.7,
+    "CategoryType": 2,
+    "Clients": [
+      1,
+      68,
+      73,
+      17,
+      98,
+      98
+    ]
+  },
+  {
+    "Name": "Tyre P21W 24V/21W",
+    "Price": 1.36,
+    "CategoryType": 4,
+    "Clients": [
+      4,
+      17,
+      17,
+      98
+    ]
+  },
+  {
+    "Name": "ADR Kit WK1080/7X",
+    "Price": 375,
+    "CategoryType": 1,
+    "Clients": [
+      25,
+      43,
+      78,
+      158,
+      47,
+      3
+    ]
+  },
+  {
+    "Name": "Fender for trailer",
+    "Price": 40,
+    "CategoryType": 4,
+    "Clients": [
+      53,
+      51,
+      56,
+      4,
+      98,
+      78
+    ]
+  },
+  {
+    "Name": "DAF-Filter 9PK1380",
+    "Price": 261.48,
+    "CategoryType": 2,
+    "Clients": [
+      64,
+      26,
+      49,
+      54,
+      31
+    ]
+  },
+  {
+    "Name": "MANN FILTER PL420X",
+    "Price": 125.92,
+    "CategoryType": 2,
+    "Clients": [
+      68,
+      76,
+      9
+    ]
+  },
+  {
+    "Name": "HENGST E123H01D194",
+    "Price": 8,
+    "CategoryType": 4,
+    "Clients": [
+      89,
+      81,
+      63,
+      37
+    ]
+  },
+  {
+    "Name": "MAN-Filter 9PK1380",
+    "Price": 1.63,
+    "CategoryType": 2,
+    "Clients": [
+      1,
+      65,
+      25,
+      10,
+      25
+    ]
+  },
+  {
+    "Name": "DAF FILTER PU1059X",
+    "Price": 22.18,
+    "CategoryType": 2,
+    "Clients": [
+      58,
+      90,
+      32,
+      51,
+      1,
+      24
+    ]
+  },
+  {
+    "Name": "Tyre PY21W 24V/21W",
+    "Price": 1.63,
+    "CategoryType": 4,
+    "Clients": [
+      83,
+      4,
+      48,
+      60,
+      35,
+      53,
+      45
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb C811",
+    "Price": 9.71,
+    "CategoryType": 3,
+    "Clients": [
+      63,
+      71,
+      65
+    ]
+  },
+  {
+    "Name": "ADR Kit U6202Y KIT",
+    "Price": 47.86,
+    "CategoryType": 1,
+    "Clients": [
+      68,
+      16,
+      36,
+      80
+    ]
+  },
+  {
+    "Name": "HELLA-Light bulb H7",
+    "Price": 3.75,
+    "CategoryType": 3,
+    "Clients": [
+      44,
+      56,
+      87,
+      2,
+      1,
+      3
+    ]
+  },
+  {
+    "Name": "HELLA-Light bulb H3",
+    "Price": 1.66,
+    "CategoryType": 3,
+    "Clients": [
+      10,
+      11,
+      95,
+      73,
+      158,
+      124,
+      101
+    ]
+  },
+  {
+    "Name": "Air bag for trailer",
+    "Price": 130.06,
+    "CategoryType": 4,
+    "Clients": [
+      44,
+      39,
+      59,
+      70,
+      94
+    ]
+  },
+  {
+    "Name": "MAN Filter CUK32001",
+    "Price": 20.99,
+    "CategoryType": 2,
+    "Clients": [
+      89,
+      69,
+      40,
+      23,
+      89,
+      86
+    ]
+  },
+  {
+    "Name": "MANN FILTER PU1059X",
+    "Price": 31.67,
+    "CategoryType": 2,
+    "Clients": [
+      89,
+      69,
+      40,
+      23,
+      89,
+      86
+    ]
+  },
+  {
+    "Name": "MAN FILTER U58/9KIT",
+    "Price": 84,
+    "CategoryType": 2,
+    "Clients": [
+      93,
+      59,
+      97,
+      27,
+      69,
+      18,
+      53
+    ]
+  },
+  {
+    "Name": "MAN FILTER HU12103X",
+    "Price": 4.07,
+    "CategoryType": 2,
+    "Clients": [
+      5,
+      19,
+      28
+    ]
+  },
+  {
+    "Name": "MAN FILTER PU999/1X",
+    "Price": 51.7,
+    "CategoryType": 2,
+    "Clients": [
+      89,
+      31,
+      17,
+      20
+    ]
+  },
+  {
+    "Name": "Lightbulb HELLA, H3",
+    "Price": 123,
+    "CategoryType": 3,
+    "Clients": [
+      19,
+      65,
+      41,
+      79,
+      3
+    ]
+  },
+  {
+    "Name": "Lightbulb HELLA, H7",
+    "Price": 36.28,
+    "CategoryType": 3,
+    "Clients": [
+      4,
+      23,
+      54,
+      90,
+      88,
+      21
+    ]
+  },
+  {
+    "Name": "DAF Filter CUK32001",
+    "Price": 2.02,
+    "CategoryType": 2,
+    "Clients": [
+      95,
+      28,
+      42,
+      5,
+      98,
+      41,
+      97
+    ]
+  },
+  {
+    "Name": "DAF FILTER HU12140X",
+    "Price": 42.49,
+    "CategoryType": 2,
+    "Clients": [
+      89,
+      64,
+      15,
+      14,
+      13
+    ]
+  },
+  {
+    "Name": "DAF FILTER HU12006Z",
+    "Price": 34.95,
+    "CategoryType": 2,
+    "Clients": [
+      30,
+      39,
+      64,
+      39
+    ]
+  },
+  {
+    "Name": "DAF FILTER U58/9KIT",
+    "Price": 53.66,
+    "CategoryType": 2,
+    "Clients": [
+      17,
+      95,
+      44,
+      27,
+      92
+    ]
+  },
+  {
+    "Name": "DAF FILTER HU12103X",
+    "Price": 164.45,
+    "CategoryType": 2,
+    "Clients": [
+      79,
+      81,
+      54,
+      61,
+      80,
+      57
+    ]
+  },
+  {
+    "Name": "DAF FILTER PU999/1X",
+    "Price": 22.89,
+    "CategoryType": 2,
+    "Clients": [
+      33,
+      34,
+      97,
+      41,
+      35,
+      51,
+      79,
+      4
+    ]
+  },
+  {
+    "Name": "Tyre H4 24V  75/70W",
+    "Price": 125.41,
+    "CategoryType": 4,
+    "Clients": [
+      12,
+      74,
+      87
+    ]
+  },
+  {
+    "Name": "MANN FILTER HU12140X",
+    "Price": 92.47,
+    "CategoryType": 2,
+    "Clients": [
+      34,
+      33,
+      88,
+      77,
+      46
+    ]
+  },
+  {
+    "Name": "MANN FILTER HU12006Z",
+    "Price": 27.5,
+    "CategoryType": 2,
+    "Clients": [
+      30,
+      60,
+      24,
+      53,
+      85
+    ]
+  },
+  {
+    "Name": "Lightbulb H1 24V/70W",
+    "Price": 14.88,
+    "CategoryType": 3,
+    "Clients": [
+      15,
+      41,
+      97,
+      35,
+      82,
+      48
+    ]
+  },
+  {
+    "Name": "Lightbulb OS c10w 12",
+    "Price": 9.13,
+    "CategoryType": 3,
+    "Clients": [
+      59,
+      86,
+      24,
+      83,
+      65,
+      57,
+      55
+    ]
+  },
+  {
+    "Name": "DAF FILTER WK1080/7X",
+    "Price": 53.29,
+    "CategoryType": 2,
+    "Clients": [
+      20,
+      72,
+      45
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb PL420X",
+    "Price": 26.63,
+    "CategoryType": 3,
+    "Clients": [
+      82,
+      53,
+      41,
+      70
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb H601/4",
+    "Price": 59.7,
+    "CategoryType": 3,
+    "Clients": [
+      59,
+      40,
+      45,
+      52,
+      91
+    ]
+  },
+  {
+    "Name": "MAN-Lightbulb HU1210",
+    "Price": 28.71,
+    "CategoryType": 3,
+    "Clients": [
+      78,
+      4,
+      22,
+      59,
+      78,
+      71
+    ]
+  },
+  {
+    "Name": "MANN FILTER WK1080/7X",
+    "Price": 375,
+    "CategoryType": 2,
+    "Clients": [
+      91,
+      47,
+      71,
+      49,
+      48,
+      31,
+      63
+    ]
+  },
+  {
+    "Name": "MAN FILTER U6202Y KIT",
+    "Price": 47.86,
+    "CategoryType": 2,
+    "Clients": [
+      77,
+      26,
+      72
+    ]
+  },
+  {
+    "Name": "HENGST E103KP01D197-2",
+    "Price": 65.74,
+    "CategoryType": 4,
+    "Clients": [
+      6,
+      7,
+      12,
+      8,
+      8
+    ]
+  },
+  {
+    "Name": "Lightbulb H11 24V/70W",
+    "Price": 49.96,
+    "CategoryType": 3,
+    "Clients": [
+      59,
+      60,
+      61,
+      62
+    ]
+  },
+  {
+    "Name": "Lightbulb P/W V/W BAY",
+    "Price": 172.47,
+    "CategoryType": 3,
+    "Clients": [
+      22,
+      29,
+      29,
+      31,
+      38,
+      78,
+      108
+    ]
+  },
+  {
+    "Name": "MAN-Lightbulb 9PK1380",
+    "Price": 1.63,
+    "CategoryType": 3,
+    "Clients": [
+      1,
+      46,
+      50,
+      51,
+      52,
+      102
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb PU1059X",
+    "Price": 22.18,
+    "CategoryType": 3,
+    "Clients": [
+      38,
+      39,
+      59,
+      62,
+      57,
+      56
+    ]
+  },
+  {
+    "Name": "ADR eyes cleaner water",
+    "Price": 13.17,
+    "CategoryType": 1,
+    "Clients": [
+      40,
+      57,
+      19,
+      57,
+      18,
+      56,
+      18,
+      20
+    ]
+  },
+  {
+    "Name": "Break pads for trailer",
+    "Price": 89.6,
+    "CategoryType": 4,
+    "Clients": [
+      11,
+      40,
+      41,
+      58,
+      8,
+      59,
+      9,
+      12,
+      12,
+      73,
+      10
+    ]
+  },
+  {
+    "Name": "DAF-Fuel Filter HU1210",
+    "Price": 40.25,
+    "CategoryType": 2,
+    "Clients": [
+      37,
+      59,
+      63
+    ]
+  },
+  {
+    "Name": "Lightbulb P21W 24V/21W",
+    "Price": 1.36,
+    "CategoryType": 3,
+    "Clients": [
+      44,
+      24,
+      54,
+      74,
+      24,
+      22,
+      24,
+      23
+    ]
+  },
+  {
+    "Name": "MAN-Fuel Filter HU1210",
+    "Price": 28.71,
+    "CategoryType": 2,
+    "Clients": [
+      32,
+      32,
+      32
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb CUK32001",
+    "Price": 2.02,
+    "CategoryType": 3,
+    "Clients": [
+      77,
+      57,
+      53,
+      91,
+      7,
+      57
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb HU12140X",
+    "Price": 42.49,
+    "CategoryType": 3,
+    "Clients": [
+      44,
+      45
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb HU12006Z",
+    "Price": 34.95,
+    "CategoryType": 3,
+    "Clients": [
+      40,
+      42,
+      13,
+      44,
+      15,
+      15,
+      14,
+      57
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb U58/9KIT",
+    "Price": 53.66,
+    "CategoryType": 3,
+    "Clients": [
+      57,
+      6,
+      6,
+      83,
+      47,
+      3,
+      91,
+      4,
+      6,
+      54,
+      5
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb HU12103X",
+    "Price": 164.45,
+    "CategoryType": 3,
+    "Clients": [
+      107,
+      107,
+      107
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb PU999/1X",
+    "Price": 22.89,
+    "CategoryType": 3,
+    "Clients": [
+      41,
+      51,
+      1,
+      21,
+      1,
+      41
+    ]
+  },
+  {
+    "Name": "Lightbulb PY21W 24V/21W",
+    "Price": 1.63,
+    "CategoryType": 3,
+    "Clients": [
+      57,
+      68,
+      42,
+      31,
+      30
+    ]
+  },
+  {
+    "Name": "Steel armor for trailer",
+    "Price": 1350,
+    "CategoryType": 4,
+    "Clients": [
+      44,
+      47,
+      33,
+      41
+    ]
+  },
+  {
+    "Name": "DAF Lightbulb WK1080/7X",
+    "Price": 53.29,
+    "CategoryType": 3,
+    "Clients": [
+      81,
+      74,
+      93,
+      45,
+      64,
+      58,
+      52
+    ]
+  },
+  {
+    "Name": "ADR-plate for bulk cargo",
+    "Price": 17.15,
+    "CategoryType": 1,
+    "Clients": [
+      99,
+      99
+    ]
+  },
+  {
+    "Name": "DAF-Air Filter-LX2838 HD",
+    "Price": 77.44,
+    "CategoryType": 2,
+    "Clients": [
+      81,
+      27,
+      52
+    ]
+  },
+  {
+    "Name": "MAN-Oil Filter-KC522D HD",
+    "Price": 16.37,
+    "CategoryType": 2,
+    "Clients": [
+      65,
+      56,
+      81,
+      81,
+      99
+    ]
+  },
+  {
+    "Name": "Lightbulb H4 24V  75/70W",
+    "Price": 125.41,
+    "CategoryType": 3,
+    "Clients": [
+      36,
+      63
+    ]
+  },
+  {
+    "Name": "Fire extinguisher 6kg ABC",
+    "Price": 44.84,
+    "CategoryType": 4,
+    "Clients": [
+      81,
+      81,
+      99
+    ]
+  },
+  {
+    "Name": "DAF-Air filter VIG-055020",
+    "Price": 43.14,
+    "CategoryType": 2,
+    "Clients": [
+      97,
+      98,
+      96
+    ]
+  },
+  {
+    "Name": "Tyre BOR5W 24V BA15S BA5S",
+    "Price": 17.31,
+    "CategoryType": 4,
+    "Clients": [
+      58,
+      17,
+      43,
+      2
+    ]
+  },
+  {
+    "Name": "Michelin D M+S 295/60R22.5",
+    "Price": 18.31,
+    "CategoryType": 4,
+    "Clients": [
+      81,
+      91,
+      73,
+      74,
+      75
+    ]
+  },
+  {
+    "Name": "DAF-Filter small particles",
+    "Price": 205.83,
+    "CategoryType": 2,
+    "Clients": [
+      80,
+      56,
+      57,
+      90
+    ]
+  },
+  {
+    "Name": "MAN-Filter small particles",
+    "Price": 21.27,
+    "CategoryType": 2,
+    "Clients": [
+      44,
+      54,
+      34,
+      64,
+      34
+    ]
+  },
+  {
+    "Name": "Groupage board-Load limiter",
+    "Price": 79.33,
+    "CategoryType": 1,
+    "Clients": [
+      81,
+      82,
+      73,
+      56
+    ]
+  },
+  {
+    "Name": "Continental M+S 315/60R22.5",
+    "Price": 78.38,
+    "CategoryType": 4,
+    "Clients": [
+      29,
+      29,
+      39,
+      49,
+      49
+    ]
+  },
+  {
+    "Name": "DAF-Oil filter 95XF-HU12103X",
+    "Price": 27.77,
+    "CategoryType": 2,
+    "Clients": [
+      45,
+      96,
+      63,
+      67,
+      35,
+      96
+    ]
+  },
+  {
+    "Name": "DAF-water pump XF-105-T36528",
+    "Price": 20.22,
+    "CategoryType": 4,
+    "Clients": [
+      73,
+      49,
+      49,
+      58
+    ]
+  },
+  {
+    "Name": "Continental D M+S 295/60R22.5",
+    "Price": 12.48,
+    "CategoryType": 4,
+    "Clients": [
+      51,
+      51,
+      49,
+      50,
+      52
+    ]
+  },
+  {
+    "Name": "MAN-Lightbulb small particles",
+    "Price": 21.27,
+    "CategoryType": 3,
+    "Clients": [
+      73,
+      74,
+      47,
+      25,
+      26,
+      73,
+      25
+    ]
+  },
+  {
+    "Name": "BAY-Light bulb 5W double light",
+    "Price": 0.48,
+    "CategoryType": 3,
+    "Clients": [
+      1,
+      46,
+      50,
+      51,
+      52,
+      102
+    ]
+  },
+  {
+    "Name": "DAF-Oil filter XF95-105-T36528",
+    "Price": 191,
+    "CategoryType": 2,
+    "Clients": [
+      22,
+      29,
+      29,
+      31,
+      38,
+      78,
+      108
+    ]
+  },
+  {
+    "Name": "DAF-Oil Filter-LC4 70541958 HD",
+    "Price": 0.88,
+    "CategoryType": 2,
+    "Clients": [
+      59,
+      60,
+      61,
+      62
+    ]
+  },
+  {
+    "Name": "Lightbulb BOR5W 24V BA15S BA5S",
+    "Price": 17.31,
+    "CategoryType": 3,
+    "Clients": [
+      6,
+      7,
+      12,
+      8,
+      8
+    ]
+  },
+  {
+    "Name": "HELLA-Windshield wipers-55cm DAF",
+    "Price": 7.81,
+    "CategoryType": 3,
+    "Clients": [
+      77,
+      26,
+      72
+    ]
+  },
+  {
+    "Name": "Michelin Dynamic-Battery-230Ah HD",
+    "Price": 309.76,
+    "CategoryType": 4,
+    "Clients": [
+      1,
+      68,
+      73,
+      17,
+      98,
+      98
+    ]
+  },
+  {
+    "Name": "Buffer rubber for trailer 6610646",
+    "Price": 17.67,
+    "CategoryType": 4,
+    "Clients": [
+      4,
+      17,
+      17,
+      98
+    ]
+  },
+  {
+    "Name": "MAN-Air Filter-LX1024 08594459 HD",
+    "Price": 18.78,
+    "CategoryType": 2,
+    "Clients": [
+      25,
+      43,
+      78,
+      158,
+      47,
+      3
+    ]
+  },
+  {
+    "Name": "DAF-Oil Filter-LA50/1 76417570 HD",
+    "Price": 2.09,
+    "CategoryType": 2,
+    "Clients": [
+      53,
+      51,
+      56,
+      4,
+      98,
+      78
+    ]
+  },
+  {
+    "Name": "DAF-Filter AdBlue-D6042 1457436042",
+    "Price": 41.09,
+    "CategoryType": 2,
+    "Clients": [
+      64,
+      26,
+      49,
+      54,
+      31
+    ]
+  },
+  {
+    "Name": "GOODYEAR FUELMAX D M+S 295/60R22.5",
+    "Price": 34.16,
+    "CategoryType": 1,
+    "Clients": [
+      68,
+      76,
+      9
+    ]
+  },
+  {
+    "Name": "Belt details black 150 mm-135/180mm",
+    "Price": 1.58,
+    "CategoryType": 4,
+    "Clients": [
+      99
+    ]
+  },
+  {
+    "Name": "ADR Anti-slip pad-Big-20cm/80cm/8mm",
+    "Price": 27.79,
+    "CategoryType": 1,
+    "Clients": [
+      3,
+      4,
+      48,
+      60,
+      35,
+      53,
+      45
+    ]
+  },
+  {
+    "Name": "GOODYEAR FUELMAX S HL M+S 315/60R22",
+    "Price": 19.45,
+    "CategoryType": 1,
+    "Clients": [
+      63,
+      71,
+      65
+    ]
+  }
+]

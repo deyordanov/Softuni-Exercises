@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Clients>
+	<Client>
+		<Name>LiCB</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gnigler strasse</StreetName>
+				<StreetNumber>57</StreetNumber>
+				<PostCode>5020</PostCode>
+				<City>Salzburg</City>
+				<Country>Austria</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>Mr. Pen</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gewerbestrasse</StreetName>
+				<StreetNumber>12</StreetNumber>
+				<PostCode>5165</PostCode>
+				<City>Berndorf bei Salzburg</City>
+				<Country>Austria</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>HLmedical</Name>
+		<NumberVat>BG5464152</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Industriestr</StreetName>
+				<StreetNumber>79</StreetNumber>
+				<PostCode>2353</PostCode>
+				<City>Guntramsdorf</City>
+				<Country>Austria</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>Hour Loop</Name>
+		<NumberVat>BG5464153</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gadnergasse</StreetName>
+				<StreetNumber>71</StreetNumber>
+				<PostCode>1110</PostCode>
+				<City>Wien</City>
+				<Country>Austria</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SPEDOX,SRO</Name>
+		<NumberVat>SK2023911087</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Sperrwies</StreetName>
+				<StreetNumber>1</StreetNumber>
+				<PostCode>94036</PostCode>
+				<City>Passau</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>FREIGHTS PC</Name>
+		<NumberVat>EL801106064</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Loc Autoporto</StreetName>
+				<StreetNumber>5</StreetNumber>
+				<PostCode>11020</PostCode>
+				<City>Pollein</City>
+				<Country>Spain</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>LOPERBEN SL</Name>
+		<NumberVat>ESB24242765</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rue de le industrie</StreetName>
+				<StreetNumber>14</StreetNumber>
+				<PostCode>51350</PostCode>
+				<City>Conmontreuil</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>Mr. Medical</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gullbergs Strandgataaa</StreetName>
+				<StreetNumber>36</StreetNumber>
+				<PostCode>41104</PostCode>
+				<City>Goeteborg</City>
+				<Country>Sweden</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TRANS CARGO</Name>
+		<NumberVat>EL099517837</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Industriestasse</StreetName>
+				<StreetNumber>1</StreetNumber>
+				<PostCode>83607</PostCode>
+				<City>Holzkirchen</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SARL SOVI 34</Name>
+		<NumberVat>FR63432629426</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rudolf-Diesel Str.</StreetName>
+				<StreetNumber>3</StreetNumber>
+				<PostCode>49456</PostCode>
+				<City>Bakum</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>DPS EUROPE AB</Name>
+		<NumberVat>SE556488676901</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Mobel-Hubner Str.</StreetName>
+				<StreetNumber>6</StreetNumber>
+				<PostCode>16356</PostCode>
+				<City>Ahrensfelde am Bumberg</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>JE Products US</Name>
+		<NumberVat>BG5464154</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Merkurstasse</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<PostCode>67663</PostCode>
+				<City>Kaiserslautern</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SARL HEBERGECO</Name>
+		<NumberVat>FR75532664075</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Berliner Strasse</StreetName>
+				<StreetNumber>77</StreetNumber>
+				<PostCode>44143</PostCode>
+				<City>Dortmund</City>
+				<Country>Germany</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TG TRUCKS GMBH</Name>
+		<NumberVat>DE254185437</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Sarmiento</StreetName>
+				<StreetNumber>11</StreetNumber>
+				<PostCode>94000</PostCode>
+				<City>Aranda de duero</City>
+				<Country>Spain</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SARL FLEXATRANS</Name>
+		<NumberVat>FR28503105314</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Carretera de Madrid</StreetName>
+				<StreetNumber>240</StreetNumber>
+				<PostCode>20080</PostCode>
+				<City>Albacete</City>
+				<Country>Spain</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>BTS GMBH CO KG</Name>
+		<NumberVat>DE814592224</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Carretera</StreetName>
+				<StreetNumber>330</StreetNumber>
+				<PostCode>50400</PostCode>
+				<City>Carinena</City>
+				<Country>Spain</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>JF Distributions</Name>
+		<NumberVat>BG5464155</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Avda. Mas Pins</StreetName>
+				<StreetNumber>56</StreetNumber>
+				<PostCode>17458</PostCode>
+				<City>Girona</City>
+				<Country>Italy</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>Hey Dude Official</Name>
+		<NumberVat>BG5464151</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rue de moulin brou</StreetName>
+				<StreetNumber>6</StreetNumber>
+				<PostCode>10000</PostCode>
+				<City>Bourg en Bresse</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>LY Berditchev Co.</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Av des Chabauds</StreetName>
+				<StreetNumber>415</StreetNumber>
+				<PostCode>13320</PostCode>
+				<City>Boul Bel Air</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>MYBATTERYSUPPLIER</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Route de Orleans</StreetName>
+				<StreetNumber>37</StreetNumber>
+				<PostCode>27000</PostCode>
+				<City>Evreux</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>KAMEEN LOGISTIC KG</Name>
+		<NumberVat>ATU75339778</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rue de la Gare</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<PostCode>29670</PostCode>
+				<City>Taule</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>Lume Deodorant LLC</Name>
+		<NumberVat>BG5464156654654654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Avenue de la Biste</StreetName>
+				<StreetNumber>457</StreetNumber>
+				<PostCode>34670</PostCode>
+				<City>Baillargues</City>
+				<Country>France</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TALLERES MAVIMA SL</Name>
+		<NumberVat>ESB26163097</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Via Tasso</StreetName>
+				<StreetNumber>25</StreetNumber>
+				<PostCode>208630</PostCode>
+				<City>Rome</City>
+				<Country>Italy</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SCANIA SLOVAKIA SRO</Name>
+		<NumberVat>SK2020261144</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Via dei Piazzoli</StreetName>
+				<StreetNumber>1</StreetNumber>
+				<PostCode>24040</PostCode>
+				<City>Suisio</City>
+				<Country>Italy</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TEAM SERVICE CAR SRL</Name>
+		<NumberVat>IT00931980965</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Via Emilia Pavese</StreetName>
+				<StreetNumber>75</StreetNumber>
+				<PostCode>29015</PostCode>
+				<City>Castel San Giovanni</City>
+				<Country>Italy</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>MHS TRUCK SERVICE SRL</Name>
+		<NumberVat>RO33935139</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Zona Industrial Nord</StreetName>
+				<StreetNumber>5</StreetNumber>
+				<PostCode>33097</PostCode>
+				<City>Spilimergo</City>
+				<Country>Italy</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>OFFICINA TURBOCAR SNC</Name>
+		<NumberVat>IT00364840074</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Iroon Polytechniou</StreetName>
+				<StreetNumber>36</StreetNumber>
+				<PostCode>26441</PostCode>
+				<City>Patra</City>
+				<Country>Greece</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SAS TURBOTRUCKS REIMS</Name>
+		<NumberVat>FR23752934406</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Oktovriou street</StreetName>
+				<StreetNumber>26</StreetNumber>
+				<PostCode>54627</PostCode>
+				<City>Thessaloniki</City>
+				<Country>Greece</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>JOSEF PAUL GMBH COKG</Name>
+		<NumberVat>DE131605560</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Iuliu Manio</StreetName>
+				<StreetNumber>592</StreetNumber>
+				<PostCode>35468</PostCode>
+				<City>Bucuresti</City>
+				<Country>Romania</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>LE RELAIS DES PRIMEURS</Name>
+		<NumberVat>FR64431553163</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Tipografilor</StreetName>
+				<StreetNumber>11</StreetNumber>
+				<PostCode>13714</PostCode>
+				<City>Bucuresti</City>
+				<Country>Romania</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>RINALDI GOMME 2012 SRL</Name>
+		<NumberVat>IT03750390167</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Bzenov</StreetName>
+				<StreetNumber>3</StreetNumber>
+				<PostCode>82042</PostCode>
+				<City>Bzenov</City>
+				<Country>Slovakia</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>BECCARO ALFEO EREDI SNC</Name>
+		<NumberVat>IT00062510938</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Dialnica cesta</StreetName>
+				<StreetNumber>2</StreetNumber>
+				<PostCode>90301</PostCode>
+				<City>Senec</City>
+				<Country>Slovakia</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TECNO TRUCK FLLI BEQIRI</Name>
+		<NumberVat>IT01825150335</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gnigler strasse</StreetName>
+				<StreetNumber>6</StreetNumber>
+				<PostCode>11020</PostCode>
+				<City>Conmontreuil</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>ALPENTRANS SPEDITION UND</Name>
+		<NumberVat>ATU33814209</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gewerbestrasse</StreetName>
+				<StreetNumber>415</StreetNumber>
+				<PostCode>51350</PostCode>
+				<City>Goeteborg</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>B H TRANSPORT LOGISTIK</Name>
+		<NumberVat>ATU53998900</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Industriestr</StreetName>
+				<StreetNumber>37</StreetNumber>
+				<PostCode>41104</PostCode>
+				<City>Holzkirchen</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>FAHRZEUGBEDARF KOTZ CO</Name>
+		<NumberVat>ATU19169904</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gadnergasse</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<PostCode>83607</PostCode>
+				<City>Bakum</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>FRANZ SCHMID GMBH CO K</Name>
+		<NumberVat>DE129169278</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Sperrwies</StreetName>
+				<StreetNumber>457</StreetNumber>
+				<PostCode>49456</PostCode>
+				<City>Ahrensfelde am Bumberg</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>IVECO TRUCK SERVICES SRL</Name>
+		<NumberVat>RO31625301</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Loc Autoporto</StreetName>
+				<StreetNumber>25</StreetNumber>
+				<PostCode>16356</PostCode>
+				<City>Kaiserslautern</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>JUAN Y ENRIQUE SANCHEZ GA</Name>
+		<NumberVat>ESB02020543</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rue de le industrie</StreetName>
+				<StreetNumber>1</StreetNumber>
+				<PostCode>67663</PostCode>
+				<City>Dortmund</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>ROMO BELLIDO SOCIEDAD LIM</Name>
+		<NumberVat>ESB13131654</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Gullbergs Strandgata</StreetName>
+				<StreetNumber>75</StreetNumber>
+				<PostCode>44143</PostCode>
+				<City>Aranda de duero</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SAS BOURG EN BRESSE GESTII</Name>
+		<NumberVat>FR93525106811</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Industriestasse</StreetName>
+				<StreetNumber>5</StreetNumber>
+				<PostCode>94000</PostCode>
+				<City>Albacete</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>SUDBECK NUTZFAHRZEUGE GMBB</Name>
+		<NumberVat>DE117775708</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Rudolf-Diesel Str.</StreetName>
+				<StreetNumber>36</StreetNumber>
+				<PostCode>35468</PostCode>
+				<City>Carinena</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+	<Client>
+		<Name>TCB TRUCK CENTER BLUMBERGG</Name>
+		<NumberVat>DE185298679</NumberVat>
+		<Addresses>
+			<Address>
+				<StreetName>Mobel-Hubner Str.</StreetName>
+				<StreetNumber>26</StreetNumber>
+				<PostCode>13714</PostCode>
+				<City>Girona</City>
+				<Country>United Kingdom</Country>
+			</Address>
+		</Addresses>
+	</Client>
+</Clients>
