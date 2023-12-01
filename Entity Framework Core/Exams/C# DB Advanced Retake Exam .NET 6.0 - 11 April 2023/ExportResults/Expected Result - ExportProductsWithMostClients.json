@@ -1,0 +1,165 @@
+[
+  {
+    "Name": "MAHLE KX400KIT",
+    "Price": 26.13,
+    "Category": "Tyres",
+    "Clients": [
+      {
+        "Name": "BTS GMBH CO KG",
+        "NumberVat": "DE814592224"
+      },
+      {
+        "Name": "DPS EUROPE AB",
+        "NumberVat": "SE556488676901"
+      },
+      {
+        "Name": "FREIGHTS PC",
+        "NumberVat": "EL801106064"
+      },
+      {
+        "Name": "KAMEEN LOGISTIC KG",
+        "NumberVat": "ATU75339778"
+      },
+      {
+        "Name": "SARL HEBERGECO",
+        "NumberVat": "FR75532664075"
+      },
+      {
+        "Name": "SARL SOVI 34",
+        "NumberVat": "FR63432629426"
+      },
+      {
+        "Name": "TALLERES MAVIMA SL",
+        "NumberVat": "ESB26163097"
+      },
+      {
+        "Name": "TRANS CARGO",
+        "NumberVat": "EL099517837"
+      }
+    ]
+  },
+  {
+    "Name": "MAHLE KC 522D",
+    "Price": 108.3,
+    "Category": "Tyres",
+    "Clients": [
+      {
+        "Name": "DPS EUROPE AB",
+        "NumberVat": "SE556488676901"
+      },
+      {
+        "Name": "FREIGHTS PC",
+        "NumberVat": "EL801106064"
+      },
+      {
+        "Name": "LOPERBEN SL",
+        "NumberVat": "ESB24242765"
+      },
+      {
+        "Name": "SARL FLEXATRANS",
+        "NumberVat": "FR28503105314"
+      },
+      {
+        "Name": "SARL SOVI 34",
+        "NumberVat": "FR63432629426"
+      },
+      {
+        "Name": "TEAM SERVICE CAR SRL",
+        "NumberVat": "IT00931980965"
+      },
+      {
+        "Name": "TG TRUCKS GMBH",
+        "NumberVat": "DE254185437"
+      }
+    ]
+  },
+  {
+    "Name": "HENGST E82",
+    "Price": 271.51,
+    "Category": "Tyres",
+    "Clients": [
+      {
+        "Name": "BTS GMBH CO KG",
+        "NumberVat": "DE814592224"
+      },
+      {
+        "Name": "KAMEEN LOGISTIC KG",
+        "NumberVat": "ATU75339778"
+      },
+      {
+        "Name": "LOPERBEN SL",
+        "NumberVat": "ESB24242765"
+      },
+      {
+        "Name": "MHS TRUCK SERVICE SRL",
+        "NumberVat": "RO33935139"
+      },
+      {
+        "Name": "SARL FLEXATRANS",
+        "NumberVat": "FR28503105314"
+      },
+      {
+        "Name": "SARL SOVI 34",
+        "NumberVat": "FR63432629426"
+      }
+    ]
+  },
+  {
+    "Name": "MAHLE OX434D",
+    "Price": 91.37,
+    "Category": "Tyres",
+    "Clients": [
+      {
+        "Name": "JUAN Y ENRIQUE SANCHEZ GA",
+        "NumberVat": "ESB02020543"
+      },
+      {
+        "Name": "LOPERBEN SL",
+        "NumberVat": "ESB24242765"
+      },
+      {
+        "Name": "MHS TRUCK SERVICE SRL",
+        "NumberVat": "RO33935139"
+      },
+      {
+        "Name": "RINALDI GOMME 2012 SRL",
+        "NumberVat": "IT03750390167"
+      },
+      {
+        "Name": "TG TRUCKS GMBH",
+        "NumberVat": "DE254185437"
+      },
+      {
+        "Name": "TRANS CARGO",
+        "NumberVat": "EL099517837"
+      }
+    ]
+  },
+  {
+    "Name": "Break pads for trailer",
+    "Price": 89.6,
+    "Category": "Tyres",
+    "Clients": [
+      {
+        "Name": "BTS GMBH CO KG",
+        "NumberVat": "DE814592224"
+      },
+      {
+        "Name": "KAMEEN LOGISTIC KG",
+        "NumberVat": "ATU75339778"
+      },
+      {
+        "Name": "SARL FLEXATRANS",
+        "NumberVat": "FR28503105314"
+      },
+      {
+        "Name": "TALLERES MAVIMA SL",
+        "NumberVat": "ESB26163097"
+      },
+      {
+        "Name": "TG TRUCKS GMBH",
+        "NumberVat": "DE254185437"
+      }
+    ]
+  }
+]

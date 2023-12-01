@@ -1,0 +1,474 @@
+Invalid data!
+Successfully imported product - ADR plate with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR light with 3 clients.
+Successfully imported product - HENGST E82 with 6 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAHLE HX80 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAHLE LA50/1 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAHLE OX434D with 6 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit C811 with 0 clients.
+Successfully imported product - MAHLE KC 522D with 8 clients.
+Successfully imported product - MAHLE KX400KIT with 8 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre HELLA, H3 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre HELLA, H7 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit PL420X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit H601/4 with 3 clients.
+Successfully imported product - MAN FILTER C811 with 4 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER C811 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre H1 24V/70W with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre OS c10w 12 with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit PU1059X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre H11 24V/70W with 6 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre P/W V/W BAY with 4 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit HU12140X with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit HU12006Z with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit U58/9KIT with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit PU999/1X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN Filter CU3855 with 4 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN FILTER H601/4 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER PL420X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER H601/4 with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit WK1080/7X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Fender for trailer with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Filter 9PK1380 with 1 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - MANN FILTER PL420X with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - HENGST E123H01D194 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER PU1059X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb C811 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR Kit U6202Y KIT with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Air bag for trailer with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN Filter CUK32001 with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MANN FILTER PU1059X with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN FILTER U58/9KIT with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN FILTER PU999/1X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb HELLA, H3 with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb HELLA, H7 with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER HU12140X with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER HU12006Z with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER U58/9KIT with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER HU12103X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER PU999/1X with 1 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre H4 24V  75/70W with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MANN FILTER HU12140X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MANN FILTER HU12006Z with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb H1 24V/70W with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb OS c10w 12 with 1 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - DAF FILTER WK1080/7X with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb PL420X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb H601/4 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN-Lightbulb HU1210 with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MANN FILTER WK1080/7X with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - MAN FILTER U6202Y KIT with 1 clients.
+Successfully imported product - HENGST E103KP01D197-2 with 4 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb H11 24V/70W with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb P/W V/W BAY with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb PU1059X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - ADR eyes cleaner water with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Break pads for trailer with 5 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Fuel Filter HU1210 with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - MAN-Fuel Filter HU1210 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb HU12140X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb HU12006Z with 3 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb U58/9KIT with 4 clients.
+Invalid data!
+Successfully imported product - DAF Lightbulb HU12103X with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb PU999/1X with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF Lightbulb WK1080/7X with 0 clients.
+Invalid data!
+Successfully imported product - ADR-plate for bulk cargo with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Air Filter-LX2838 HD with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN-Oil Filter-KC522D HD with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - Lightbulb H4 24V  75/70W with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - Fire extinguisher 6kg ABC with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Air filter VIG-055020 with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - Tyre BOR5W 24V BA15S BA5S with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Michelin D M+S 295/60R22.5 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Filter small particles with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN-Filter small particles with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Groupage board-Load limiter with 0 clients.
+Invalid data!
+Invalid data!
+Successfully imported product - Continental M+S 315/60R22.5 with 1 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Oil filter 95XF-HU12103X with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-water pump XF-105-T36528 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - Continental D M+S 295/60R22.5 with 0 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - MAN-Lightbulb small particles with 2 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported product - DAF-Oil filter XF95-105-T36528 with 2 clients.
+Invalid data!
+Successfully imported product - Lightbulb BOR5W 24V BA15S BA5S with 4 clients.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!

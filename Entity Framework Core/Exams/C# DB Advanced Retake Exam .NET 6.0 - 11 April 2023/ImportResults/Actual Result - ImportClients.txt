@@ -1,0 +1,51 @@
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported client SPEDOX,SRO.
+Successfully imported client FREIGHTS PC.
+Successfully imported client LOPERBEN SL.
+Invalid data!
+Successfully imported client TRANS CARGO.
+Successfully imported client SARL SOVI 34.
+Invalid data!
+Successfully imported client DPS EUROPE AB.
+Invalid data!
+Successfully imported client SARL HEBERGECO.
+Invalid data!
+Successfully imported client TG TRUCKS GMBH.
+Successfully imported client SARL FLEXATRANS.
+Invalid data!
+Successfully imported client BTS GMBH CO KG.
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported client KAMEEN LOGISTIC KG.
+Invalid data!
+Invalid data!
+Successfully imported client TALLERES MAVIMA SL.
+Successfully imported client SCANIA SLOVAKIA SRO.
+Invalid data!
+Successfully imported client TEAM SERVICE CAR SRL.
+Successfully imported client MHS TRUCK SERVICE SRL.
+Successfully imported client OFFICINA TURBOCAR SNC.
+Successfully imported client SAS TURBOTRUCKS REIMS.
+Successfully imported client JOSEF PAUL GMBH COKG.
+Successfully imported client LE RELAIS DES PRIMEURS.
+Invalid data!
+Successfully imported client RINALDI GOMME 2012 SRL.
+Successfully imported client BECCARO ALFEO EREDI SNC.
+Successfully imported client TECNO TRUCK FLLI BEQIRI.
+Successfully imported client ALPENTRANS SPEDITION UND.
+Successfully imported client B H TRANSPORT LOGISTIK.
+Successfully imported client FAHRZEUGBEDARF KOTZ CO.
+Invalid data!
+Successfully imported client FRANZ SCHMID GMBH CO K.
+Successfully imported client IVECO TRUCK SERVICES SRL.
+Successfully imported client JUAN Y ENRIQUE SANCHEZ GA.
+Successfully imported client ROMO BELLIDO SOCIEDAD LIM.
+Invalid data!
+Invalid data!
+Invalid data!
