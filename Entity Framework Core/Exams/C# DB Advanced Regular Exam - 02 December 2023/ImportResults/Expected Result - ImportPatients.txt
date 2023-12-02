@@ -1,0 +1,72 @@
+Successfully imported patient - Ivan Petrov with 2 medicines.
+Successfully imported patient - Maria Ivanova with 2 medicines.
+Successfully imported patient - Georgi Dimitrov with 3 medicines.
+Successfully imported patient - Stafaniya Angelova with 4 medicines.
+Successfully imported patient - Dimitar Stoyanov with 3 medicines.
+Successfully imported patient - Lyubomir Vasilev with 3 medicines.
+Successfully imported patient - Elena Dimitrova with 2 medicines.
+Successfully imported patient - Petar Georgiev with 4 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported patient - Anton Popov with 3 medicines.
+Successfully imported patient - Ivelina Todorova with 2 medicines.
+Successfully imported patient - Kaloyan Mihaylov with 3 medicines.
+Successfully imported patient - Nikolina Petrova with 2 medicines.
+Invalid Data!
+Successfully imported patient - Todor Aleksandrov with 2 medicines.
+Successfully imported patient - Anastasiya Ilieva with 3 medicines.
+Successfully imported patient - Borislava Kostova with 5 medicines.
+Successfully imported patient - Nikolay Zhelev with 2 medicines.
+Successfully imported patient - Margarita Stafanova with 1 medicines.
+Successfully imported patient - Stanimir Pavlov with 5 medicines.
+Successfully imported patient - Rositsa Hristova with 1 medicines.
+Successfully imported patient - Valeri Terziev with 1 medicines.
+Successfully imported patient - Desislava Marinova with 1 medicines.
+Successfully imported patient - Georgi Ivanov with 3 medicines.
+Successfully imported patient - Svetla Petrova with 1 medicines.
+Successfully imported patient - Yavor Dimitrov with 3 medicines.
+Successfully imported patient - Tsvetanka Yordanova with 2 medicines.
+Successfully imported patient - Angel Karaivanov with 2 medicines.
+Successfully imported patient - Emiliya Todorova with 2 medicines.
+Successfully imported patient - Zdravko Kolev with 3 medicines.
+Successfully imported patient - Violeta Georgieva with 1 medicines.
+Successfully imported patient - Radoslav Mihaylov with 1 medicines.
+Successfully imported patient - Iskra Ivanova with 1 medicines.
+Successfully imported patient - Vasil Petrov with 2 medicines.
+Successfully imported patient - Lidiya Nikolova with 1 medicines.
+Successfully imported patient - Dragomir Angelov with 2 medicines.
+Successfully imported patient - Katerina Savova with 1 medicines.
+Invalid Data!
+Successfully imported patient - Vasil Petrov with 2 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported patient - Iliana Georgieva with 2 medicines.
+Successfully imported patient - Stoyan Petrov with 1 medicines.
+Successfully imported patient - Mila Dimitrova with 2 medicines.
+Successfully imported patient - Nikolay Vasilev with 3 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported patient - Yana Popova with 2 medicines.
+Successfully imported patient - Vladimir Kolev with 3 medicines.
+Successfully imported patient - Tsvetelina Mihaylova with 2 medicines.
+Successfully imported patient - Georgi Todorov with 3 medicines.
+Successfully imported patient - Kalina Petrova with 1 medicines.
+Successfully imported patient - Ivan Angelov with 3 medicines.
+Successfully imported patient - Elitsa Kirilova with 2 medicines.
+Successfully imported patient - Radoslav Dimitrov with 2 medicines.
+Successfully imported patient - Silviya Zaharieva with 2 medicines.
+Successfully imported patient - Krasimir Yordanov with 1 medicines.
+Successfully imported patient - Valentina Tsvetkova with 2 medicines.
+Successfully imported patient - Borislav Marinov with 2 medicines.
+Successfully imported patient - Kristina Ivanova with 2 medicines.
+Successfully imported patient - Martin Georgiev with 2 medicines.
+Successfully imported patient - Aneliya Petrova with 1 medicines.
+Successfully imported patient - Svetoslav Todorov with 4 medicines.
+Successfully imported patient - Denitsa Hristova with 2 medicines.
+Successfully imported patient - Boyan Dimitrov with 2 medicines.
+Successfully imported patient - Ekaterina Vasileva with 2 medicines.
+Successfully imported patient - Viktor Popov with 2 medicines.
+Successfully imported patient - Radina Kostova with 3 medicines.
+Successfully imported patient - Spas Ivanov with 2 medicines.
+Successfully imported patient - Magdalena Stoyanova with 1 medicines.
+Successfully imported patient - Plamen Nikolov with 2 medicines.

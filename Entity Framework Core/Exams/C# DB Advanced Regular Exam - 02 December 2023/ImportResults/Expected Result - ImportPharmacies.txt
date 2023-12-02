@@ -1,0 +1,36 @@
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - Vitality with 11 medicines.
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - GreenLeaf with 5 medicines.
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - Pulse with 2 medicines.
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - Serenity with 2 medicines.
+Successfully imported pharmacy - PureLife with 0 medicines.
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - Revive with 3 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - Panacea with 1 medicines.
+Invalid Data!
+Successfully imported pharmacy - Healthwise with 2 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - LifeSpring with 3 medicines.
+Invalid Data!
+Invalid Data!
+Successfully imported pharmacy - MediTrust with 0 medicines.
