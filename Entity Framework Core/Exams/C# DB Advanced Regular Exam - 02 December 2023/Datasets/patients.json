@@ -1,0 +1,654 @@
+[
+  {
+    "FullName": "Ivan Petrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      15,
+      23
+    ]
+  },
+  {
+    "FullName": "Maria Ivanova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      16,
+      26
+    ]
+  },
+  {
+    "FullName": "Georgi Dimitrov",
+    "AgeGroup": "0",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "FullName": "Stafaniya Angelova",
+    "AgeGroup": "1",
+    "Gender": "1",
+    "Medicines": [
+      1,
+      4,
+      23,
+      27
+    ]
+  },
+  {
+    "FullName": "Dimitar Stoyanov",
+    "AgeGroup": "2",
+    "Gender": "0",
+    "Medicines": [
+      10,
+      11,
+      13
+    ]
+  },
+  {
+    "FullName": "Lyubomir Vasilev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      17,
+      19
+    ]
+  },
+  {
+    "FullName": "Elena Dimitrova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      15,
+      21
+    ]
+  },
+  {
+    "FullName": "Petar Georgiev",
+    "AgeGroup": "0",
+    "Gender": "0",
+    "Medicines": [
+      2,
+      6,
+      15,
+      20
+    ]
+  },
+  {
+    "FullName": "Sofi",
+    "AgeGroup": "1",
+    "Gender": "1",
+    "Medicines": [
+      5,
+      7,
+      9,
+      24,
+      28
+    ]
+  },
+  {
+    "FullName": "Viktoriya Nikolova, Viktoriya Nikolova, Viktoriya Nikolova, Viktoriya Nikolova, Viktoriya Nikolova, Viktoriya Nikolova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      25
+    ]
+  },
+  {
+    "FullName": "Anton Popov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      4,
+      13
+    ]
+  },
+  {
+    "FullName": "Ivelina Todorova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      1,
+      2
+    ]
+  },
+  {
+    "FullName": "Kaloyan Mihaylov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      12,
+      17,
+      25
+    ]
+  },
+  {
+    "FullName": "Nikolina Petrova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [ 15, 25 ]
+  },
+  {
+    "FullName": "Todor Aleksandrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      11,
+      22,
+      22
+    ]
+  },
+  {
+    "FullName": "Anastasiya Ilieva",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      3,
+      16,
+      24
+    ]
+  },
+  {
+    "FullName": "Borislava Kostova",
+    "AgeGroup": "1",
+    "Gender": "1",
+    "Medicines": [
+      8,
+      9,
+      11,
+      13,
+      22
+    ]
+  },
+  {
+    "FullName": "Nikolay Zhelev",
+    "AgeGroup": "2",
+    "Gender": "0",
+    "Medicines": [
+      28,
+      29
+    ]
+  },
+  {
+    "FullName": "Margarita Stafanova",
+    "AgeGroup": "1",
+    "Gender": "1",
+    "Medicines": [
+      1
+    ]
+  },
+  {
+    "FullName": "Stanimir Pavlov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      2,
+      4,
+      7,
+      24,
+      26
+    ]
+  },
+  {
+    "FullName": "Rositsa Hristova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      23
+    ]
+  },
+  {
+    "FullName": "Valeri Terziev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      23
+    ]
+  },
+  {
+    "FullName": "Desislava Marinova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      6
+    ]
+  },
+  {
+    "FullName": "Georgi Ivanov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      14,
+      27
+    ]
+  },
+  {
+    "FullName": "Svetla Petrova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      25
+    ]
+  },
+  {
+    "FullName": "Yavor Dimitrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      14,
+      21,
+      23
+    ]
+  },
+  {
+    "FullName": "Tsvetanka Yordanova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      28,
+      29
+    ]
+  },
+  {
+    "FullName": "Angel Karaivanov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      4
+    ]
+  },
+  {
+    "FullName": "Emiliya Todorova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      15,
+      25
+    ]
+  },
+  {
+    "FullName": "Zdravko Kolev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      19,
+      21,
+      24
+    ]
+  },
+  {
+    "FullName": "Violeta Georgieva",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      29
+    ]
+  },
+  {
+    "FullName": "Radoslav Mihaylov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13
+    ]
+  },
+  {
+    "FullName": "Iskra Ivanova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      21
+    ]
+  },
+  {
+    "FullName": "Vasil Petrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      4
+    ]
+  },
+  {
+    "FullName": "Lidiya Nikolova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      15
+    ]
+  },
+  {
+    "FullName": "Dragomir Angelov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      4
+    ]
+  },
+  {
+    "FullName": "Katerina Savova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      20
+    ]
+  },
+  {
+    "FullName": " ",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      23,
+      25
+    ]
+  },
+  {
+    "FullName": "Vasil Petrov",
+    "AgeGroup": "0",
+    "Gender": "0",
+    "Medicines": [
+      4,
+      2
+    ]
+  },
+  {
+    "FullName": "Zdravko Nikolaev",
+    "AgeGroup": "1",
+    "Gender": "3",
+    "Medicines": [
+      13,
+      18,
+      19
+    ]
+  },
+  {
+    "FullName": "Miho Mihaylov",
+    "AgeGroup": "4",
+    "Gender": "0",
+    "Medicines": [
+      26
+    ]
+  },
+  {
+    "FullName": "Iliana Georgieva",
+    "AgeGroup": "1",
+    "Gender": "1",
+    "Medicines": [
+      18,
+      21
+    ]
+  },
+  {
+    "FullName": "Stoyan Petrov",
+    "AgeGroup": "2",
+    "Gender": "0",
+    "Medicines": [
+      25
+    ]
+  },
+  {
+    "FullName": "Mila Dimitrova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      2,
+      6
+    ]
+  },
+  {
+    "FullName": "Nikolay Vasilev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      5,
+      7,
+      13
+    ]
+  },
+  {
+    "FullName": "Lidiya Ivanova",
+    "AgeGroup": "6",
+    "Gender": "1",
+    "Medicines": [
+      19,
+      22
+    ]
+  },
+  {
+    "FullName": "Dimitar Stoyanov",
+    "AgeGroup": "-1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      18,
+      19,
+      21
+    ]
+  },
+  {
+    "FullName": "Yana Popova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      2,
+      20
+    ]
+  },
+  {
+    "FullName": "Vladimir Kolev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      5,
+      7,
+      14
+    ]
+  },
+  {
+    "FullName": "Tsvetelina Mihaylova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      15,
+      25
+    ]
+  },
+  {
+    "FullName": "Georgi Todorov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      23,
+      27
+    ]
+  },
+  {
+    "FullName": "Kalina Petrova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      6
+    ]
+  },
+  {
+    "FullName": "Ivan Angelov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      4,
+      8,
+      9
+    ]
+  },
+  {
+    "FullName": "Elitsa Kirilova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      25,
+      27
+    ]
+  },
+  {
+    "FullName": "Radoslav Dimitrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      11,
+      12
+    ]
+  },
+  {
+    "FullName": "Silviya Zaharieva",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      3,
+      15
+    ]
+  },
+  {
+    "FullName": "Krasimir Yordanov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      19
+    ]
+  },
+  {
+    "FullName": "Valentina Tsvetkova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      15,
+      21
+    ]
+  },
+  {
+    "FullName": "Borislav Marinov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      22
+    ]
+  },
+  {
+    "FullName": "Kristina Ivanova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      3,
+      16
+    ]
+  },
+  {
+    "FullName": "Martin Georgiev",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      24
+    ]
+  },
+  {
+    "FullName": "Aneliya Petrova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      15
+    ]
+  },
+  {
+    "FullName": "Svetoslav Todorov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      1,
+      4,
+      8,
+      9
+    ]
+  },
+  {
+    "FullName": "Denitsa Hristova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      16,
+      21
+    ]
+  },
+  {
+    "FullName": "Boyan Dimitrov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      18
+    ]
+  },
+  {
+    "FullName": "Ekaterina Vasileva",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      11,
+      13
+    ]
+  },
+  {
+    "FullName": "Viktor Popov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      21,
+      24
+    ]
+  },
+  {
+    "FullName": "Radina Kostova",
+    "AgeGroup": "0",
+    "Gender": "1",
+    "Medicines": [
+      1,
+      3,
+      7
+    ]
+  },
+  {
+    "FullName": "Spas Ivanov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      27,
+      28
+    ]
+  },
+  {
+    "FullName": "Magdalena Stoyanova",
+    "AgeGroup": "2",
+    "Gender": "1",
+    "Medicines": [
+      25
+    ]
+  },
+  {
+    "FullName": "Plamen Nikolov",
+    "AgeGroup": "1",
+    "Gender": "0",
+    "Medicines": [
+      13,
+      16
+    ]
+  }
+]

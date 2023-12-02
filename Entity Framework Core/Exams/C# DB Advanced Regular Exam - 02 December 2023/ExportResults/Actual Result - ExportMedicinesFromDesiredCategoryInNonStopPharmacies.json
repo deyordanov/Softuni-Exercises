@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Clindamycin",
+    "Price": "15.30",
+    "Pharmacy": {
+      "Name": "Revive",
+      "PhoneNumber": "(654) 987-0123"
+    }
+  },
+  {
+    "Name": "Erythromycin",
+    "Price": "16.85",
+    "Pharmacy": {
+      "Name": "Serenity",
+      "PhoneNumber": "(890) 123-4567"
+    }
+  },
+  {
+    "Name": "Ciprofloxacin",
+    "Price": "19.20",
+    "Pharmacy": {
+      "Name": "Vitality",
+      "PhoneNumber": "(123) 456-7890"
+    }
+  },
+  {
+    "Name": "Penicillin",
+    "Price": "21.00",
+    "Pharmacy": {
+      "Name": "GreenLeaf",
+      "PhoneNumber": "(456) 789-0123"
+    }
+  },
+  {
+    "Name": "Penicillin",
+    "Price": "22.00",
+    "Pharmacy": {
+      "Name": "Vitality",
+      "PhoneNumber": "(123) 456-7890"
+    }
+  }
+]
