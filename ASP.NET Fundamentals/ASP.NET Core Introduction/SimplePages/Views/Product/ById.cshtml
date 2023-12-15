@@ -1,0 +1,12 @@
+﻿@model ASP.NET_Core_Introduction.ViewModels.ProductViewModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="card">
+    <div class="card-header">@ViewData["Title"]</div>
+    <div class="card-body">
+        <h5 class="card-title">Product name: @Model.Name</h5>
+        <p class="card-text">Price: @Model.Price$</p>
+    </div>
+</div>

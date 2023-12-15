@@ -1,0 +1,12 @@
+﻿@using ASP.NET_Core_Introduction.ViewModels
+@model IEnumerable<ASP.NET_Core_Introduction.ViewModels.ProductViewModel>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<ul class="list-group">
+    @foreach (ProductViewModel product in Model)
+    {
+        <a href="/Product/ById/{@product.Id}" class="list-group-item">@product.Name - @product.Price</a>
+    }
+</ul>

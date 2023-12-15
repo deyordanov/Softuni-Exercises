@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "NumbersFrom1ToN Page";
+    int count = (int)ViewBag.Count;
+}
+
+<h2>Numbers From 1 To @count</h2>
+<ul>
+    @for (int i = 1; i <= count; i++)
+    {
+        <li>@i</li>
+    }
+</ul>
+<form asp-controller="Home" asp-action="NumbersFrom1ToN" method="post">
+    <div class="row">
+        <div class="col-2">
+            <input class="form-control" type="number" min="0" step="1" name="count" />
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
