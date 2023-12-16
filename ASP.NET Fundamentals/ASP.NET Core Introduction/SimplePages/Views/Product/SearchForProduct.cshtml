@@ -1,0 +1,26 @@
+﻿@using ASP.NET_Core_Introduction.ViewModels
+@model IEnumerable<ASP.NET_Core_Introduction.ViewModels.ProductViewModel>
+@{
+    ViewData["Title"] = "Search For Product";
+}
+
+<form method="post" asp-controller="Product" asp-action="SearchForProduct">
+    <div>
+        <input class="form-control" type="text" placeholder="Search..." aria-label="Search" name="keyword">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <h2>No such products have been found!</h2>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (ProductViewModel product in Model)
+        {
+            <li class="list-group-item">@product.Name - @product.Price</li>
+        }
+    </ul>
+}
