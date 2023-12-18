@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskBoardApp.Data.Models\TaskBoardApp.Data.Models.csproj" />
+    <ProjectReference Include="..\TaskBoardApp.Data\TaskBoardApp.Data.csproj" />
+    <ProjectReference Include="..\TaskBoardApp.Web.ViewModels\TaskBoardApp.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Board\" />
+    <Folder Include="Home\" />
+    <Folder Include="Task\" />
+  </ItemGroup>
+
+</Project>
