@@ -1,0 +1,18 @@
+1. "docker pull [image]" -> download a docker image from a registry (like Docker hub)
+2. "docker run [image]" -> create a running container from an image
+ - "-p" / "--publish" -> this options maps a network port from the host into the container (if the port in the container and we want to access the web app f.e. at port 5000, we`d say '-p 5000:80'
+ - "-d" / "--detach" -> runs the container in the background
+ - "-v *example* c:\users:/app" -> this mounts a volume from the host system into the container, in this case it`s mounting the 'c:\users' directory from the host machine (our machine) to the '/app' directory inside the container. Can be used to mount a volume to the '/app' directory as well (that is the better use case: create a volume and store the given directory there).
+3. "docker images" -> list all Docker images on the local system
+4. "docker ps" -> list all currently running containers on the local system
+5. "docker logs [container]" -> fetch all logs of a specific container
+6. "docker start [container]" -> start one or more stopped containers
+7. "docker exec [container] [command]" -> run a new command in a running container
+ - "-i" / "--interactive" -> this flag keeps the session open to receive input from the user
+ - "-t" / "-tty" -> this flag simulates a real terminal
+ - "-d" / "--detach" -> this runs the container in the background (it starts the process and then immediately returns control to the given terminal)
+ - "/bin/sh" -> this is the command we are asking docker to execute inside the container. In this case it represents a shell, a command-line interpreter that allows us to interact with the operating system.
+8. "docker volume create [volume]" -> create a volume
+9. "docker volume ls" -> list all volumes
+10. "docker volume inspect [volume]" -> inspect volume
+11. "docker volume rm [volume]" -> remove a volume

@@ -1,0 +1,25 @@
+# After a lot of trial and error - creating a MSSQL container with a volume attached to it (without getting issues regarding authorization) can be done by simply running a similar docker-compose.yml file!
+
+# The version of the docker compose file format
+version: '3.8'
+#Define the services
+services:
+  mssql:
+    # The image from which the container will be created
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    # Set the default user as 'root', otherwise the container will not be able to write in the necessary files
+    user: root
+    # We expose it on port 1433
+    ports:
+      - 1433:1433
+    environment:
+    # Define environment variables
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongPasswordThatIsLongerThan8Characters!
+    # Set the volumes which the container will be mounted to
+    volumes:
+      - MSSQL_data:/var/opt/mssql/data
+
+# Define the volumes we will be using (they will automatically be created)
+volumes:
+  MSSQL_data:
