@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: web
+    depends_on:
+      - backend
+    networks:
+      - react-express
+    ports:
+      - 3000:3000
+  backend:
+    build: ./backend
+    container_name: api
+    depends_on:
+      - mongo
+    networks:
+      - react-express
+      - mongo-express
+  mongo:
+    image: mongo:latest
+    container_name: db
+    networks:
+      - mongo-express
+    volumes:
+      - ./data:/data/dn
+
+networks:
+  react-express:
+  mongo-express:
