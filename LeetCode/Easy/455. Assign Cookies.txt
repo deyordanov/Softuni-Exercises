@@ -1,0 +1,26 @@
+public class Solution {
+    public int FindContentChildren(int[] g, int[] s) {
+        Array.Sort(g);
+        Array.Sort(s);
+
+        int childIndex = g.Length - 1;
+        int cookieIndex = s.Length - 1;
+
+        int satisfiedChildren = 0;
+        while(childIndex >= 0 && cookieIndex >= 0)
+        {
+            if(s[cookieIndex] >= g[childIndex])
+            {
+                satisfiedChildren++;
+                cookieIndex--;
+                childIndex--;
+            }
+            else
+            {
+                childIndex--;
+            }
+        }
+
+        return satisfiedChildren;
+    }
+}
