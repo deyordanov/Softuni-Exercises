@@ -1,0 +1,25 @@
+public class Solution {
+    public int MinOperations(int[] nums) {
+        Dictionary<int, int> occurrences = new Dictionary<int, int>();
+        for(int i = 0; i < nums.Length; i++)
+        {
+            if(!occurrences.ContainsKey(nums[i]))
+            {
+                occurrences.Add(nums[i], 0);
+            }
+            occurrences[nums[i]]++;
+        }
+
+        int operationsPerformed = 0;
+        foreach(int key in occurrences.Keys)
+        {
+            if(occurrences[key] == 1)
+            {
+                return -1;
+            }
+            operationsPerformed += (int)Math.Ceiling(occurrences[key] / 3.0);
+        }
+
+        return operationsPerformed;
+    }
+}
