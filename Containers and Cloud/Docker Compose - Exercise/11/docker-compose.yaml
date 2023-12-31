@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  vote:
+    container_name: vote
+    build: ./vote
+    command: python app.py
+    ports:
+      - 5000:80
+    networks:
+      - frontend
+      - backend
+  result:
+    container_name: result
+    build: ./result
+    command: nodemon server.js
+    ports:
+      - 5001:80
+    networks:
+      - frontend
+      - backend
+  worker:
+    container_name: worker
+    build: ./worker
+    networks:
+      - backend
+  redis:
+    container_name: redis
+    image: redis
+    networks:
+      - backend
+  db:
+    container_name: db
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+volumes:
+  postgres-data:
+
+networks:
+  backend:
+  frontend:

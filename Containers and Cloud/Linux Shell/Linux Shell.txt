@@ -1,0 +1,78 @@
+Alpine Commands:
+"whoami" - displays the currently logged-in user
+"uname -a" - command to print OS information
+"top [options]" - display all active processes
+"ls" - list all files in current directory
+"ls -al" - list all available + hidden files 
+"mkdir {directoryName}" - create a directory
+"cp [options] {source destination}" - copy directory and files
+"mv [options] {new file name}" - rename files
+"mv [options] {source destination}" - move files
+"rm [options] file [file...]" - remove files or directories
+"pwd" - print working directory
+"cat" - read data from the file and return the content as output
+"echo {text}" - print text on terminal
+"echo Hello, young padwan! > jedi.txt" - save the given text in the jedi.txt file
+"echo Hello again, young padwan! >> jedi.txt" - save text in the jedi.txt file on a new line, otherwise if one '>' is used, the text will be overwritten.
+"hostname" - extract information about the host (their name)
+"cd ~" - will return us to the root directory of the given user '/root'
+"date" - check today's date
+"date +%Y-%m-%d" - change the formatting of the date
+"cal" - calendar
+"uptime" - how long our system has been operating
+"history" - the history of all used commands during this session
+"exit", "logout" - end the session
+"set" - returns all the environmental variables and functions
+"set | less" - display the output one page at a time (go to the next page with [Enter] or quit with [q])
+"set -o" - check the parameters that are driving the environment
+"set -x" change the flag that control the amount of information shown during commands execution (xtrace): ('-' -> turn on a flag. '+' -> turn on a flag). After running a command whilst having this flag on, information about what else is going to be executed.
+"help" - returns all built-in command
+"help | less" - again displays the output one page at a time 
+"help cd" - ask for help for a specific command
+"." - files whose names start with this symbol are considered to be hidden
+"man", "info" - alternative and modern help systems
+"sudo {command}" - used to access restricted files and operations (controls who can do what and from where; temporarily allows ordinary users to perform administrative tasks)
+"sudo -u {username} whoami" - execute the given command as another user
+"sudo su {username}" - switch to a user
+"su {username}" - switch to a user with a login shell
+"sudo chmod +x {file}" - execute a single command as root
+"chmode [operations] {file name / directory name}" - change the permissions of a file or directory for all types of users
+"chmode [options] [owner][:[group]] file" - change the file owner and group
+"chgrp [options] group file" - change group ownership
+"env" - list all environment variables
+"printenv {environment variable name}" / "echo {environment variable name}"- print a single environment variable
+"export {environment variable name}={environment variable value}" - set a new environment variable
+"ssh {ip address} -l root" - allows connecting to a remote machine's console
+"apt install <package>" - provides a high-level command line interface for the package management system
+"apt update" - download package information from all configured sources
+"apt upgrade" - install available upgrades for all packages
+"wget [options] {URL}" - free utility for non-interactive download of files from the Web
+"curl [options] {URL}" - tool for transferring data from or to a server
+
+Command Sequences:
+"command1 ; command2; command3" - execute in order (disconnected), the output of one command is not given as input for the next command
+"command1 | command2 | command3" - execute in order (connected), the output of one command is given as input for the next command
+"command1 && command2" - execute conditionally on SUCCESS
+"command1 || command2" - execute conditionally on FAILURE
+
+File Types:
+"-" - regular file
+"d" - directory
+"l" - symbol link (app shortcut)
+"b" - block
+"c" - character
+"p" - FIFO pipe
+"s" - local socket
+
+Root Directory Files:
+"/bin" - user binaries
+"/sbin" - system binaries
+"/etc" - configuration files
+"/dev" - device files
+"/proc" - process information
+"/boot" - boot loader files
+"/var" - variable files
+"/tmp" - temporary files
+"/usr" - user programs
+"/home" - home directories
+"/lib" - system libraries 
