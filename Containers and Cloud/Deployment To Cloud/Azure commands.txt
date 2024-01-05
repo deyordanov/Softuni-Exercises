@@ -1,0 +1,17 @@
+1. "docker login azure" -> log into azure
+2. "docker context create aci [context name] -> create an azure container instance context
+	- context -> used to specify the docker environment. This context associates Docker with an azure subscription and resourse group, so we can manage and create 		container instances.
+	- aci -> azure container instace -> a service that allows us to run a container in the cloud, without having to worry about the infrasturture and managing VMs. 	This way we can focus on development instead.
+3. "docker context use [context name]" -< use a given context
+4. "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi" -> install Azure CLI
+5. "az --version" -> check the version of the Azure CLI
+6. "az group create --name [RG name] --location [location]" -> create an azure resource group
+7. "az acr create -g [resource group] --name [acr name] --sku [plan]" -> create an azure container registry
+8. "az acr login --name [acr name]" -> log in a given acr
+9. "docker tag [local image name] [login server name] [new image name]:[version] -> to push the container to a private registry like ACR, we must first tag the image with the full name of the registry`s login server
+10. "docker push [registry login server + image name] -> push an image to ACR
+11. "az acr repository list --name [acr name]" -> list all images in a given acr
+12. " az container create -g [RG name] --name [new container name] --image [image name] --cpu 1 --memory 1 --registry-login-server [registry login server] --registry-username [server principal username] --registry-password [server principal password] --ip-address Public --dns-name-label [dns name] --ports [ports]" -> create a container in azure
+13. "az container show -g [RG name] --name [container name] --query instanceView.state" -> show a given container`s state
+14. "az container show -g [RG name] --name [container name] --query ipAddress.fqdn" -> show a given container`s fully qualified domain name
+15. "az group delete --name [RG name]" - delete a given resource group
