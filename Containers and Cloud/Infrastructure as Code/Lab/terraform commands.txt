@@ -1,0 +1,7 @@
+1. "terraform init" -> initialize a configuration directory, which downloads and installs the providers defined in the configuration file.
+2. "terraform fmt" -> automatically update configurations in the current directory for readability and consistency.
+3. "terraform validate" -> check if the terraform configuration file is valid.
+4. "terraform apply" -> create or update infrastructure.
+5. "terraform destroy" -> destroy a previously-created infrastructure.
+6. "terraform show" -> inspect the current terraform state.
+7. "terraform apply -var-file="[path to file]" -> this will apply the defined values of the given variables in the file, located at [path to file].
