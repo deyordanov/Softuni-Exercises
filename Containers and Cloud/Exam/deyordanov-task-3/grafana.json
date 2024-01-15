@@ -1,0 +1,75 @@
+{
+  "datasource": {
+    "uid": "a81f3c7f-e710-4142-90c9-d60104db67aa",
+    "type": "prometheus"
+  },
+  "type": "histogram",
+  "title": "Panel Title",
+  "gridPos": {
+    "x": 0,
+    "y": 0,
+    "w": 12,
+    "h": 8
+  },
+  "id": 1,
+  "targets": [
+    {
+      "refId": "A",
+      "expr": "probe_duration_seconds",
+      "range": true,
+      "instant": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "a81f3c7f-e710-4142-90c9-d60104db67aa"
+      },
+      "editorMode": "builder",
+      "legendFormat": "__auto",
+      "useBackend": false,
+      "disableTextWrap": false,
+      "fullMetaSearch": false,
+      "includeNullMetadata": true
+    }
+  ],
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "lineWidth": 1,
+        "fillOpacity": 80,
+        "gradientMode": "none",
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        }
+      },
+      "unitScale": true,
+      "color": {
+        "mode": "thresholds"
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "value": null,
+            "color": "green"
+          },
+          {
+            "value": 80,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "options": {
+    "bucketOffset": 0,
+    "legend": {
+      "showLegend": true,
+      "displayMode": "list",
+      "placement": "bottom",
+      "calcs": []
+    }
+  }
+}
