@@ -1,0 +1,29 @@
+# Global settings for Prometheus
+global:
+  # Define how often Prometheus scrapes metrics from configured targets
+  scrape_interval: 15s
+
+# Define the configuration for the scraping part of Prometheus
+scrape_configs:
+  # Define job name
+  - job_name: "blackbox"
+    # Where Prometheus will scrape the metrics from
+    metrics_path: /probe
+    # Defined targets for Prometheus to scrape
+    static_configs:
+      - targets:
+          - "https://softuni.org"
+    # Relabel configurations
+    relabel_configs:
+      # Take the address of the target
+      - source_labels: [__address__]
+        # Store the address of the target in the __param_target label
+        target_label: __param_target
+      # Take the value of the __param_target
+      - source_labels: [__param_target]
+        # Store the value of __param_target in the label
+        target_label: instance
+      # Take the value of __address__
+      - target_label: __address__
+        # Set the value of __address__ to the label
+        replacement: 127.0.0.1:9115

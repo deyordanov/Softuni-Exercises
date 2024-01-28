@@ -1,0 +1,65 @@
+# Set the version of the yml file
+version: "3.8"
+
+# Define the services
+services:
+  # Define mongodb
+  mongodb:
+    # Define container name
+    container_name: mongo
+    # Define container image
+    image: mongo
+    # Define networks
+    networks:
+      - shopping_list_network
+    #Define volumes
+    volumes:
+      # Map the 'data' volume to '/data/db' inside the container
+      - data:/data/db
+    environment:
+      # Set the mongo db username (taken from ./backend/app.js)
+      - MONGO_INITDB_ROOT_USERNAME=max
+      # Set the mongo db password (taken from ./backend/app.js)
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+  # Define backend
+  backend:
+    # Define container name
+    container_name: backend
+    # Define container image
+    image: deyordanov/backend
+    # Define networks
+    networks:
+      - shopping_list_network
+    # Define volumes
+    volumes:
+      # Map the 'logs' volume to '/app/logs' inside the container (the application`s logs)
+      - logs:/app/logs
+      # Map the 'node_modules' volume to '/app/node_modules' inside the container (the application`s node_modules)
+      - node_modules:/app/node_modules
+      # Map the frontend`s 'src' folder the the 'src' folder of backend
+      - ./frontend/src:/app/src
+    # Map ports
+    ports:
+      - 80:80
+  # Define frontend
+  frontend:
+    # Define container name
+    container_name: frontend
+    # Define container image
+    image: deyordanov/frontend
+    # Define networks
+    networks:
+      - shopping_list_network
+    # Map ports
+    ports:
+      - 3000:3000
+
+# Create the necessary volumes
+volumes:
+  data:
+  logs:
+  node_modules:
+
+# Create the necessary networks
+networks:
+  shopping_list_network:
