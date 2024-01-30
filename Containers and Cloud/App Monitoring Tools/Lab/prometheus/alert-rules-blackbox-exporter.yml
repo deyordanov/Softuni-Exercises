@@ -1,0 +1,15 @@
+groups:
+  - name: Connection Was Slow
+    rules:
+      # Define the alert name
+      - alert: SlowConnection
+        # Prometheus expression to evaluate. Triggers if the connection phase takes more than 2.5 milliseconds
+        expr: probe_http_duration_seconds{phase="connect"} > 0.0025
+        # Duration after which the alert should be fired if the condition is true
+        for: 3s
+        # Labels to attach to the alert, categorizing its severity
+        labels:
+          severity: warning
+        # Annotations to add more context to the alert. They are not used for filtering or silencing.
+        annotations:
+          summary: "Connection took more than 2.5 milliseconds!"

@@ -1,0 +1,17 @@
+route:
+  # Group alerts by the 'altername' label
+  group_by: ["altername"]
+  # Wait time before sending a notification about grouped alerts
+  group_wait: 30s
+  # Interval between repeated notifications for the same group of alerts
+  group_interval: 5m
+  # Interval between repeated notifications for the same alert
+  repeat_interval: 1h
+  # The receiver to which notifications should be sent
+  receiver: "web.hook"
+
+receivers:
+  - name: "web.hook"
+    webhook_configs:
+      # The URL endpoint to send notifications to
+      - url: "https://webhook.site/34dbfc74-f4d0-4d9e-b880-e352749c6d56"
