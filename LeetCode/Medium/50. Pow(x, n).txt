@@ -1,0 +1,33 @@
+public class Solution {
+    public double MyPow(double x, int n) {
+        
+        double result = Pow(x, Math.Abs((long)n));
+
+        bool isNegative = n < 0;
+
+        return isNegative ? (1.0 / result) : result;
+
+        double Pow(double x, long n)
+        {
+            if(n == 0)
+            {
+                return 1;
+            }
+
+            if(n == 1)
+            {
+                return x;
+            }
+
+            double result = Pow(x, n / 2);
+            double power = result * result;
+
+            if(n % 2 == 1)
+            {
+                power *= x;
+            }
+
+            return power;
+        }
+    }
+}
