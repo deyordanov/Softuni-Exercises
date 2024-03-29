@@ -1,0 +1,23 @@
+public class Solution {
+  public int MaxSubarrayLength(int[] nums, int k) {
+    Dictionary < int, int > occurrences = new Dictionary < int, int > ();
+
+    int maxLength = 0;
+    int left = 0;
+    for (int right = 0; right < nums.Length; right++) {
+      int number = nums[right];
+      occurrences.TryAdd(number, 0);
+      occurrences[number]++;
+
+      while (occurrences[number] > k) {
+        int leftNumber = nums[left];
+        occurrences[leftNumber]--;
+        left++;
+      }
+
+      maxLength = Math.Max(maxLength, right - left + 1);
+    }
+
+    return maxLength;
+  }
+}
