@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandDesignPattern", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethodDesignPattern", "TemplateMethodDesignPattern\TemplateMethodDesignPattern.csproj", "{948BC748-EA1E-448E-B788-18B4CF7A8306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorDesignPattern", "VisitorDesignPattern\VisitorDesignPattern.csproj", "{D408C690-1B60-4166-8484-4CAD844D27FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorDesignPattern", "VisitorDesignPattern\VisitorDesignPattern.csproj", "{D408C690-1B60-4166-8484-4CAD844D27FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorDesignPattern", "MediatorDesignPattern\MediatorDesignPattern.csproj", "{82966E30-C4EA-4871-8171-6B085930284B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorDesignPattern", "MediatorDesignPattern\MediatorDesignPattern.csproj", "{82966E30-C4EA-4871-8171-6B085930284B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MementoDesignPattern", "MementoDesignPattern\MementoDesignPattern.csproj", "{7A27F05F-D0A2-4966-BE1D-EECED04B609F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MementoDesignPattern", "MementoDesignPattern\MementoDesignPattern.csproj", "{7A27F05F-D0A2-4966-BE1D-EECED04B609F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverDesignPattern", "ObserverDesignPattern\ObserverDesignPattern.csproj", "{55A2814B-C4C6-4946-B4FE-FD5203414BC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7A27F05F-D0A2-4966-BE1D-EECED04B609F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A27F05F-D0A2-4966-BE1D-EECED04B609F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A27F05F-D0A2-4966-BE1D-EECED04B609F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A2814B-C4C6-4946-B4FE-FD5203414BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A2814B-C4C6-4946-B4FE-FD5203414BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A2814B-C4C6-4946-B4FE-FD5203414BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A2814B-C4C6-4946-B4FE-FD5203414BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
