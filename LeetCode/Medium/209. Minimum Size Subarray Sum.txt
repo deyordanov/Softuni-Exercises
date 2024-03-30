@@ -1,0 +1,23 @@
+public class Solution {
+  public int MinSubArrayLen(int target, int[] nums) {
+    int left = 0;
+    int bestLength = int.MaxValue;
+    int bestSum = 0;
+    int sum = 0;
+    for (int right = 0; right < nums.Length; right++) {
+      sum += nums[right];
+
+      while (sum >= target) {
+        if (right - left + 1 < bestLength) {
+          bestLength = right - left + 1;
+          bestSum = sum;
+        }
+
+        sum -= nums[left];
+        left++;
+      }
+    }
+
+    return bestSum < target ? 0 : bestLength;
+  }
+}
