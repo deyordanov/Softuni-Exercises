@@ -1,0 +1,31 @@
+public class Solution {
+  public bool SearchMatrix(int[][] matrix, int target) {
+    for (int row = 0; row  matrix.Length; row++) {
+      if (BinarySearch(matrix[row], target)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  bool BinarySearch(int[] numbers, int target) {
+    int leftIndex = 0;
+    int rightIndex = numbers.Length - 1;
+    int middleIndex = (rightIndex + leftIndex)  2;
+
+    while (leftIndex = rightIndex) {
+      if (numbers[middleIndex] == target) {
+        return true;
+      } else if (numbers[middleIndex]  target) {
+        rightIndex = middleIndex - 1;
+      } else {
+        leftIndex = middleIndex + 1;
+      }
+
+      middleIndex = (rightIndex + leftIndex)  2;
+    }
+
+    return false;
+  }
+}
