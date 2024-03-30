@@ -1,0 +1,55 @@
+public class Solution {
+  public bool CanFinish(int numCourses, int[][] prerequisites) {
+    Dictionary < int, List < int >> graph = new Dictionary < int, List < int >> ();
+    HashSet < int > visited = new HashSet < int > ();
+    HashSet < int > cycle = new HashSet < int > ();
+
+    for (int i = 0; i < numCourses; i++) {
+      graph.TryAdd(i, new List < int > ());
+    }
+
+    foreach(int[] prerequisite in prerequisites) {
+      int parent = prerequisite[1];
+      int child = prerequisite[0];
+
+      graph[parent].Add(child);
+    }
+
+    for (int i = 0; i < numCourses; i++) {
+      bool result = DFS(i, graph, visited, cycle);
+
+      if (!result) {
+        return result;
+      }
+    }
+
+    return true;
+  }
+
+  bool DFS(
+    int parent,
+    Dictionary < int, List < int >> graph,
+    HashSet < int > visited,
+    HashSet < int > cycle) {
+    if (cycle.Contains(parent)) {
+      return false;
+    }
+
+    if (visited.Contains(parent)) {
+      return true;
+    }
+
+    cycle.Add(parent);
+    visited.Add(parent);
+
+    foreach(int child in graph[parent]) {
+      if (!DFS(child, graph, visited, cycle)) {
+        return false;
+      }
+    }
+
+    cycle.Remove(parent);
+
+    return true;
+  }
+}
