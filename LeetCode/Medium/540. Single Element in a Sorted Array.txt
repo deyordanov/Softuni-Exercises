@@ -1,0 +1,26 @@
+public class Solution {
+  public int SingleNonDuplicate(int[] nums) {
+    return BinarySearch(nums);
+  }
+
+  int BinarySearch(int[] nums) {
+    int startIndex = 0;
+    int endIndex = nums.Length - 1;
+
+    while (startIndex < endIndex) {
+      int middleIndex = (startIndex + endIndex) / 2;
+
+      if (middleIndex % 2 != 0) {
+        middleIndex--;
+      }
+
+      if (nums[middleIndex] == nums[middleIndex + 1]) {
+        startIndex = middleIndex + 2;
+      } else {
+        endIndex = middleIndex;
+      }
+    }
+
+    return nums[startIndex];
+  }
+}
