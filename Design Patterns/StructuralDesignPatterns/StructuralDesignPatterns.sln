@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterDesignPattern", "AdapterDesignPattern\AdapterDesignPattern.csproj", "{3361FC27-CD12-41CC-BD42-2E91D6F47B17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterDesignPattern", "AdapterDesignPattern\AdapterDesignPattern.csproj", "{3361FC27-CD12-41CC-BD42-2E91D6F47B17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeDesignPattern", "BridgeDesignPattern\BridgeDesignPattern.csproj", "{5A1C7007-8842-4B1A-A2B9-97E7D13C7B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BridgeDesignPattern", "BridgeDesignPattern\BridgeDesignPattern.csproj", "{5A1C7007-8842-4B1A-A2B9-97E7D13C7B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeDesignPattern", "CompositeDesignPattern\CompositeDesignPattern.csproj", "{27DCFC2A-9210-4FD4-AC77-AA8C48190FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositeDesignPattern", "CompositeDesignPattern\CompositeDesignPattern.csproj", "{27DCFC2A-9210-4FD4-AC77-AA8C48190FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorDesignPattern", "DecoratorDesignPattern\DecoratorDesignPattern.csproj", "{7D1F44B1-A411-4861-BEEE-416694645CA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{27DCFC2A-9210-4FD4-AC77-AA8C48190FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27DCFC2A-9210-4FD4-AC77-AA8C48190FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27DCFC2A-9210-4FD4-AC77-AA8C48190FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1F44B1-A411-4861-BEEE-416694645CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1F44B1-A411-4861-BEEE-416694645CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1F44B1-A411-4861-BEEE-416694645CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1F44B1-A411-4861-BEEE-416694645CA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
