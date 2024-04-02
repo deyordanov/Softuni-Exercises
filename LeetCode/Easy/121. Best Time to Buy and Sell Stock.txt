@@ -1,0 +1,37 @@
+public class Solution {
+  public int MaxProfit(int[] prices) {
+    int left = 0;
+    int currentProfit = 0;
+    int maxProfit = 0;
+    for (int right = 1; right  prices.Length; right++) {
+      currentProfit = prices[right] - prices[left];
+
+      if (currentProfit = 0) {
+        left++;
+        continue;
+      }
+
+      while (right  prices.Length) {
+        currentProfit = prices[right] - prices[left];
+        if (currentProfit  maxProfit) {
+          maxProfit = currentProfit;
+        }
+
+        right++;
+      }
+
+      int currentLeft = prices[left];
+      while (left  prices.Length) {
+        if (prices[left]  currentLeft) {
+          break;
+        }
+
+        left++;
+      }
+
+      right = left;
+    }
+
+    return maxProfit;
+  }
+}
