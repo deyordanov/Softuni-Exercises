@@ -1,0 +1,52 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left;
+ *     public TreeNode right;
+ *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+public class Solution {
+  public IList < IList < int >> LevelOrder(TreeNode root) {
+    if (root == null) return new List < IList < int >> ();
+
+    Dictionary < int, IList < int >> list = new Dictionary < int, IList < int >> ();
+    
+    list.Add(1, new List < int > ());
+    list[1].Add(root.val);
+   
+    PreOrderTraversal(root, list, 2);
+    
+    return list
+      .Where(d => d.Value.Count != 0)
+      .Select(d => d.Value)
+      .ToList();
+  }
+
+  void PreOrderTraversal(
+    TreeNode node,
+    Dictionary < int, IList < int >> list,
+    int depth) {
+    if (node == null) return;
+
+    if (!list.ContainsKey(depth)) {
+      list.Add(depth, new List < int > ());
+    }
+
+    if (node.left != null) {
+      list[depth].Add(node.left.val);
+    }
+
+    if (node.right != null) {
+      list[depth].Add(node.right.val);
+    }
+
+    PreOrderTraversal(node.left, list, depth + 1);
+    PreOrderTraversal(node.right, list, depth + 1);
+  }
+}
