@@ -1,0 +1,52 @@
+name: Build & Teset & Deploy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Replace the config settings
+        run: echo "export const settings = { host:\"http://localhost:3030\" };" > src/config.js
+      - name: Start the BackEnd
+        run: npm run start-be &
+      - name: Start the FrontEnd
+        run: npm run start-fe &
+      - name: Install Playwright browsers
+        run: npx playwright install
+      - name: Run tests
+        run: npm run test-ui
+  deploy-be:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: build_and_test
+    steps:
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.SERVICE_BE_ID }}
+          api-key: ${{ secrets.RENDER_TOKEN }}
+  deploy-fe:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: deploy-be
+    steps:
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.SERVICE_FE_ID }}
+          api-key: ${{ secrets.RENDER_TOKEN }}
