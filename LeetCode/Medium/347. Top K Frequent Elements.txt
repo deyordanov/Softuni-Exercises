@@ -1,0 +1,16 @@
+public class Solution {
+  public int[] TopKFrequent(int[] nums, int k) {
+    Dictionary < int, int > occurrences = new Dictionary < int, int > ();
+
+    foreach(int number in nums) {
+      occurrences.TryAdd(number, 0);
+      occurrences[number]++;
+    }
+
+    return occurrences
+      .Keys
+      .OrderByDescending(key => occurrences[key])
+      .Take(k)
+      .ToArray();
+  }
+}
