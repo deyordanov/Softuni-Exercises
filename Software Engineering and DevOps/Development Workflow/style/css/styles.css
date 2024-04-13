@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/fantasyStories.jpg");
+  background-image: url("../images/fantasyStoriesNewImage.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -16,7 +16,6 @@ body {
   box-shadow: 40px 15px 19px -7px rgba(59, 53, 53, 1);
   -webkit-box-shadow: 40px 15px 19px -7px rgba(59, 53, 53, 1);
   -moz-box-shadow: 40px 15px 19px -7px rgba(59, 53, 53, 1);
-
 }
 
 .form-wrapper .inner-wrap {
@@ -35,7 +34,7 @@ body {
 
   color: rgb(14, 13, 13);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-weight: 100;
   box-shadow: 24px 15px 19px -7px rgba(59, 53, 53, 0.74);
   -webkit-box-shadow: 24px 15px 19px -7px rgba(59, 53, 53, 0.74);
@@ -43,7 +42,7 @@ body {
   border: 1px solid#e71313;
 }
 
-.form-wrapper h1>span {
+.form-wrapper h1 > span {
   display: block;
   margin-top: 1px;
   font: 14px Arial, Helvetica, sans-serif;
@@ -57,7 +56,7 @@ body {
 }
 
 #form-btn {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #form-btn:disabled {
@@ -104,7 +103,7 @@ body {
   border-radius: 5px;
   color: rgb(33, 31, 31);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
   border: 1px solid #257c9e;
   font-size: 15px;
@@ -156,7 +155,7 @@ body {
   border-radius: 10px 10px 0 0;
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 30px;
   font-weight: 100;
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -172,7 +171,7 @@ body {
   border-radius: 5px;
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
   border: 1px solid #000000;
   font-size: 15px;
@@ -201,14 +200,13 @@ body {
   font-size: 35px;
   margin: 10px 0 10px 0;
   color: #e71313;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .story-info p {
   font-size: 22px;
   margin: 5px;
   color: #888;
-
 }
 
 .story-info p:last-child {
@@ -222,11 +220,11 @@ article {
   border-radius: 10px;
 }
 
-#main>h1 {
+#main > h1 {
   text-align: center;
   margin-top: 25%;
   font-size: 6rem;
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   color: #e71313;
   background-color: #000000;
   padding: 10px;
