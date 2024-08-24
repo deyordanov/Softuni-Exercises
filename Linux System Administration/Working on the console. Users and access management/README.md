@@ -11,6 +11,10 @@
 | `export`   | Set export attribute for shell variables                                 | `export PATH=/new/path:$PATH`                    | *(none)*                                       |
 | `alias`    | Define or display aliases                                                | `alias ll='ls -la'`                              | *(none)*                                       |
 | `unalias`  | Remove aliases                                                           | `unalias ll`                                     | **`-a`**: Remove all aliases.                  |
+| `type`     | Display information about command type                                   | `type ls`                                        | **`-a`**: Display all locations containing an executable of that name. |
+| `which`    | Locate a command                                                         | `which ls`                                       | **`-a`**: Print all matching pathnames.         |
+| `whereis`  | Locate the binary, source, and manual page files for a command           | `whereis ls`                                     | *(none)*                                        |
+| `hash`     | Display or manipulate the command hash table                             | `hash`                                           | *(none)*                                        |
 
 ## File and Directory Commands
 
@@ -47,6 +51,8 @@
 | `passwd`   | Change user password                    | `passwd newuser`            | *(none)*                                       |
 | `chage`    | Change user password expiry information | `chage -l newuser`          | **`-l`**: List password aging information.<br>**`-E`**: Set account expiration date.<br>**`-M`**: Set maximum number of days before password change. |
 | `id`       | Print user and group IDs                | `id`                        | **`-u`**: Print only the effective user ID.<br>**`-g`**: Print only the effective group ID.<br>**`-G`**: Print all group IDs. |
+| `adduser`  | Add a user interactively (Debian/Ubuntu)| `sudo adduser newuser`      | *(none)*                                        |
+| `addgroup` | Add a group (Debian/Ubuntu)             | `sudo addgroup newgroup`    | *(none)*                                        |
 
 ## Access Rights
 
@@ -75,3 +81,10 @@
 | `info`     | Read Info documents                           | `info coreutils`            | *(none)*                                       |
 | `whatis`   | Display one-line manual page descriptions     | `whatis ls`                 | *(none)*                                       |
 | `apropos`  | Search the manual page names and descriptions | `apropos copy`              | **`-e`**: Search for exact match.<br>**`-l`**: Display results in long format. |
+
+## System Information and Session Management
+
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `su`       | Switch user or become superuser                                          | `su - root`                                      | **`-`**: Provide an environment similar to a real login. |
+| `sudo`     | Execute a command as another user (typically as superuser)               | `sudo command`                                   | **`-u`**: Specify the user to execute as.       |
