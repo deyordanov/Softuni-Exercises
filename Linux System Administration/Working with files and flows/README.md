@@ -9,10 +9,10 @@
 ## File Redirection and Piping Commands
 
 | Command | Description                                                     | Example           | Parameters                         |
-| ------- | --------------------------------------------------------------- | ----------------- | ---------------------------------- | -------- |
+| ------- | --------------------------------------------------------------- | ----------------- | ---------------------------------- |
 | `cat`   | Concatenate and display files                                   | `cat users.txt`   | **`-n`**: Number all output lines. |
-| `tee`   | Read from standard input and write to standard output and files | `ls -l            | tee tee-out.txt`                   | _(none)_ |
-| `xargs` | Build and execute command lines from standard input             | `cat new-dirs.txt | xargs mkdir`                       | _(none)_ |
+| `tee`   | Read from standard input and write to standard output and files | `ls -l            | tee tee-out.txt`                   |
+| `xargs` | Build and execute command lines from standard input             | `cat new-dirs.txt | xargs mkdir`                       |
 
 ## Stream Manipulation Commands
 
@@ -33,10 +33,10 @@
 
 ## Text Processing Commands
 
-| Command | Description                                       | Example                               | Parameters                 |
+| Command | Description                                       | Example                               | Parameters                 |                                        |
 | ------- | ------------------------------------------------- | ------------------------------------- | -------------------------- | -------------------------------------- |
 | `sed`   | Stream editor for filtering and transforming text | `echo "Tram-ta-ra-ra-ram"             | sed s/a/A/`                | **`-n`**: Suppress automatic printing. |
-| `awk`   | Pattern scanning and processing language          | `awk -F ':' '{print $1}' /etc/passwd` | **`-F`**: Field separator. |
+| `awk`   | Pattern scanning and processing language          | `awk -F ':' '{print $1}' /etc/passwd` | **`-F`**: Field separator. |                                        |
 
 ## Editor Commands
 
