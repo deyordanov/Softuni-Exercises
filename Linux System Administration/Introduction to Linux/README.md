@@ -1,69 +1,58 @@
-# Linux and Virtualization Cheat Sheet
+# Linux Command Cheat Sheet
 
-## Linux Basics
+## Environment and Directory Commands
 
-| Concept                    | Description                           |
-| -------------------------- | ------------------------------------- |
-| Linux                      | A kernel, not a complete OS           |
-| Linux Distribution         | Kernel + Utilities                    |
-| Main Distribution Families | Debian, Fedora/Red Hat, openSUSE/SUSE |
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `pwd`      | Print name of the current/working directory                              | `pwd`                                            | **`-L`**: Use logical path.<br>**`-P`**: Use physical path. |
+| `ls`       | List directory contents                                                  | `ls -l`                                          | **`-a`**: Show hidden files.<br>**`-l`**: Long listing format.<br>**`-h`**: Human-readable sizes.<br>**`-R`**: Recursively list subdirectories. |
+| `cd`       | Change the current directory                                             | `cd /etc`                                        | *(none)*                                       |
+| `mkdir`    | Create new directories                                                   | `mkdir new_directory`                            | **`-p`**: Create parent directories as needed.<br>**`-v`**: Verbose output. |
+| `rmdir`    | Remove empty directories                                                 | `rmdir old_directory`                            | *(none)*                                       |
+| `touch`    | Create or update a file’s timestamp                                      | `touch file.txt`                                 | **`-a`**: Change only the access time.<br>**`-m`**: Change only the modification time. |
+| `cp`       | Copy files or directories                                                | `cp file.txt /new/location/`                     | **`-r`**: Recursive copy for directories.<br>**`-v`**: Verbose output.<br>**`-i`**: Prompt before overwrite. |
+| `mv`       | Move or rename files                                                     | `mv file.txt /new/location/`                     | **`-i`**: Prompt before overwrite.<br>**`-v`**: Verbose output.<br>**`-n`**: Do not overwrite. |
+| `rm`       | Remove files or directories                                              | `rm file.txt`                                    | **`-r`**: Remove directories recursively.<br>**`-f`**: Force removal.<br>**`-v`**: Verbose output. |
+| `ln`       | Create hard or symbolic links                                            | `ln -s file.txt symlink`                         | **`-s`**: Create symbolic link.<br>**`-v`**: Verbose output.<br>**`-f`**: Force the creation of the link. |
 
-## Virtualization
+## File Viewing and Editing Commands
 
-| Term                 | Description                                       |
-| -------------------- | ------------------------------------------------- |
-| Host OS              | The main operating system on the physical machine |
-| Virtual Machine (VM) | A software-based emulation of a computer          |
-| Guest OS             | The operating system running inside a VM          |
-| Hypervisor           | Software that creates and runs virtual machines   |
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `cat`      | Concatenate and display file contents                                    | `cat file.txt`                                   | **`-n`**: Show line numbers.<br>**`-T`**: Show tabs as `^I`. |
+| `date`     | Print or set the system date and time                                    | `date +%Y-%m-%d`                                 | **`+FORMAT`**: Custom date format.<br>**`-u`**: Use UTC time. |
+| `cal`      | Display a calendar                                                       | `cal`                                            | **`-3`**: Show the previous, current, and next month. |
+| `echo`     | Display a line of text                                                   | `echo "Hello World"`                             | **`-n`**: Do not output the trailing newline. |
+| `history`  | Show the command history                                                 | `history`                                        | **`-c`**: Clear the history.<br>**`-w`**: Write the history to the history file. |
 
-## Basic Linux Commands
+## System Information Commands
 
-| Command    | Description                               |
-| ---------- | ----------------------------------------- |
-| `pwd`      | Print working directory                   |
-| `ls`       | List directory contents                   |
-| `cd`       | Change directory                          |
-| `cat`      | Concatenate and display file content      |
-| `date`     | Display or set date and time              |
-| `cal`      | Display a calendar                        |
-| `hostname` | Show or set the system's hostname         |
-| `uname`    | Print system information                  |
-| `uptime`   | Show how long the system has been running |
-| `history`  | Display command history                   |
-| `exit`     | Exit the shell                            |
-| `logout`   | Exit a login shell                        |
-| `reboot`   | Reboot the system                         |
-| `poweroff` | Shut down the system                      |
-| `shutdown` | Schedule a system shutdown                |
-| `wall`     | Send a message to all users               |
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `uname`    | Print system information                                                 | `uname -a`                                       | **`-a`**: Print all system information.<br>**`-r`**: Print kernel release.<br>**`-n`**: Print network node hostname. |
+| `uptime`   | Show how long the system has been running                                | `uptime`                                         | **`--pretty`**: Show uptime in human-readable format. |
+| `hostname` | Get or set the system hostname                                           | `hostname`                                       | **`--short`**: Show short hostname. |
+| `hostnamectl`| Control the system hostname                                             | `hostnamectl set-hostname new-hostname`          | *(none)*                                       |
+| `df`       | Report disk space usage                                                  | `df -h`                                          | **`-h`**: Human-readable sizes.<br>**`-T`**: Show file system type. |
+| `free`     | Display memory usage                                                     | `free -h`                                        | **`-h`**: Human-readable sizes. |
+| `whoami`   | Print the current user                                                   | `whoami`                                         | *(none)*                                       |
 
-## Environment Variables
+## System Management Commands
 
-| Variable   | Description                                |
-| ---------- | ------------------------------------------ |
-| `PATH`     | Directories to search for executable files |
-| `PWD`      | Current working directory                  |
-| `HOSTNAME` | Name of the current host                   |
-| `USER`     | Current user name                          |
-| `HOME`     | Home directory of the current user         |
-| `SHELL`    | Path to the user's preferred shell         |
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `reboot`   | Reboot the system                                                        | `sudo reboot`                                    | *(none)*                                       |
+| `shutdown` | Shut down or reboot the system                                           | `sudo shutdown -h now`                           | **`-h`**: Halt after shutdown.<br>**`-r`**: Reboot after shutdown.<br>**`+TIME`**: Delay shutdown. |
+| `poweroff` | Power off the system                                                     | `sudo poweroff`                                  | *(none)*                                       |
+| `halt`     | Halt the machine                                                         | `sudo halt`                                      | **`-p`**: Power off after halting. |
+| `logout`   | Exit the current login session                                           | `logout`                                         | *(none)*                                       |
 
-## Shell Keyboard Shortcuts
+## Network Commands
 
-| Shortcut | Action                            |
-| -------- | --------------------------------- |
-| Ctrl + A | Move to beginning of line         |
-| Ctrl + E | Move to end of line               |
-| Ctrl + L | Clear the screen                  |
-| Ctrl + C | Interrupt current process         |
-| Ctrl + Z | Suspend current process           |
-| Ctrl + D | Exit the terminal                 |
-| Tab      | Auto-complete command or filename |
-
-## Connecting to Linux
-
-| Method           | Description                                            |
-| ---------------- | ------------------------------------------------------ |
-| Local VM Console | Direct access, no network required                     |
-| Remote SSH       | Requires network and SSH service, allows file transfer |
+| Command    | Description                                                              | Example                                          | Parameters                                      |
+|------------|--------------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------|
+| `ping`     | Test network connectivity                                                | `ping google.com`                                | **`-c`**: Specify the number of packets to send.<br>**`-i`**: Set interval between packets. |
+| `ifconfig` | Configure network interfaces (deprecated, use `ip`)                      | `ifconfig eth0 up`                               | *(none)*                                       |
+| `ip`       | Show/manipulate routing, devices, and tunnels                            | `ip addr show`                                   | **`addr`**: Show IP addresses.<br>**`link`**: Show network device status. |
+| `netstat`  | Show network connections, routing tables, and statistics                 | `netstat -tuln`                                  | **`-t`**: Show TCP connections.<br>**`-u`**: Show UDP connections.<br>**`-l`**: Show listening services. |
+| `ssh`      | Open SSH sessions to remote machines                                     | `ssh user@hostname`                              | **`-p`**: Specify port.<br>**`-i`**: Use identity file. |
